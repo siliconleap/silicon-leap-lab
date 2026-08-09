@@ -21,6 +21,7 @@ across runs is the point, not each run in isolation.
 experiments/
   YYYY-MM-<slug>/
     README.md          # design and conclusion — the only required file
+    plan.md            # the run script — written by experiment-plan before the run
     notes/             # raw notes from the run
     data/              # timings, token counts, success rates
     recordings/        # asciinema casts and window captures
@@ -28,7 +29,7 @@ experiments/
     drafts/            # pipeline output — not hand-written
 ```
 
-Full conventions: [`silicon-leap-forge/docs/experiment-layout.md`](../silicon-leap/docs/experiment-layout.md)
+Full conventions: [`silicon-leap-forge/docs/experiment-layout.md`](../silicon-leap-forge/docs/experiment-layout.md)
 
 ## Notes are raw on purpose
 
