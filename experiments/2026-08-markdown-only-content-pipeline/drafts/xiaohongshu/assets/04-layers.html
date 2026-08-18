@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1080x1440">
+<title>哪些不能交给 AI</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; background: #1a1a19; color: #f0eee6;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding: 80px 70px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  h2 { font-size: 64px; line-height: 1.26; font-weight: 700; }
+  h2 em { font-style: normal; color: #d97757; }
+  .sub { font-size: 32px; color: #a8a49c; margin-top: 20px; line-height: 1.5; }
+  .layers { display: flex; flex-direction: column; gap: 26px; }
+  .l { background: #0f0f0e; border-radius: 18px; padding: 32px 38px; border-left: 5px solid; }
+  .l1 { border-color: #3987e5; }
+  .l2 { border-color: #d95926; }
+  .l3 { border-color: #199e70; }
+  .l .top { display: flex; justify-content: space-between; align-items: baseline; }
+  .l .who { font-size: 40px; font-weight: 700; }
+  .l .kind { font-size: 26px; color: #8a8780; letter-spacing: .08em; }
+  .l .ex { font-size: 30px; color: #a8a49c; margin-top: 14px; line-height: 1.55; }
+  .proof {
+    border-top: 2px solid #35342f; padding-top: 32px; display: flex; align-items: center; gap: 30px;
+  }
+  .proof .n { font-size: 104px; font-weight: 700; color: #d97757; line-height: 1; }
+  .proof .txt { font-size: 33px; line-height: 1.5; color: #c9c6bd; }
+  .proof .txt b { color: #f0eee6; }
+</style>
+<body>
+  <div>
+    <h2>哪些不能<br><em>交给 AI</em></h2>
+    <div class="sub">内容实验 harness：把约束、工具、确认和反馈串起来</div>
+  </div>
+
+  <div class="layers">
+    <div class="l l1">
+      <div class="top"><span class="who">script</span><span class="kind">确定性</span></div>
+      <div class="ex">目录骨架 · 七段标题 · 链接校验 · 配图渲染</div>
+    </div>
+    <div class="l l2">
+      <div class="top"><span class="who">agent</span><span class="kind">可推断</span></div>
+      <div class="ex">从可验证来源起草 · 按审核表修改</div>
+    </div>
+    <div class="l l3">
+      <div class="top"><span class="who">人</span><span class="kind">真正的决策</span></div>
+      <div class="ex">补事实 · 确认结论 · 账号注册 · 预览与发布</div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <div class="n">4</div>
+    <div class="txt"><b>0 平台工具依赖</b><br>不等于 0 人工成本</div>
+  </div>
+</body>

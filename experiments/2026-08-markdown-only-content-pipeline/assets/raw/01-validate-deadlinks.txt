@@ -1,0 +1,12 @@
+$ .claude/skills/experiment-plan/scripts/validate.sh experiments/2026-08-markdown-only-content-pipeline
+ok    目录名格式 YYYY-MM-<slug>
+ok    七段标题逐字匹配且有序
+ok    含可选第八段 Artifacts
+WARN  Conclusion 为空 —— 这是设计允许的状态，但发布前必须由人写
+ok    plan.md 含产物时间轴
+ok    plan.md 步骤表无空单元格
+ok    drafts 相对链接目标全部存在
+ok    结论为空，各平台初稿均已标待补
+WARN  drafts 中这些数字未出现在 README Data 段（启发式，可能误报）: 09 10
+
+全部通过, 2 项警告

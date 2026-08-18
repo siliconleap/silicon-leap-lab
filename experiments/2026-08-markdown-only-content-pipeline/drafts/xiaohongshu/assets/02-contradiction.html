@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1080x1440">
+<title>配置与模板自相矛盾</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; background: #1a1a19; color: #f0eee6;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding: 80px 70px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  h2 { font-size: 62px; line-height: 1.28; font-weight: 700; }
+  h2 em { font-style: normal; color: #d97757; }
+  .cards { display: flex; flex-direction: column; gap: 34px; }
+  .card { background: #0f0f0e; border-radius: 18px; padding: 36px 40px; }
+  .card .path {
+    font-family: "SF Mono", Menlo, monospace; font-size: 25px; color: #8a8780; margin-bottom: 22px;
+  }
+  .card .role { font-size: 27px; color: #d97757; letter-spacing: .08em; margin-bottom: 16px; }
+  .card .body { font-size: 34px; line-height: 1.62; }
+  .card .body .dim { color: #a8a49c; }
+  .card.tpl .body { font-family: "SF Mono", Menlo, monospace; font-size: 29px; line-height: 1.9; }
+  .verdict {
+    border-top: 2px solid #35342f; padding-top: 34px; font-size: 36px; line-height: 1.55; color: #c9c6bd;
+  }
+  .verdict b { color: #f0eee6; }
+</style>
+<body>
+  <h2>配置在批评模板<br>模板在<em>违反配置</em></h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="path">platforms/xiaohongshu.md</div>
+      <div class="role">配置说</div>
+      <div class="body">「陈述完事实就转进列表。<span class="dim">没有处境，没有反应，数字没有参照系。</span>」</div>
+    </div>
+
+    <div class="card tpl">
+      <div class="path">templates/xiaohongshu/note.md</div>
+      <div class="role">模板写着</div>
+      <div class="body">
+        **结果：**<br>
+        - &nbsp;&nbsp;- &nbsp;&nbsp;-<br>
+        **有效的：**<br>
+        - &nbsp;&nbsp;-<br>
+        **踩的坑：**<br>
+        - &nbsp;&nbsp;-
+      </div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    两个文件<b>分开看，每一个都是对的</b>。<br>
+    矛盾只在真的跑一遍、读到产出的那一刻才出现。
+  </div>
+</body>

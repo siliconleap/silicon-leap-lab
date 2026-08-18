@@ -1,0 +1,69 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1600x900">
+<title>Pipeline stages</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px; height: 900px; background: #fcfcfb; color: #0b0b0b;
+    font-family: -apple-system, "Helvetica Neue", "PingFang SC", sans-serif;
+    padding: 70px 80px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  h2 { font-size: 46px; font-weight: 700; letter-spacing: -.01em; }
+  .sub { font-size: 24px; color: #52514e; margin-top: 14px; }
+  .row { display: flex; align-items: stretch; gap: 20px; }
+  .stage { flex: 1; border: 2px solid #e1e0d9; border-radius: 14px; padding: 28px 30px; background: #fff; }
+  .stage.built { border-color: #2a78d6; }
+  .stage.human { border-color: #eb6834; }
+  .stage.missing { border-style: dashed; border-color: #b9b7ae; background: #f6f5f2; }
+  .stage .who { font-size: 19px; letter-spacing: .1em; text-transform: uppercase; color: #52514e; }
+  .stage .name { font-size: 32px; font-weight: 700; margin-top: 12px; }
+  .stage .out { font-size: 21px; color: #52514e; margin-top: 16px; line-height: 1.55; }
+  .stage .badge { font-size: 18px; margin-top: 18px; display: inline-block; padding: 5px 12px; border-radius: 20px; }
+  .badge.ok { background: #e8f1fc; color: #1c5ea8; }
+  .badge.hu { background: #fdeee7; color: #b8481c; }
+  .badge.no { background: #eeede8; color: #6b6862; }
+  .arrow { display: flex; align-items: center; font-size: 34px; color: #b9b7ae; }
+  .foot { font-size: 22px; color: #52514e; border-top: 2px solid #e1e0d9; padding-top: 26px; }
+  .foot b { color: #0b0b0b; }
+</style>
+<body>
+  <div>
+    <h2>Three stages, one of which existed</h2>
+    <div class="sub">Before this run, only the middle stage was built. Publishing is still not built.</div>
+  </div>
+
+  <div class="row">
+    <div class="stage built">
+      <div class="who">skill</div>
+      <div class="name">experiment-plan</div>
+      <div class="out">Topic → experiment directory: seven-heading README, plan.md with the artifact timeline</div>
+      <div class="badge ok">built this run</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage human">
+      <div class="who">human + tools</div>
+      <div class="name">the run itself</div>
+      <div class="out">notes/ · recordings/ · data/ — the only window in which these can be produced</div>
+      <div class="badge hu">not automatable</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage built">
+      <div class="who">skill</div>
+      <div class="name">content-forge</div>
+      <div class="out">Experiment → per-platform drafts and rendered images</div>
+      <div class="badge ok">existed before</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stage missing">
+      <div class="who">not built</div>
+      <div class="name">publish</div>
+      <div class="out">Preview → approve → ship. Target site does not exist yet</div>
+      <div class="badge no">open</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Everything above is plain text — Markdown conventions plus shell scripts. <b>Zero platform tools</b>: no n8n, no Coze, no Dify, no server, no database.
+  </div>
+</body>

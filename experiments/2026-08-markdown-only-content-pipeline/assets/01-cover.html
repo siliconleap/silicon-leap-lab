@@ -1,0 +1,48 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>小红书首图 1080x1440</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px;
+    background: #1a1a19;
+    color: #f0eee6;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding: 90px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .tag { font-size: 30px; color: #8a8780; letter-spacing: .18em; }
+  h1 { font-size: 92px; line-height: 1.22; font-weight: 700; margin-top: 44px; }
+  h1 em { font-style: normal; color: #d97757; }
+  .sub { font-size: 36px; color: #a8a49c; line-height: 1.6; margin-top: 36px; }
+  .term {
+    background: #0f0f0e; border-radius: 16px; padding: 34px 38px;
+    font-family: "SF Mono", Menlo, monospace; font-size: 27px; line-height: 1.85;
+    border-left: 5px solid #d97757;
+  }
+  .term .dim { color: #6b6862; }
+  .term .hit { color: #d97757; }
+  .foot { display: flex; justify-content: space-between; align-items: flex-end; }
+  .foot .brand { font-size: 30px; color: #8a8780; letter-spacing: .1em; }
+  .foot .n { font-size: 130px; font-weight: 700; color: #d97757; line-height: 1; }
+  .foot .n small { font-size: 32px; color: #8a8780; font-weight: 400; display: block; margin-top: 12px; letter-spacing: .1em; }
+</style>
+<body>
+  <div>
+    <div class="tag">硅基跃迁 · 实验记录 01</div>
+    <h1>push 前 30 秒<br>我发现了<em>两处泄露</em></h1>
+    <div class="sub">工作区扫过了：没有密码，没有密钥，<br>没有绝对路径。然后我查了 git 历史。</div>
+  </div>
+
+  <div class="term">
+    <div class="dim">$ git log --format='%an &lt;%ae&gt;'</div>
+    <div class="hit">Bobby &lt;个人邮箱&gt;    ← 不是品牌身份</div>
+    <div class="dim">$ ls -l .claude/skills/</div>
+    <div class="hit">content-forge -&gt; /Users/&lt;用户名&gt;/...  ← 进了 git</div>
+  </div>
+
+  <div class="foot">
+    <div class="brand">silicon-leap-lab</div>
+    <div class="n">0<small>平台工具依赖</small></div>
+  </div>
+</body>

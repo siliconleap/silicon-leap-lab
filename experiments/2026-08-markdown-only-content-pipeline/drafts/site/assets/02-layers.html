@@ -1,0 +1,59 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1600x900">
+<title>Three layers of responsibility</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px; height: 900px; background: #fcfcfb; color: #0b0b0b;
+    font-family: -apple-system, "Helvetica Neue", "PingFang SC", sans-serif;
+    padding: 70px 80px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  h2 { font-size: 46px; font-weight: 700; letter-spacing: -.01em; }
+  .sub { font-size: 24px; color: #52514e; margin-top: 14px; }
+  .row { display: flex; gap: 24px; }
+  .l { flex: 1; background: #fff; border: 2px solid #e1e0d9; border-top-width: 7px; border-radius: 14px; padding: 30px 32px; }
+  .l1 { border-top-color: #2a78d6; }
+  .l2 { border-top-color: #eb6834; }
+  .l3 { border-top-color: #1baf7a; }
+  .l .who { font-size: 34px; font-weight: 700; }
+  .l .kind { font-size: 19px; letter-spacing: .1em; text-transform: uppercase; color: #52514e; margin-top: 8px; }
+  .l .ex { font-size: 22px; color: #52514e; margin-top: 20px; line-height: 1.65; }
+  .l .test { font-size: 20px; margin-top: 20px; padding-top: 18px; border-top: 1px solid #e1e0d9; color: #0b0b0b; }
+  .proof { display: flex; align-items: center; gap: 26px; border-top: 2px solid #e1e0d9; padding-top: 28px; }
+  .proof .n { font-size: 76px; font-weight: 700; color: #eb6834; line-height: 1; }
+  .proof .txt { font-size: 24px; color: #52514e; line-height: 1.5; }
+  .proof .txt b { color: #0b0b0b; }
+</style>
+<body>
+  <div>
+    <h2>Push determinism down, and the surface a human must understand shrinks</h2>
+    <div class="sub">The failure this answers: approving something whose internals you have not read</div>
+  </div>
+
+  <div class="row">
+    <div class="l l1">
+      <div class="who">script</div>
+      <div class="kind">deterministic</div>
+      <div class="ex">Directory scaffolding · the seven headings · artifact timeline · validation · image rendering</div>
+      <div class="test">Same input, same output. No judgement.</div>
+    </div>
+    <div class="l l2">
+      <div class="who">agent</div>
+      <div class="kind">inferable</div>
+      <div class="ex">Drafting from verifiable sources: run log, data files, what worked and what failed</div>
+      <div class="test">Every claim traceable to a source.</div>
+    </div>
+    <div class="l l3">
+      <div class="who">human</div>
+      <div class="kind">actual decisions</div>
+      <div class="ex">The conclusion's stance · whether a topic is worth running · success criteria · whether to publish</div>
+      <div class="test">The agent escalates. It never absorbs.</div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <div class="n">4</div>
+    <div class="txt">dead links caught on the validation script's <b>first run</b> — previously only manual review surfaced them</div>
+  </div>
+</body>

@@ -1,0 +1,54 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1080x608">
+<title>三层职责</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 608px; background: #1a1a19; color: #f0eee6;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding: 44px 48px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .hd { display: flex; justify-content: space-between; align-items: baseline; }
+  h2 { font-size: 38px; font-weight: 700; }
+  h2 em { font-style: normal; color: #d97757; }
+  .sub { font-size: 21px; color: #a8a49c; }
+  .cols { display: flex; gap: 20px; }
+  .l { flex: 1; background: #0f0f0e; border-radius: 14px; padding: 24px 26px; border-top: 5px solid; }
+  .l1 { border-color: #3987e5; }
+  .l2 { border-color: #d95926; }
+  .l3 { border-color: #199e70; }
+  .l .who { font-size: 31px; font-weight: 700; }
+  .l .kind { font-size: 19px; color: #8a8780; letter-spacing: .08em; margin-top: 6px; }
+  .l .ex { font-size: 21px; color: #a8a49c; margin-top: 16px; line-height: 1.6; }
+  .proof { border-top: 2px solid #35342f; padding-top: 20px; display: flex; align-items: center; gap: 22px; }
+  .proof .n { font-size: 62px; font-weight: 700; color: #d97757; line-height: 1; }
+  .proof .txt { font-size: 24px; line-height: 1.45; color: #c9c6bd; }
+  .proof .txt b { color: #f0eee6; }
+</style>
+<body>
+  <div class="hd">
+    <h2>把确定性<em>沉进脚本</em></h2>
+    <div class="sub">人要理解的表面积就缩小了</div>
+  </div>
+
+  <div class="cols">
+    <div class="l l1">
+      <div class="who">script</div><div class="kind">确定性</div>
+      <div class="ex">目录骨架 · 七段标题 · 校验 · 配图渲染</div>
+    </div>
+    <div class="l l2">
+      <div class="who">agent</div><div class="kind">可推断</div>
+      <div class="ex">从可验证来源起草：过程 · 数据 · 成败</div>
+    </div>
+    <div class="l l3">
+      <div class="who">人</div><div class="kind">真正的决策</div>
+      <div class="ex">结论立场 · 选题价值 · 判据 · 发布与否</div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <div class="n">4</div>
+    <div class="txt">校验脚本第一次跑，就抓出<b>四处死链</b>——此前靠人工 review 才发现</div>
+  </div>
+</body>

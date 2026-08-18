@@ -1,0 +1,59 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1080x1440">
+<title>代码快，判断慢</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px; background: #1a1a19; color: #f0eee6;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    padding: 80px 70px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  h2 { font-size: 66px; line-height: 1.26; font-weight: 700; }
+  h2 em { font-style: normal; color: #d97757; }
+  .line { position: relative; padding-left: 46px; }
+  .line::before {
+    content: ""; position: absolute; left: 13px; top: 14px; bottom: 14px;
+    width: 3px; background: #35342f;
+  }
+  .row { position: relative; margin-bottom: 30px; }
+  .row::before {
+    content: ""; position: absolute; left: -40px; top: 12px;
+    width: 17px; height: 17px; border-radius: 50%; background: #35342f;
+  }
+  .row.hit::before { background: #d97757; }
+  .row .t { font-size: 25px; color: #8a8780; letter-spacing: .08em; }
+  .row .q { font-size: 37px; line-height: 1.5; margin-top: 8px; }
+  .row.hit .q { color: #d97757; font-weight: 600; font-size: 44px; }
+  .verdict {
+    border-top: 2px solid #35342f; padding-top: 32px; font-size: 38px; line-height: 1.55; color: #c9c6bd;
+  }
+  .verdict b { color: #f0eee6; }
+</style>
+<body>
+  <h2>代码快<br><em>判断慢</em></h2>
+
+  <div class="line">
+    <div class="row hit">
+      <div class="t">半天</div>
+      <div class="q">流水线骨架搭完</div>
+    </div>
+    <div class="row">
+      <div class="t">之后</div>
+      <div class="q">跑出第一篇初稿，却读不下去</div>
+    </div>
+    <div class="row">
+      <div class="t">一周多</div>
+      <div class="q">反复修改，越来越不想发布</div>
+    </div>
+    <div class="row">
+      <div class="t">现在</div>
+      <div class="q">内容简报已确认，进入独立审核</div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <b>精确工时未记录。</b><br>
+    「一周多」来自作者补充，不是速度指标。
+  </div>
+</body>
