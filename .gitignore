@@ -3,3 +3,6 @@ node_modules/
 .env
 .env.local
 *.log
+
+# 视频构建产物：由 scenes.md + build-video.py 生成，源在 git 里就够了
+drafts/**/build/

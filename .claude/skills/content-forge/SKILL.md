@@ -51,6 +51,7 @@ description: 把一个实验目录的原始素材蒸馏成中立事实摘要，�
 - `notes/`——所有文件，作为过程细节的补充
 - `data/`——量化结果
 - `recordings/`——只列文件名和时长，用于视频脚本的片段标注
+- `notes/session-timeline.md`（若存在）——从 agent 会话记录提取的真人输入时间线，带时间戳。**对话式工作没有录屏时，这是主要的过程证据**：决策、犹豫、中断、返工都在里面，引用时给出时间戳
 - `content-outline.md`（必需，新实验）——实验前由作者确认的背景、读者、已知困难与叙事骨架
 - `## Artifacts`（若存在，README 的可选第八段）——这次实验产出的可复用成果指针表。**各平台输出都要带上它**：读者最想知道「这实验产出了什么我能用的东西」
 
@@ -85,7 +86,7 @@ description: 把一个实验目录的原始素材蒸馏成中立事实摘要，�
 叙事弧线: (为什么选这个实验 → 中间哪些失败 → 成果是什么 → 能否复制。缺一项就是流水账)
 最反直觉的发现:
 可复用成果: (README 的 Artifacts 段。无则跳过)
-可用录屏片段: (文件名 → 对应内容)
+可用过程证据: (录屏文件名、会话记录时间戳、git 提交 → 对应内容。分别标注一手/复现/示意)
 ```
 
 「最反直觉的发现」是选题价值的核心。如果找不到，说明这次实验的内容价值有限，直接告诉用户。
@@ -168,7 +169,7 @@ AI 写中文有固定的病：翻译腔和欧化长句。
 | 网站 / 静态站 | `platforms/site.md` | `drafts/site/blog.md` |
 | GitHub | `platforms/github.md` | `drafts/github/readme-section.md` |
 | 小红书 | `platforms/xiaohongshu.md` | `drafts/xiaohongshu/note.md`, `carousel-brief.md` |
-| YouTube | `platforms/youtube.md` | `drafts/youtube/script.md`, `packaging.md` |
+| YouTube | `platforms/youtube.md` | `drafts/youtube/scenes.md`, `packaging.md` |
 
 平台适配不是简单改长度。必须按配置改变开头、结构、证据密度、排版、素材需求和 CTA。
 
