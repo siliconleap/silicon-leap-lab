@@ -29,6 +29,16 @@ The shortest technical summary for people browsing the experiment repository.
 - Do not bury status.
 - Prefer links over explanation when raw artifacts exist.
 
+## Visual Assets
+
+At most one image. A README section that needs three diagrams is a blog post in the wrong place.
+
+- Use it only when the structure is genuinely hard to state in a sentence — then a boxes-and-arrows diagram; otherwise none.
+- HTML source under `drafts/github/assets/` with `<meta name="render-size" content="1600x900">`, rendered to PNG by `scripts/render.sh`, referenced by relative path. Never link an image that does not exist in the repo — `validate.sh` fails on it.
+- Redact usernames, emails, and absolute paths inside the image, not just in the prose.
+- GitHub renders both themes: either use colors that hold on light and dark surfaces, or ship two files behind `<picture>`.
+- Alt text is required; a diagram with no alt text is a blank space for anyone reading with a screen reader or on a slow connection.
+
 ## Acceptance Checklist
 
 - Fits as a section inside an experiment README.
