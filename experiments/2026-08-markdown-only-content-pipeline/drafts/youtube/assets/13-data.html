@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="render-size" content="1920x1080">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px; height: 1080px; background: #1a1a19;
+    padding: 110px 130px;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  h1 { font-size: 34px; color: #898781; font-weight: 500; letter-spacing: .04em; margin-bottom: 54px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 46px 60px; }
+  .cell .n {
+    font-size: 96px; line-height: 1; color: #ffffff; font-weight: 600;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+  .cell .n.zero { color: #d03b3b; }
+  .cell .n.ok { color: #0ca30c; }
+  .cell .l { font-size: 28px; color: #c3c2b7; margin-top: 14px; }
+  .foot { margin-top: 56px; font-size: 26px; color: #898781; font-family: "SF Mono", Menlo, monospace; }
+</style>
+<h1>这次实验的数字</h1>
+<div class="grid">
+  <div class="cell"><div class="n">10</div><div class="l">天，从第一句话到发布前</div></div>
+  <div class="cell"><div class="n">105</div><div class="l">条真人输入，全部带时间戳</div></div>
+  <div class="cell"><div class="n zero">0</div><div class="l">个录屏文件</div></div>
+  <div class="cell"><div class="n">12</div><div class="l">个 skill 文件</div></div>
+  <div class="cell"><div class="n">5</div><div class="l">个平台配置</div></div>
+  <div class="cell"><div class="n zero">0</div><div class="l">个平台工具依赖</div></div>
+  <div class="cell"><div class="n ok">4</div><div class="l">处死链，校验脚本首次运行抓到</div></div>
+  <div class="cell"><div class="n">2</div><div class="l">轮独立审核</div></div>
+  <div class="cell"><div class="n zero">—</div><div class="l">耗时与 token，没记</div></div>
+</div>
+<div class="foot">来源：README Data · notes/session-timeline.md · internal/review1.md · review2.md</div>
