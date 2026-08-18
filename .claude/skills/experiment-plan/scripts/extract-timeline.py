@@ -2,7 +2,7 @@
 """从 agent 会话记录里提取真人输入的时间线。
 
 用法:
-    extract-timeline.py <jsonl 或目录> [...] [--full] [--since YYYY-MM-DD]
+    extract-timeline.py <jsonl 或目录> [...] [--cwd 子串] [--full] [--since YYYY-MM-DD]
 
 为什么需要这个:
     对话式工作没有「操作过程」可录屏——终端里没有人的动作。但会话记录本身
@@ -15,6 +15,11 @@
 支持两种格式, 自动识别:
     Claude Code   ~/.claude/projects/<项目>/*.jsonl
     Codex CLI     ~/.codex/sessions/YYYY/MM/DD/rollout-*.jsonl
+
+一定要用 --cwd:
+    Claude 的记录按项目分目录, 但 Codex 的按日期分目录——同一天所有项目的
+    会话混在一起。不过滤就会把别的项目的对话抄进实验记录, 而这份产物是要
+    公开的。--cwd 按会话的工作目录过滤, 匹配不上的整个文件跳过。
 
 脱敏:
     绝对路径里的用户名一律换成 ~, 因为这份产物要进 git。
@@ -81,6 +86,28 @@ def parse_codex(path):
         yield d.get("timestamp", ""), payload.get("message") or ""
 
 
+def session_cwd(path):
+    """会话的工作目录。Codex 在首行 session_meta, Claude 在每条记录上。
+
+    返回 None 表示探不出来——这种文件在指定了 --cwd 时一律跳过, 宁可漏也
+    不要把别的项目的对话混进来。
+    """
+    with path.open(encoding="utf-8", errors="replace") as fh:
+        for i, line in enumerate(fh):
+            if i > 50:
+                break
+            try:
+                d = json.loads(line)
+            except ValueError:
+                continue
+            if d.get("cwd"):
+                return d["cwd"]
+            payload = d.get("payload")
+            if isinstance(payload, dict) and payload.get("cwd"):
+                return payload["cwd"]
+    return None
+
+
 def collect(path):
     """一个文件可能是任一格式, 两个解析器都跑, 谁有产出用谁。"""
     entries = []
@@ -100,10 +127,10 @@ def collect(path):
 
 def main(argv):
     full = "--full" in argv
-    since = ""
-    if "--since" in argv:
-        since = argv[argv.index("--since") + 1]
-    targets = [a for a in argv if not a.startswith("--") and a != since]
+    since = argv[argv.index("--since") + 1] if "--since" in argv else ""
+    cwd_filter = argv[argv.index("--cwd") + 1] if "--cwd" in argv else ""
+    consumed = {since, cwd_filter} - {""}
+    targets = [a for a in argv if not a.startswith("--") and a not in consumed]
 
     if not targets:
         print(__doc__.strip(), file=sys.stderr)
@@ -122,6 +149,19 @@ def main(argv):
     if not files:
         print("错误: 没有找到任何 .jsonl", file=sys.stderr)
         return 1
+
+    if cwd_filter:
+        kept = []
+        for f in files:
+            c = session_cwd(f)
+            if c is None:
+                print(f"跳过 (探不出 cwd): {f.name}", file=sys.stderr)
+            elif cwd_filter in c:
+                kept.append(f)
+        print(f"cwd 过滤 '{cwd_filter}': {len(files)} → {len(kept)} 个文件", file=sys.stderr)
+        files = kept
+    else:
+        print("警告: 未指定 --cwd, 可能混入其他项目的会话", file=sys.stderr)
 
     rows = []
     for f in files:
