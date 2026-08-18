@@ -21,6 +21,16 @@
     会话混在一起。不过滤就会把别的项目的对话抄进实验记录, 而这份产物是要
     公开的。--cwd 按会话的工作目录过滤, 匹配不上的整个文件跳过。
 
+这里过滤什么, 不过滤什么:
+    过滤——不是人说的话 (系统注入、skill 正文回灌、Codex 审批时回灌的 agent
+    transcript), 以及「继续」「可以提交」这类只有「往下走」一个意思的操作指令。
+    它们是噪声, 不是内容。
+
+    不过滤——跟这次选题无关的话题。同一段时间里人会顺手干别的事 (搭站、升级
+    工具、配域名), 那些也是真实发生的, 留在 raw 记录里没有坏处。**该不该进
+    最终内容, 是叙事判断, 属于 content-forge 那一步**: 选 scene 时按主线挑,
+    挑剩下的不进片。在这里按关键词猜主题只会误删——换个选题, 该留的就变了。
+
 脱敏:
     绝对路径里的用户名一律换成 ~, 因为这份产物要进 git。
 """
@@ -40,6 +50,22 @@ SKIP_PREFIXES = (
     "Caveat:",
     "Shell cwd was reset",
 )
+
+# Codex 的审批请求会把 agent 自己的 transcript 当成 user_message 回灌。
+# 那是 agent 说的话, 不是人说的, 混进来会让时间线看着像人在念工具输出。
+SKIP_CONTAINS = (
+    "agent history whose request action you are assessing",
+    "agent history added since your last approval assessment",
+    ">>> TRANSCRIPT",
+)
+
+# 纯操作指令: 真的是人打的, 但只有「往下走」这一个意思, 没有信息量。
+# 一次实验里有几十条, 留着会把真正的判断淹掉。
+NOISE = {
+    "继续", "可以", "可以继续", "可以，继续", "确认", "对", "好", "嗯",
+    "ok", "go", "fix it", "创建吧", "可以提交", "可以，操作吧", "执行",
+    "验证了吗", "修订好了吗", "可以配置", "1 可以", "2 继续",
+}
 
 HOME_RE = re.compile(r"/Users/[^/\s\"']+")
 
@@ -120,6 +146,10 @@ def collect(path):
     for ts, text in entries:
         text = text.strip()
         if not text or text.startswith(SKIP_PREFIXES):
+            continue
+        if any(k in text for k in SKIP_CONTAINS):
+            continue
+        if text.strip("。.！!，, ").lower() in NOISE:
             continue
         out.append((ts, redact(text), path.name))
     return out
