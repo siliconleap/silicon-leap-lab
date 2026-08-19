@@ -6,10 +6,15 @@
 
 选项:
     --dry-run       只解析和校验, 不生成任何文件
-    --voice NAME    TTS 音色, 默认 Tingting (macOS say)
-    --rate N        语速, 默认 180 字/分
+    --tts ENGINE    say (默认, macOS 自带) | tencent (腾讯云)
+    --voice NAME    say 用音色名, 默认 Tingting；tencent 用 VoiceType 数字, 默认 101016
+    --rate N        say 的语速, 默认 180 字/分。tencent 忽略这项
     --burn          把字幕烧进画面 (需要 libass)。默认只输出外挂 srt
     --size WxH      输出尺寸, 默认 1920x1080
+
+腾讯云 TTS 需要环境变量:
+    TENCENTCLOUD_SECRET_ID
+    TENCENTCLOUD_SECRET_KEY
 
 设计:
     scenes.md 是唯一的源。时长不写在源里——TTS 跑完才知道每段多长, 总长是
@@ -169,6 +174,100 @@ def resolve(base, ref):
     return p if p.exists() else Path(ref)
 
 
+def tencent_tts(text, out, voice, tmp_dir):
+    """腾讯云语音合成 (TextToVoice)。
+
+    走 REST + TC3 签名, 不装 SDK——这条流水线的前提是零额外依赖, 为一个
+    接口拉一整个 SDK 不划算。
+
+    短文本合成单次上限 150 个汉字, 而旁白经常超。所以按句切开逐句合成,
+    再用 ffmpeg 拼回一个 scene 的音频。句子边界本来就是换气的地方, 拼接
+    听不出来。
+    """
+    import base64
+    import hashlib
+    import hmac
+    import json as _json
+    import os
+    import time
+    import urllib.request
+
+    sid = os.environ.get("TENCENTCLOUD_SECRET_ID")
+    skey = os.environ.get("TENCENTCLOUD_SECRET_KEY")
+    if not sid or not skey:
+        die("腾讯云 TTS 需要 TENCENTCLOUD_SECRET_ID / TENCENTCLOUD_SECRET_KEY")
+
+    host, service, version, action = "tts.tencentcloudapi.com", "tts", "2019-08-23", "TextToVoice"
+
+    def one(sentence, idx):
+        payload = _json.dumps({
+            "Text": sentence,
+            "SessionId": f"{int(time.time())}-{idx}",
+            "VoiceType": int(voice),
+            "Codec": "mp3",
+            "SampleRate": 16000,
+        }, ensure_ascii=False)
+
+        ts = int(time.time())
+        date = time.strftime("%Y-%m-%d", time.gmtime(ts))
+        canonical = (
+            f"POST\n/\n\ncontent-type:application/json; charset=utf-8\nhost:{host}\n\n"
+            f"content-type;host\n{hashlib.sha256(payload.encode()).hexdigest()}"
+        )
+        scope = f"{date}/{service}/tc3_request"
+        to_sign = (
+            f"TC3-HMAC-SHA256\n{ts}\n{scope}\n"
+            f"{hashlib.sha256(canonical.encode()).hexdigest()}"
+        )
+
+        def sign(key, msg):
+            return hmac.new(key, msg.encode(), hashlib.sha256).digest()
+
+        k = sign(sign(sign(("TC3" + skey).encode(), date), service), "tc3_request")
+        sig = hmac.new(k, to_sign.encode(), hashlib.sha256).hexdigest()
+
+        req = urllib.request.Request(
+            f"https://{host}",
+            data=payload.encode(),
+            headers={
+                "Content-Type": "application/json; charset=utf-8",
+                "Host": host,
+                "X-TC-Action": action,
+                "X-TC-Version": version,
+                "X-TC-Timestamp": str(ts),
+                "Authorization": (
+                    f"TC3-HMAC-SHA256 Credential={sid}/{scope}, "
+                    f"SignedHeaders=content-type;host, Signature={sig}"
+                ),
+            },
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            body = _json.loads(resp.read())
+        r = body.get("Response", {})
+        if "Error" in r:
+            die(f"腾讯云 TTS: {r['Error'].get('Code')} {r['Error'].get('Message')}")
+        return base64.b64decode(r["Audio"])
+
+    sentences = split_sentences(text)
+    parts = []
+    for i, sent in enumerate(sentences):
+        part = tmp_dir / f"{out.stem}-{i:02d}.mp3"
+        part.write_bytes(one(sent, i))
+        parts.append(part)
+
+    if len(parts) == 1:
+        parts[0].replace(out)
+        return
+
+    lst = tmp_dir / f"{out.stem}-parts.txt"
+    lst.write_text("".join(f"file '{p.name}'\n" for p in parts), encoding="utf-8")
+    run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-c", "copy", str(out)], cwd=tmp_dir)
+    for p in parts:
+        p.unlink()
+    lst.unlink()
+
+
 def duration(path):
     out = run([
         "ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -244,9 +343,12 @@ def main(argv):
     def opt(name, default):
         return argv[argv.index(name) + 1] if name in argv else default
 
-    voice = opt("--voice", "Tingting")
+    engine = opt("--tts", "say")
+    voice = opt("--voice", "101016" if engine == "tencent" else "Tingting")
     rate = opt("--rate", "180")
     size = opt("--size", "1920x1080")
+    if engine not in ("say", "tencent"):
+        die(f"--tts 只支持 say / tencent, 收到 '{engine}'")
 
     src = base / "scenes.md"
     if not src.exists():
@@ -271,17 +373,28 @@ def main(argv):
     for tool in ("ffmpeg", "ffprobe"):
         if not shutil.which(tool):
             die(f"缺少 {tool}——`brew install ffmpeg`")
-    if not shutil.which("say"):
-        die("缺少 say (macOS TTS)——换 TTS 请改本脚本的 tts 段")
+    if engine == "say" and not shutil.which("say"):
+        die("缺少 say (macOS TTS)——用 --tts tencent 换腾讯云")
+    if engine == "tencent":
+        import os
+        missing = [k for k in ("TENCENTCLOUD_SECRET_ID", "TENCENTCLOUD_SECRET_KEY")
+                   if not os.environ.get(k)]
+        if missing:
+            die(f"腾讯云 TTS 缺少环境变量: {', '.join(missing)}")
 
     build = base / "build"
     for sub in ("audio", "clips"):
         (build / sub).mkdir(parents=True, exist_ok=True)
 
-    print("\n配音…")
+    print(f"\n配音（{engine}）…")
+    ext = "mp3" if engine == "tencent" else "aiff"
     for s in scenes:
-        wav = build / "audio" / f"{s['id']}.aiff"
-        run_retry(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]], timeout=60)
+        wav = build / "audio" / f"{s['id']}.{ext}"
+        if engine == "tencent":
+            tencent_tts(s["旁白"], wav, voice, build / "audio")
+        else:
+            run_retry(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]], timeout=60)
+        s["audio"] = wav.name
         s["duration"] = duration(wav)
         print(f"  {s['id']}  {s['duration']:6.2f}s")
 
@@ -304,7 +417,7 @@ def main(argv):
     )
     audio_list = build / "audio.txt"
     audio_list.write_text(
-        "".join(f"file 'audio/{s['id']}.aiff'\n" for s in scenes), encoding="utf-8"
+        "".join(f"file 'audio/{s['audio']}'\n" for s in scenes), encoding="utf-8"
     )
 
     print("拼接…")
