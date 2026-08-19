@@ -8,7 +8,8 @@
     --dry-run       只解析和校验, 不生成任何文件
     --tts ENGINE    say (默认, macOS 自带) | tencent (腾讯云)
     --voice NAME    say 用音色名, 默认 Tingting；tencent 用 VoiceType 数字, 默认 101016
-    --rate N        say 的语速, 默认 180 字/分。tencent 忽略这项
+    --rate N        say 的语速, 默认 180 字/分。tencent 不用这项
+    --speed N       tencent 语速, -2~2, 0 是正常, 正数更快。默认 0.5
     --burn          把字幕烧进画面 (需要 libass)。默认只输出外挂 srt
     --size WxH      输出尺寸, 默认 1920x1080
 
@@ -194,7 +195,7 @@ def tencent_creds():
     return sid, skey
 
 
-def tencent_tts(text, out, voice, tmp_dir):
+def tencent_tts(text, out, voice, speed, tmp_dir):
     """腾讯云语音合成 (TextToVoice)。
 
     走 REST + TC3 签名, 不装 SDK——这条流水线的前提是零额外依赖, 为一个
@@ -221,6 +222,7 @@ def tencent_tts(text, out, voice, tmp_dir):
             "Text": sentence,
             "SessionId": f"{int(time.time())}-{idx}",
             "VoiceType": int(voice),
+            "Speed": float(speed),
             "Codec": "mp3",
             "SampleRate": 16000,
         }, ensure_ascii=False)
@@ -363,6 +365,7 @@ def main(argv):
     engine = opt("--tts", "say")
     voice = opt("--voice", "101016" if engine == "tencent" else "Tingting")
     rate = opt("--rate", "180")
+    speed = opt("--speed", "0.5")
     size = opt("--size", "1920x1080")
     if engine not in ("say", "tencent"):
         die(f"--tts 只支持 say / tencent, 收到 '{engine}'")
@@ -407,7 +410,7 @@ def main(argv):
     for s in scenes:
         wav = build / "audio" / f"{s['id']}.{ext}"
         if engine == "tencent":
-            tencent_tts(s["旁白"], wav, voice, build / "audio")
+            tencent_tts(s["旁白"], wav, voice, speed, build / "audio")
         else:
             run_retry(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]], timeout=60)
         s["audio"] = wav.name
