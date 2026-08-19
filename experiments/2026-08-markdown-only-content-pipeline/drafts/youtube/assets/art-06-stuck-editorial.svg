@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <filter id="ink" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="19" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ink2" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="37" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#14140f"/>
+
+  <!-- ═══════ 右：门开着，光洒进来 ═══════ -->
+  <g filter="url(#ink2)">
+    <path d="M1420 806 l180 -536 h286 v536 z" fill="#1e1c14"/>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1600 270 h286 v536 h-286 z" stroke="#8d8b82" stroke-width="5"/>
+      <g stroke="#c9a24a" stroke-width="2.2" opacity="0.5">
+        <path d="M1616 320 h254"/><path d="M1616 372 h254"/><path d="M1616 424 h254"/>
+        <path d="M1616 476 h254"/><path d="M1616 528 h254"/><path d="M1616 580 h254"/>
+        <path d="M1616 632 h254"/><path d="M1616 684 h254"/><path d="M1616 736 h254"/>
+      </g>
+      <path d="M1420 806 l180 -536" stroke="#c9a24a" stroke-width="3" opacity="0.55"/>
+      <circle cx="1626" cy="546" r="8" stroke="#8d8b82" stroke-width="4"/>
+    </g>
+  </g>
+  <text x="1743" y="880" font-family="-apple-system,'PingFang SC',sans-serif" font-size="28" fill="#8d8b82" text-anchor="middle">发布</text>
+
+  <!-- ═══════ 走一半就断的路 ═══════ -->
+  <g filter="url(#ink2)" fill="none" stroke-linecap="round" stroke="#6f6d66">
+    <path d="M900 946 C 1010 934, 1100 926, 1180 920" stroke-width="5"/>
+    <path d="M1222 917 h40" stroke-width="5" opacity="0.7"/>
+    <path d="M1300 912 h34" stroke-width="5" opacity="0.45"/>
+    <path d="M1372 907 h28" stroke-width="5" opacity="0.25"/>
+  </g>
+
+  <!-- ═══════ 桌子 ═══════ -->
+  <g filter="url(#ink)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M232 812 h700 l-26 30 h-648 z" stroke="#b8b6a9" stroke-width="7"/>
+    <path d="M290 842 v190" stroke="#b8b6a9" stroke-width="7"/>
+    <path d="M868 842 v190" stroke="#b8b6a9" stroke-width="7"/>
+    <g stroke="#403e38" stroke-width="2.2">
+      <path d="M306 862 l64 58"/><path d="M348 862 l64 58"/><path d="M390 862 l64 58"/>
+      <path d="M432 862 l64 58"/><path d="M474 862 l64 58"/><path d="M516 862 l64 58"/>
+      <path d="M558 862 l64 58"/><path d="M600 862 l64 58"/><path d="M642 862 l64 58"/>
+      <path d="M684 862 l64 58"/><path d="M726 862 l64 58"/><path d="M768 862 l64 58"/>
+      <path d="M810 862 l64 58"/>
+    </g>
+  </g>
+
+  <!-- ═══════ 人：剪影。塌肩、低头、一手撑额 ═══════ -->
+  <g filter="url(#ink)">
+    <!-- 躯干 + 塌下去的背 -->
+    <path d="M356 812
+             C 344 720, 350 638, 388 586
+             C 404 562, 436 552, 468 560
+             C 512 570, 540 606, 552 660
+             C 566 722, 566 772, 560 812 Z"
+          fill="#e6e3d6"/>
+    <!-- 头，向前低垂 -->
+    <path d="M470 556
+             a66 66 0 1 1 -4 -128
+             a66 66 0 0 1 4 128 Z"
+          fill="#e6e3d6"/>
+    <!-- 撑着额头的手臂：从肩到肘再折回额头 -->
+    <path d="M548 640
+             C 606 662, 632 620, 610 566
+             C 596 532, 560 496, 524 480
+             L 500 512
+             C 536 528, 562 552, 570 578
+             C 578 606, 562 622, 528 606 Z"
+          fill="#e6e3d6"/>
+    <!-- 另一只手臂：垂着，搭在桌面，没有伸向门 -->
+    <path d="M362 660
+             C 396 700, 452 754, 520 796
+             L 508 820
+             C 434 786, 376 730, 344 690 Z"
+          fill="#e6e3d6"/>
+    <!-- 头发 -->
+    <path d="M406 466
+             C 414 424, 462 406, 498 424
+             C 528 438, 534 470, 524 486
+             C 512 458, 470 442, 434 458
+             C 420 464, 410 470, 406 466 Z"
+          fill="#8d8b82"/>
+    <!-- 背上的褶皱：亮底上的暗线 -->
+    <g fill="none" stroke="#8d8b82" stroke-width="2.6" stroke-linecap="round">
+      <path d="M378 646 q30 16 54 10"/>
+      <path d="M368 692 q34 18 62 10"/>
+      <path d="M364 738 q36 18 66 8"/>
+      <path d="M366 782 q36 16 68 6"/>
+    </g>
+  </g>
+
+  <!-- ═══════ 笔记本：屏幕上是真实原话 ═══════ -->
+  <g filter="url(#ink2)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M614 566 h336 v240 h-336 z" stroke="#b8b6a9" stroke-width="5"/>
+    <path d="M596 806 h372 l16 16 h-404 z" stroke="#b8b6a9" stroke-width="5"/>
+  </g>
+  <rect x="626" y="578" width="312" height="216" fill="#0c0c08"/>
+  <text x="648" y="620" font-family="'SF Mono',Menlo,monospace" font-size="18" fill="#6f6d66">2026-08-15 15:22</text>
+  <text x="648" y="672" font-family="-apple-system,'PingFang SC',sans-serif" font-size="25" fill="#ece9dd">越来越不肯行动</text>
+  <text x="648" y="712" font-family="-apple-system,'PingFang SC',sans-serif" font-size="25" fill="#ece9dd">处于失败边缘</text>
+  <path d="M648 740 h250" fill="none" stroke="#c9a24a" stroke-width="2.5"/>
+  <text x="648" y="776" font-family="-apple-system,'PingFang SC',sans-serif" font-size="20" fill="#6f6d66">又改了一版，还是没发</text>
+
+  <!-- ═══════ 脚边的废稿：真正揉皱的纸 ═══════ -->
+  <g filter="url(#ink2)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#8d8b82">
+    <g stroke-width="4">
+      <path d="M120 966 l40 -30 l46 8 l26 -18 l38 26 l-8 40 l18 30 l-44 18 l-52 -6 l-40 -22 l6 -26 z"/>
+      <path d="M166 944 l30 22 l-16 30"/><path d="M196 966 l42 -6"/>
+    </g>
+    <g stroke-width="4">
+      <path d="M300 1024 l36 -28 l42 8 l24 -16 l34 24 l-6 36 l16 26 l-40 16 l-48 -6 l-36 -20 l6 -22 z"/>
+      <path d="M342 1004 l26 20 l-14 26"/>
+    </g>
+    <g stroke-width="3.6">
+      <path d="M556 992 l32 -24 l38 6 l20 -14 l30 22 l-6 32 l14 22 l-36 14 l-42 -6 l-32 -16 l6 -20 z"/>
+      <path d="M594 974 l24 18 l-12 24"/>
+    </g>
+    <g stroke-width="3.4" opacity="0.7">
+      <path d="M700 1042 l28 -22 l34 6 l18 -12 l26 18 l-4 28 l12 20 l-32 12 l-38 -4 l-28 -16 z"/>
+    </g>
+    <g stroke-width="3.4" opacity="0.55">
+      <path d="M22 1036 l28 -22 l34 6 l18 -12 l26 18 l-4 28 l12 20 l-32 12 l-38 -4 l-28 -16 z"/>
+    </g>
+  </g>
+
+  <!-- ═══════ 头顶：反复打转 ═══════ -->
+  <g filter="url(#ink2)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#c9a24a" stroke-width="5">
+    <path d="M348 330 C 316 250, 420 202, 508 234 C 592 264, 606 344, 540 380 C 482 412, 396 386, 372 336"/>
+    <path d="M384 288 l-24 40 l-42 -22"/>
+  </g>
+  <text x="700" y="268" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#8d8b82">改稿 → 不满意 → 再改</text>
+
+  <!-- ═══════ 日历：十天划掉 ═══════ -->
+  <g filter="url(#ink2)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1120 120 h300 v190 h-300 z" stroke="#8d8b82" stroke-width="4.5"/>
+    <path d="M1120 172 h300" stroke="#8d8b82" stroke-width="4.5"/>
+    <path d="M1180 120 v-24" stroke="#8d8b82" stroke-width="4.5"/>
+    <path d="M1360 120 v-24" stroke="#8d8b82" stroke-width="4.5"/>
+    <g stroke="#6f6d66" stroke-width="3.2">
+      <path d="M1152 208 l32 30"/><path d="M1184 208 l-32 30"/>
+      <path d="M1218 208 l32 30"/><path d="M1250 208 l-32 30"/>
+      <path d="M1284 208 l32 30"/><path d="M1316 208 l-32 30"/>
+      <path d="M1350 208 l32 30"/><path d="M1382 208 l-32 30"/>
+      <path d="M1152 262 l32 30"/><path d="M1184 262 l-32 30"/>
+      <path d="M1218 262 l32 30"/><path d="M1250 262 l-32 30"/>
+      <path d="M1284 262 l32 30"/><path d="M1316 262 l-32 30"/>
+    </g>
+    <circle cx="1366" cy="277" r="27" stroke="#c9a24a" stroke-width="4"/>
+  </g>
+  <text x="1270" y="158" font-family="-apple-system,'PingFang SC',sans-serif" font-size="26" fill="#8d8b82" text-anchor="middle">08-09 → 08-18</text>
+
+  <text x="960" y="1058" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#8d8b82" text-anchor="middle">骨架半天就搭完了 · 第一篇拖了一周多</text>
+</svg>
