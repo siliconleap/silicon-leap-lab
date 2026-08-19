@@ -54,6 +54,23 @@ def run(cmd, **kw):
     return subprocess.run(cmd, check=True, capture_output=True, text=True, **kw)
 
 
+def run_retry(cmd, timeout=90, tries=3, **kw):
+    """macOS 的 say 偶尔会挂住不返回——连着调十几次就可能遇上一次。
+
+    单独重跑同一句永远是好的, 所以这不是文本的问题, 不用去改旁白。杀掉重试
+    即可, 但必须有上限: 静默重试到天荒地老比失败更难查。
+    """
+    for i in range(1, tries + 1):
+        try:
+            return subprocess.run(
+                cmd, check=True, capture_output=True, text=True, timeout=timeout, **kw
+            )
+        except subprocess.TimeoutExpired:
+            if i == tries:
+                die(f"{cmd[0]} 连续 {tries} 次超时 (每次 {timeout}s), 放弃")
+            print(f"    {cmd[0]} 超时, 重试 {i}/{tries - 1}", file=sys.stderr)
+
+
 def parse_scenes(path):
     """解析 scenes.md。格式约定写在模板里, 这里只认那一种。"""
     scenes = []
@@ -102,10 +119,11 @@ def parse_scenes(path):
             continue
 
         if field == "旁白":
-            if line.strip():
+            # 旁白一直收到下一个 `**字段：**` 或下一个 scene 为止。空行是段落
+            # 分隔, 不是结束标记——按空行结束会把多段旁白截成第一段, 而配音
+            # 短了半截是很难看出来的, 只有时长明显偏短才露馅。
+            if line.strip() and line.strip() != "---":
                 cur["旁白"] = (cur["旁白"] + "\n" + line.strip()).strip()
-            elif cur["旁白"]:
-                field = None
 
     if cur:
         scenes.append(cur)
@@ -207,8 +225,11 @@ def make_clip(shot, dur, out, size):
                "-vf", f"{pad},tpad=stop_mode=clone:stop_duration={dur}"]
     else:
         cmd = ["ffmpeg", "-y", "-loop", "1", "-i", str(shot), "-vf", pad]
-    cmd += ["-t", f"{dur:.3f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out)]
-    run(cmd)
+    # 画面基本是静止的, stillimage + veryfast 能把编码时间压掉一个量级,
+    # 而这种素材看不出画质差别。
+    cmd += ["-t", f"{dur:.3f}", "-c:v", "libx264", "-preset", "veryfast",
+            "-tune", "stillimage", "-pix_fmt", "yuv420p", str(out)]
+    run_retry(cmd, timeout=180)
 
 
 def main(argv):
@@ -260,7 +281,7 @@ def main(argv):
     print("\n配音…")
     for s in scenes:
         wav = build / "audio" / f"{s['id']}.aiff"
-        run(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]])
+        run_retry(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]], timeout=60)
         s["duration"] = duration(wav)
         print(f"  {s['id']}  {s['duration']:6.2f}s")
 
