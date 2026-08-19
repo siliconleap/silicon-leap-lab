@@ -9,6 +9,16 @@ recordings, and code stay together with the write-up.
 This is a monorepo on purpose. Experiments cross-reference each other — structural comparison
 across runs is the point, not each run in isolation.
 
+## What these are, and what they are not
+
+Every experiment here is something actually run. Failures are real failures, timings come from
+records rather than estimates, and quoted lines carry timestamps you can look up. When something
+could not be done, that is what gets written down.
+
+These are not roundups of best practices collected from the internet, and not a toolkit dressed
+up as a product. The value is in the accumulation — what was tried, what broke, what the judgement
+was at the time.
+
 ## Experiments
 
 | Date | Experiment | Status |
