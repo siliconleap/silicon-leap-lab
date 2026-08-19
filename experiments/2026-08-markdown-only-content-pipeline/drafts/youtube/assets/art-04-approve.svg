@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <filter id="hand" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#1a1a19"/>
+
+  <!-- ============ 左：散乱的输入 ============ -->
+  <g filter="url(#hand)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#898781" stroke-width="4">
+    <rect x="96" y="300" width="104" height="74" rx="7" transform="rotate(-13 148 337)"/>
+    <rect x="228" y="248" width="92" height="66" rx="7" transform="rotate(8 274 281)"/>
+    <rect x="112" y="452" width="98" height="70" rx="7" transform="rotate(5 161 487)"/>
+    <rect x="236" y="430" width="86" height="62" rx="7" transform="rotate(-9 279 461)"/>
+    <rect x="150" y="596" width="100" height="72" rx="7" transform="rotate(11 200 632)"/>
+    <circle cx="330" cy="370" r="19"/>
+    <circle cx="118" cy="590" r="15"/>
+    <path d="M300 540 l44 -25 l44 25 l-44 25 z"/>
+  </g>
+  <text x="230" y="770" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#898781" text-anchor="middle">一句话选题 · 零散的想法</text>
+
+  <!-- ============ AI 处理 ============ -->
+  <g filter="url(#hand)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#3987e5" stroke-width="6">
+      <path d="M420 470 h108"/><path d="M498 442 l38 28 l-38 28"/>
+    </g>
+    <!-- AI：芯片 -->
+    <g stroke="#c3c2b7" stroke-width="6">
+      <rect x="566" y="392" width="156" height="156" rx="16"/>
+      <path d="M604 392 v-30"/><path d="M644 392 v-30"/><path d="M684 392 v-30"/>
+      <path d="M604 548 v30"/><path d="M644 548 v30"/><path d="M684 548 v30"/>
+      <path d="M566 430 h-30"/><path d="M566 470 h-30"/><path d="M566 510 h-30"/>
+      <path d="M722 430 h30"/><path d="M722 470 h30"/><path d="M722 510 h30"/>
+    </g>
+    <g stroke="#3987e5" stroke-width="5">
+      <path d="M624 452 l20 -26 l20 26 l26 18 l-26 18 l-20 26 l-20 -26 l-26 -18 z"/>
+    </g>
+    <g stroke="#3987e5" stroke-width="6">
+      <path d="M760 470 h108"/><path d="M838 442 l38 28 l-38 28"/>
+    </g>
+  </g>
+  <text x="644" y="640" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#898781" text-anchor="middle">半天</text>
+
+  <!-- ============ 右：结构完整的产物 ============ -->
+  <g filter="url(#hand)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 后两张纸露在后面，构成一叠 -->
+    <g stroke="#c3c2b7" stroke-width="5" opacity="0.28">
+      <path d="M1024 306 h150 l38 42 v300 a10 10 0 0 1 -10 10 h-178 a10 10 0 0 1 -10 -10 v-332 a10 10 0 0 1 10 -10 z"/>
+    </g>
+    <g stroke="#c3c2b7" stroke-width="5" opacity="0.5">
+      <path d="M1002 278 h150 l38 42 v300 a10 10 0 0 1 -10 10 h-178 a10 10 0 0 1 -10 -10 v-332 a10 10 0 0 1 10 -10 z"/>
+    </g>
+    <g stroke="#c3c2b7" stroke-width="5">
+      <path d="M980 250 h150 l38 42 v300 a10 10 0 0 1 -10 10 h-178 a10 10 0 0 1 -10 -10 v-332 a10 10 0 0 1 10 -10 z"/>
+      <path d="M1130 250 v42 h38"/>
+    </g>
+    <g stroke="#0ca30c" stroke-width="4">
+      <path d="M1010 348 h108"/><path d="M1010 396 h130"/><path d="M1010 444 h96"/><path d="M1010 492 h122"/>
+    </g>
+  </g>
+  <text x="1075" y="700" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#898781" text-anchor="middle">分步流程 · 硬约束 · 验收标准</text>
+
+  <!-- ============ 终端窗口：真实原话 ============ -->
+  <g>
+    <rect x="1250" y="292" width="590" height="256" rx="14" fill="#111110" stroke="#3a3a37" stroke-width="3"/>
+    <rect x="1250" y="292" width="590" height="46" rx="14" fill="#232320"/>
+    <rect x="1250" y="326" width="590" height="12" fill="#232320"/>
+    <circle cx="1282" cy="315" r="8" fill="#d03b3b"/>
+    <circle cx="1310" cy="315" r="8" fill="#fab219"/>
+    <circle cx="1338" cy="315" r="8" fill="#0ca30c"/>
+    <text x="1520" y="322" font-family="'SF Mono',Menlo,monospace" font-size="20" fill="#898781" text-anchor="middle">2026-08-09 07:11:50</text>
+    <text x="1284" y="404" font-family="'SF Mono',Menlo,monospace" font-size="27" fill="#0ca30c">›</text>
+    <text x="1316" y="404" font-family="-apple-system,'PingFang SC',sans-serif" font-size="27" fill="#ffffff">可以，写出来，</text>
+    <text x="1316" y="446" font-family="-apple-system,'PingFang SC',sans-serif" font-size="27" fill="#ffffff">后续软链我想办法建</text>
+    <rect x="1316" y="476" width="15" height="28" fill="#3987e5"/>
+  </g>
+
+  <!-- ============ 人：一句话就批准了 ============ -->
+  <g filter="url(#hand)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#c3c2b7" stroke-width="6">
+    <circle cx="1545" cy="668" r="42"/>
+    <path d="M1478 800 a67 67 0 0 1 134 0"/>
+    <!-- 竖起大拇指 -->
+    <path d="M1612 758 l44 -26"/>
+    <path d="M1656 758 v-42 a16 16 0 0 1 32 0 v42 a12 12 0 0 1 -12 12 h-42 a12 12 0 0 1 -12 -12 v-14 z"/>
+  </g>
+  <text x="1545" y="880" font-family="-apple-system,'PingFang SC',sans-serif" font-size="30" fill="#c3c2b7" text-anchor="middle">一句话，批准</text>
+  <text x="1545" y="928" font-family="-apple-system,'PingFang SC',sans-serif" font-size="26" fill="#d03b3b" text-anchor="middle">而我并不理解它内部怎么跑</text>
+</svg>

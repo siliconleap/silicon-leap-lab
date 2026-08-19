@@ -10,9 +10,9 @@ translations:
   zh: markdown-only-content-pipeline-zh
 ---
 
-The starting condition is common enough to be boring: you follow the field, you have opinions worth writing down, and you publish nothing. Tools get compared. Approaches get researched. Best practices get collected. Nothing ships.
+My own starting condition, and I suspect it is not just mine: you follow the field, you have opinions worth writing down, and you publish nothing. Tools get compared. Approaches get researched. Best practices get collected. Nothing ships.
 
-The fix I settled on was a container — treat every idea worth trying as an *experiment*: one directory, one record, one public write-up. And the first experiment was to build the recording machinery itself, using an agent.
+The fix I settled on was a container: treat every idea worth trying as an *experiment*, one directory, one record, one public write-up. And the first experiment was to build the recording machinery itself, using an agent.
 
 The pipeline skeleton took half a day. The first draft then took more than a week to become something I was willing to publish.
 
@@ -20,7 +20,7 @@ That week was not a coding outage. The draft looked complete, but felt empty; ea
 
 ## The question
 
-Can a content pipeline run on nothing but Markdown conventions and Claude Code skills — no n8n, no Coze, no Dify, no server, no database?
+Can a content pipeline run on nothing but Markdown conventions and Claude Code skills, with no n8n, no Coze, no Dify, no server, no database?
 
 The answer to that narrow question is yes, and it is the least interesting result here.
 
@@ -42,7 +42,7 @@ Two skills: `experiment-plan` turns a one-line topic into a runnable experiment 
 
 The generated skill had frontmatter, a numbered flow, a hard-constraints list, and an acceptance checklist. Approving it took one sentence.
 
-Running it produced the failure. The Xiaohongshu draft was unreadable — not wrong, just dead. Tracing it back, the template hardcoded a three-part list skeleton: *Results / What worked / What went wrong*.
+Running it produced the failure. The Xiaohongshu draft was unreadable. Not wrong, just dead. Tracing it back, the template hardcoded a three-part list skeleton: *Results / What worked / What went wrong*.
 
 In a different file of the same configuration sat this line:
 
@@ -61,7 +61,7 @@ The useful change is therefore operational, not a claim about model limits: put 
 ## What that looked like in practice
 
 - A seven-item anti-AI-tone list: canned section headings, benefit lists, buzzwords, "first/second/finally" scaffolding, degree words with no data behind them, universal sign-offs.
-- A required narrative arc — shared situation → what was done → what it hit → what was learned — added to the distillation step, so a record with only the middle beat is caught as a log dump.
+- A required narrative arc (shared situation → what was done → what it hit → what was learned) added to the distillation step, so a record with only the middle beat is caught as a log dump.
 - The Xiaohongshu template rewritten from a list skeleton back into narrative structure.
 - Determinism pushed down into shell scripts: directory scaffolding, validation, image rendering.
 - A maximum of three independent review-and-revision rounds. Reviewers score factual traceability, conclusion support, logic, readability, platform fit, and the disclosed human work; a draft that misses the gate is marked not publish-ready.
@@ -69,7 +69,7 @@ The useful change is therefore operational, not a claim about model limits: put 
 ![Three layers of responsibility: script for deterministic work, agent for inferable drafting, human for actual decisions.](assets/02-layers.png)
 *Determinism belongs in scripts. What remains is what a human actually has to decide.*
 
-That last one is the durable part. A validation script now checks the deterministic invariants — heading text matches the parser interface verbatim, no empty cells in the step table, every relative link in `drafts/` resolves. Its first run caught four dead links that had previously only surfaced through manual review.
+That last one is the durable part. A validation script now checks the deterministic invariants: heading text matches the parser interface verbatim, no empty cells in the step table, every relative link in `drafts/` resolves. Its first run caught four dead links that had previously only surfaced through manual review.
 
 Images follow the same principle: HTML source is committed and diffable, PNGs are build products rendered by headless Chrome. No additional install.
 
@@ -87,20 +87,28 @@ The missing evidence matters: the original terminal output for the four dead lin
 | Identity-isolation scenarios verified | 3 / 3 | `includeIf` test |
 | Platform-tool dependencies | 0 | no n8n / Coze / Dify |
 | From starting to being willing to publish | more than one week; exact hours not recorded | author supplement, 2026-08-15 |
-| Screen recordings | 0 | known gap |
+| Screen recordings | 0 (process evidence came from the session log instead: 105 human turns) | `notes/session-timeline.md` |
 | Wall-clock time, token usage | not recorded | see caveats |
 
 ## Caveats
 
-This record is retroactive. `plan.md` was reconstructed after the run, so the "expected counterintuitive finding" section had to be replaced with actual findings — a prediction written after the fact is worth nothing.
+This record is retroactive. `plan.md` was reconstructed after the run, so the "expected counterintuitive finding" section had to be replaced with actual findings. A prediction written after the fact is worth nothing.
 
-No timing or token data was captured, and `--reset-author` overwrote the commit timestamps, so git history cannot substitute for it. There are no recordings: `asciinema` was never installed on this machine, and more fundamentally, the work happens as a conversation with an agent rather than as hand-typed commands, so there is no "human operating a terminal" to record. The real process record is the conversation, and this run did not preserve it as source material.
+No timing or token data was captured, and `--reset-author` overwrote the commit timestamps, so git history cannot substitute for it. There are no recordings: `asciinema` was never installed on this machine, and more fundamentally, the work happens as a conversation with an agent rather than as hand-typed commands, so there is no "human operating a terminal" to record. The real process record is the conversation, and it was recovered after the fact: 105 human turns, timestamped from 08-08 to 08-18.
+
+Video was written off as impossible during the run, and that call was wrong. Recordings were indeed zero, but the missing piece was footage, not assembly: assembly is deterministic, so scenes go in as plain text, narration goes through TTS, images are laid out against the narration length, and the narration doubles as subtitles. The first cut runs 4 minutes 24 seconds at 1920x1080 with 60 subtitle lines, built entirely from session-log cards, structure diagrams, and data cards.
 
 Zero platform-tool dependencies are not zero publishing cost. Account registration and maintenance, real screenshots, author sign-off, mobile preview, layout, publishing, and comment handling are all human work. None of those actions have been performed or verified by this content package.
 
 ## Conclusion
 
-TODO — author's take is drafted but not finalized. See the experiment README.
+All three criteria held, but none of them held automatically. The front stage turns a one-line topic into a runnable experiment directory, the back stage produces genuinely different packages per platform, and platform-tool dependencies stayed at zero. Every judgment in between was mine: which gap was worth closing, why a draft read dead, which quote to keep, how far the conclusion could go. The system does not remove the human. It moves the human out of the deterministic work.
+
+An agent is fast, but an ordinary prompt buys an ordinary result. Mediocrity is not a property of the model, it is the default: with no explicit constraint, generation returns to the mean, and the mean is mediocre. A bigger model just returns a more polished mean. What works is writing the refusal of mediocrity into the instructions themselves, item by item, including why. The polishing happens to the instructions, not to the output.
+
+And what actually blocked me was not the agent. The skeleton took half a day; the first piece took more than a week. So the lesson is one line: do not demand perfection, do not settle for mediocrity. Both ends fail. Demand perfection and you never publish; settle for mediocrity and nobody reads what you publish.
+
+Boundary: sample size is one. This run shows only that the generation did not surface a cross-file contradiction on its own and could not decide whether the text was worth publishing. It says nothing about all models, and it does not imply that switching models is useless.
 
 ## Reproduce
 

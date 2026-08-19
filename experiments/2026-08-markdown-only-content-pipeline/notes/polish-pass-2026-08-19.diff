@@ -1,0 +1,240 @@
+diff --git a/experiments/2026-08-markdown-only-content-pipeline/drafts/github/readme-section.md b/experiments/2026-08-markdown-only-content-pipeline/drafts/github/readme-section.md
+index c8feedd..db9de38 100644
+--- a/experiments/2026-08-markdown-only-content-pipeline/drafts/github/readme-section.md
++++ b/experiments/2026-08-markdown-only-content-pipeline/drafts/github/readme-section.md
+@@ -2,7 +2,7 @@
+ 
+ **Status:** record complete; content package not publish-ready · **Date:** 2026-08-09
+ 
+-**Question:** Can a content pipeline run on Markdown conventions and Claude Code skills — no n8n, Coze, Dify, server, or database?
++**Question:** Can a content pipeline run on Markdown conventions and Claude Code skills, with no n8n, Coze, Dify, server, or database?
+ 
+ For this run, yes: `experiment-plan` produced the experiment structure and `content-forge` produced per-platform drafts. Here, a Claude Code **agent** means the workflow that assists with drafting and deterministic steps; it does not confirm facts or make publishing decisions.
+ 
+diff --git a/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog-zh.md b/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog-zh.md
+index 244fb82..746b00b 100644
+--- a/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog-zh.md
++++ b/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog-zh.md
+@@ -3,7 +3,7 @@ title: "半天搭好流水线，第一篇却卡了一周多"
+ date: 2026-08-09
+ slug: markdown-only-content-pipeline-zh
+ tags: [claude-code, ai-agents, content-pipeline, tooling, workflow]
+-summary: "流水线骨架半天搭完，第一篇内容却让我拖了一周多。问题不只是 AI 初稿平淡，而是缺少事实核验、写作审核和人工发布环节。"
++summary: "流水线骨架半天搭完，第一篇内容却让我拖了一周多。拖住我的是事实核验、写作审核和人工发布这几个环节。"
+ experiment: 2026-08-markdown-only-content-pipeline
+ lang: zh
+ translationOf: markdown-only-content-pipeline
+@@ -15,9 +15,9 @@ translationOf: markdown-only-content-pipeline
+ 
+ 这不只发生在 AI 领域。很多人想学技能、做项目或改变习惯时，也会卡在同一处：知道得更多，第一步却迟迟没有开始。
+ 
+-我本来以为，AI 时代至少能让这些基础步骤不再是主要拦路虎。于是换了个办法：给「想试的东西」找一个容器。每件事都当成一次实验——一个目录，一份记录，一次公开。
++我本来以为，AI 时代至少能让这几步变简单。于是换了个办法：给「想试的东西」找一个容器。每件事都当成一次实验——一个目录，一份记录，一次公开。
+ 
+-而第一个实验，就是用 AI 把这套记录机制本身做出来。
++第一个实验就是用 AI 把这套记录机制本身做出来。
+ 
+ 半天搭完的是流水线骨架。第一篇内容却让我拖了一周多，还是不愿意发。
+ 
+@@ -67,7 +67,7 @@ translationOf: markdown-only-content-pipeline
+ 
+ 我查了这台机器。rsvg-convert、ImageMagick、wkhtmltoimage，一个都没装。
+ 
+-这条规则从写下的那天起，就没有执行的可能。它读起来完全合理，也确实符合「纯文本、可版本控制」的设计目标，唯独没人确认过这台机器上有没有渲染器。
++这条规则从写下的那天起就没有执行的可能。它读起来合理，也符合「纯文本、可版本控制」的目标，唯独没人确认过这台机器上有没有渲染器。
+ 
+ ## 这次能说明什么，不能说明什么
+ 
+@@ -75,7 +75,7 @@ translationOf: markdown-only-content-pipeline
+ 
+ 它只证明了两件具体的事：这次生成没有发现两个本地文件互相矛盾；它也无法替我判断一篇文案是否值得发。
+ 
+-所以把打磨放进流程，而不是把初稿当成成品。初稿先过事实、结论边界、逻辑、可读性和平台适配的独立审核；最多改三轮，仍不达标就标成「不可发布」。
++所以把打磨放进流程，别把初稿当成品。初稿先过一轮独立审核，看事实、结论边界、逻辑、可读性和平台适配；最多改三轮，仍不达标就标成「不可发布」。
+ 
+ ## 拿到了什么
+ 
+@@ -92,7 +92,7 @@ translationOf: markdown-only-content-pipeline
+ 
+ 更管用的是把确定性的部分沉进脚本。目录骨架、七段标题、校验、配图渲染，这些不需要判断，交给 shell 脚本。剩下要判断的才归 agent，最后真正要拍板的才归人。
+ 
+-校验脚本写完第一次跑，抓出四处死链。此前那是人工 review 才发现的。
++校验脚本写完第一次跑就抓出四处死链，此前这类问题得人工 review 才看得见。
+ 
+ 配图链路最后落在 HTML 渲染成 PNG，用系统自带的 Chrome，零额外安装。HTML 进 git、可 diff，PNG 是产物。
+ 
+@@ -114,7 +114,7 @@ translationOf: markdown-only-content-pipeline
+ 
+ ## 哪些能复制，哪些不能
+ 
+-这是本次采用的流程设计判断：把确定性沉进脚本，把「不要什么」写进指令。换模型、题目或渠道后是否仍然有效，需要另行验证。
++这次的做法是把确定性沉进脚本，把「不要什么」写进指令。换模型、换题目、换渠道还成不成立，得另外验证。
+ 
+ 不能复制的是这次的具体产物。平台配置照着这几个渠道写的，换个渠道要重写。
+ 
+diff --git a/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog.md b/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog.md
+index 8d8958e..4ae03de 100644
+--- a/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog.md
++++ b/experiments/2026-08-markdown-only-content-pipeline/drafts/site/blog.md
+@@ -12,7 +12,7 @@ translations:
+ 
+ The starting condition is common enough to be boring: you follow the field, you have opinions worth writing down, and you publish nothing. Tools get compared. Approaches get researched. Best practices get collected. Nothing ships.
+ 
+-The fix I settled on was a container — treat every idea worth trying as an *experiment*: one directory, one record, one public write-up. And the first experiment was to build the recording machinery itself, using an agent.
++The fix I settled on was a container: treat every idea worth trying as an *experiment*, one directory, one record, one public write-up. And the first experiment was to build the recording machinery itself, using an agent.
+ 
+ The pipeline skeleton took half a day. The first draft then took more than a week to become something I was willing to publish.
+ 
+@@ -20,7 +20,7 @@ That week was not a coding outage. The draft looked complete, but felt empty; ea
+ 
+ ## The question
+ 
+-Can a content pipeline run on nothing but Markdown conventions and Claude Code skills — no n8n, no Coze, no Dify, no server, no database?
++Can a content pipeline run on nothing but Markdown conventions and Claude Code skills, with no n8n, no Coze, no Dify, no server, no database?
+ 
+ The answer to that narrow question is yes, and it is the least interesting result here.
+ 
+@@ -42,7 +42,7 @@ Two skills: `experiment-plan` turns a one-line topic into a runnable experiment
+ 
+ The generated skill had frontmatter, a numbered flow, a hard-constraints list, and an acceptance checklist. Approving it took one sentence.
+ 
+-Running it produced the failure. The Xiaohongshu draft was unreadable — not wrong, just dead. Tracing it back, the template hardcoded a three-part list skeleton: *Results / What worked / What went wrong*.
++Running it produced the failure. The Xiaohongshu draft was unreadable. Not wrong, just dead. Tracing it back, the template hardcoded a three-part list skeleton: *Results / What worked / What went wrong*.
+ 
+ In a different file of the same configuration sat this line:
+ 
+@@ -61,7 +61,7 @@ The useful change is therefore operational, not a claim about model limits: put
+ ## What that looked like in practice
+ 
+ - A seven-item anti-AI-tone list: canned section headings, benefit lists, buzzwords, "first/second/finally" scaffolding, degree words with no data behind them, universal sign-offs.
+-- A required narrative arc — shared situation → what was done → what it hit → what was learned — added to the distillation step, so a record with only the middle beat is caught as a log dump.
++- A required narrative arc (shared situation → what was done → what it hit → what was learned) added to the distillation step, so a record with only the middle beat is caught as a log dump.
+ - The Xiaohongshu template rewritten from a list skeleton back into narrative structure.
+ - Determinism pushed down into shell scripts: directory scaffolding, validation, image rendering.
+ - A maximum of three independent review-and-revision rounds. Reviewers score factual traceability, conclusion support, logic, readability, platform fit, and the disclosed human work; a draft that misses the gate is marked not publish-ready.
+@@ -69,7 +69,7 @@ The useful change is therefore operational, not a claim about model limits: put
+ ![Three layers of responsibility: script for deterministic work, agent for inferable drafting, human for actual decisions.](assets/02-layers.png)
+ *Determinism belongs in scripts. What remains is what a human actually has to decide.*
+ 
+-That last one is the durable part. A validation script now checks the deterministic invariants — heading text matches the parser interface verbatim, no empty cells in the step table, every relative link in `drafts/` resolves. Its first run caught four dead links that had previously only surfaced through manual review.
++That last one is the durable part. A validation script now checks the deterministic invariants: heading text matches the parser interface verbatim, no empty cells in the step table, every relative link in `drafts/` resolves. Its first run caught four dead links that had previously only surfaced through manual review.
+ 
+ Images follow the same principle: HTML source is committed and diffable, PNGs are build products rendered by headless Chrome. No additional install.
+ 
+@@ -92,7 +92,7 @@ The missing evidence matters: the original terminal output for the four dead lin
+ 
+ ## Caveats
+ 
+-This record is retroactive. `plan.md` was reconstructed after the run, so the "expected counterintuitive finding" section had to be replaced with actual findings — a prediction written after the fact is worth nothing.
++This record is retroactive. `plan.md` was reconstructed after the run, so the "expected counterintuitive finding" section had to be replaced with actual findings. A prediction written after the fact is worth nothing.
+ 
+ No timing or token data was captured, and `--reset-author` overwrote the commit timestamps, so git history cannot substitute for it. There are no recordings: `asciinema` was never installed on this machine, and more fundamentally, the work happens as a conversation with an agent rather than as hand-typed commands, so there is no "human operating a terminal" to record. The real process record is the conversation, and this run did not preserve it as source material.
+ 
+@@ -100,7 +100,7 @@ Zero platform-tool dependencies are not zero publishing cost. Account registrati
+ 
+ ## Conclusion
+ 
+-TODO — author's take is drafted but not finalized. See the experiment README.
++TODO: the author's take is drafted but not finalized. See the experiment README.
+ 
+ ## Reproduce
+ 
+diff --git a/experiments/2026-08-markdown-only-content-pipeline/drafts/wechat/article.md b/experiments/2026-08-markdown-only-content-pipeline/drafts/wechat/article.md
+index ae47ed2..5773860 100644
+--- a/experiments/2026-08-markdown-only-content-pipeline/drafts/wechat/article.md
++++ b/experiments/2026-08-markdown-only-content-pipeline/drafts/wechat/article.md
+@@ -12,7 +12,7 @@
+ 
+ ## 摘要
+ 
+-流水线骨架半天搭完，第一篇内容却让我拖了一周多。问题不只是初稿平淡，而是缺少事实核验、编辑判断和人工发布环节。
++流水线骨架半天搭完，第一篇内容却让我拖了一周多。拖住我的是事实核验、编辑判断和人工发布这几个环节。
+ 
+ ## 正文
+ 
+@@ -28,7 +28,7 @@
+ 
+ 这不只发生在 AI 领域。很多人想学技能、做项目或改变习惯时，也会卡在这里：知道得更多，第一步却迟迟没有开始。
+ 
+-我本来以为，AI 时代至少能把这些基础步骤的门槛降下来。
++我本来以为，AI 时代至少能让这几步变简单。
+ 
+ ### 初稿为什么会读不下去
+ 
+@@ -41,7 +41,7 @@
+ ![](assets/01-contradiction.png)
+ *图 1：平台配置与旧模板的矛盾，来源为本次实验的两个文件。*
+ 
+-两个文件分开读都没有问题；只有真的跑出一篇文案，才发现读者没有进入故事的入口。
++两个文件分开读都没问题，跑出一篇文案才看得出来：读者根本进不去。
+ 
+ ### 这次能说明什么，不能说明什么
+ 
+@@ -53,13 +53,13 @@
+ 
+ ### 把编辑判断放进流程
+ 
+-这次改的不只是模板，而是交付顺序。
++这次动的是交付顺序，不只是模板。
+ 
+ 实验前先确认背景、读者、已知困难和叙事骨架。实验后不直接写长文，先写一份短内容简报：发生了什么、重要困难、作者观点、意外发现和结论边界。
+ 
+ 作者确认简报后，才展开成不同平台的稿件。每篇稿件最多经历三轮独立审核和修改：查事实是否可追溯，结论是否由证据支撑，逻辑是否顺，读起来是否像人话，图是否真的帮读者理解。
+ 
+-从 agent 工程的角度看，这也是一种内容实验 harness：它不是另一个模型或平台，而是把实验输入、约束、工具、人工确认和反馈串起来的运行环境。AI agent 负责可推断和可重复的部分；事实、结论与发布仍必须由作者亲自确认。
++换个说法，这是一套内容实验 harness：不是另一个模型或平台，而是把实验输入、约束、工具、人工确认和反馈串起来的运行环境。可推断、可重复的部分交给 AI agent，事实、结论和发布仍由作者自己确认。
+ 
+ 仍不过线，就标成「不可发布」，不再用润色掩盖问题。
+ 
+@@ -68,11 +68,11 @@
+ 
+ ### 自动化不等于没有人工成本
+ 
+-这次有 12 个 skill 文件；初始运行时有 4 个平台配置和 6 个模板，补入微信公众号后是 5 / 7；平台工具依赖为 0；校验脚本首次运行抓到 4 处死链。
++这次有 12 个 skill 文件，初始运行时 4 个平台配置和 6 个模板，补入微信公众号后是 5 / 7，平台工具依赖为 0，校验脚本首次运行抓到 4 处死链。
+ 
+ 但「平台工具依赖为 0」不等于发布成本为 0。账号注册与维护、补真实截图、确认个人观点、手机预览、排版、发布和评论维护，都仍是人工动作。
+ 
+-视频尤其如此。录屏为 0，剪辑、配音和字幕也没有路径；当前只能交付脚本结构，不能称为一条可发布视频。
++视频尤其如此。录屏为 0，剪辑、配音和字幕都没有路径，当前只能交付脚本结构，不是一条能发的视频。
+ 
+ ## 复现
+ 
+diff --git a/experiments/2026-08-markdown-only-content-pipeline/drafts/xiaohongshu/note.md b/experiments/2026-08-markdown-only-content-pipeline/drafts/xiaohongshu/note.md
+index bbd600f..fed2271 100644
+--- a/experiments/2026-08-markdown-only-content-pipeline/drafts/xiaohongshu/note.md
++++ b/experiments/2026-08-markdown-only-content-pipeline/drafts/xiaohongshu/note.md
+@@ -20,13 +20,13 @@
+ 
+ 我以为 AI 至少能把「开始、记录、整理」这些基础步骤变简单。
+ 
+-这里的 AI agent 指协助写初稿和执行确定性检查的工作流，不替我确认事实或决定发布。
++这里说的 AI agent，就是帮我写初稿、跑固定检查的那套东西。事实和发不发，还是我定。
+ 
+ 于是半天，我让 AI 搭好了一条内容流水线。
+ 
+ 一周多，我还是不愿意发第一篇。
+ 
+-问题不在代码。第一篇小红书初稿读起来很完整，却没有一句让我想继续看。
++问题不在代码。第一篇小红书初稿读起来很完整，没有一句让我想继续看。
+ 
+ 我往回翻，发现一个很荒唐的对照：配置文件写着「别陈述完事实就转进列表」；模板却要求「结果 / 有效的 / 踩的坑」三段列表。
+ 
+@@ -39,7 +39,7 @@
+ 
+ 我一边嫌初稿平淡，一边继续加规则、改流程。内容越不满意，越不想开始发布。最后差点又回到最初的状态：读得很多，想得很多，文章一篇没发。
+ 
+-这次我没有把它归因成「模型不够强」。这个样本只能说明：它没有自行发现跨文件矛盾，也没有替我判断这篇值不值得发。
++我没把它算到「模型不够强」头上。这一次只能说明：它没自己发现跨文件的矛盾，也没替我判断这篇值不值得发。
+ 
+ 所以把流程改成了三步：
+ 
+@@ -49,7 +49,7 @@
+ 
+ 还有一个常被省掉的事实：平台工具依赖可以是 0，人工成本不是。注册与维护账号、补真实截图、确认观点、手机预览、排版发布，都还得有人做。
+ 
+-这套流水线能自动化的是初稿和确定性检查。要不要发、发成什么样，还是人的工作。
++这套流水线能自动化的是初稿和固定检查。要不要发、发成什么样，还是人的活。
+ 
+ 完整实验记录和源文件放在评论区 / 主页。
+ 

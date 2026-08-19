@@ -7,10 +7,11 @@
 选项:
     --dry-run       只解析和校验, 不生成任何文件
     --tts ENGINE    say (默认, macOS 自带) | tencent (腾讯云)
-    --voice NAME    say 用音色名, 默认 Tingting；tencent 用 VoiceType 数字, 默认 101016
+    --voice NAME    say 用音色名, 默认 Tingting；tencent 用 VoiceType 数字, 默认 501000
     --rate N        say 的语速, 默认 180 字/分。tencent 不用这项
-    --speed N       tencent 语速, -2~2, 0 是正常, 正数更快。默认 0.5
+    --speed N       tencent 语速, -2~2, 0 是正常, 正数更快。默认 1.0
     --burn          把字幕烧进画面 (需要 libass)。默认只输出外挂 srt
+    --no-motion     关掉 Ken Burns 推拉, 画面完全静止
     --size WxH      输出尺寸, 默认 1920x1080
 
 腾讯云 TTS 需要环境变量 (两种写法都认):
@@ -331,18 +332,56 @@ def make_srt(scenes, out):
     return n
 
 
-def make_clip(shot, dur, out, size):
+def ken_burns(idx, frames, w, h):
+    """给静态图一点缓慢的推拉平移。
+
+    一屏不动的图连着放几分钟, 看起来就是幻灯片。这里的运动幅度刻意很小
+    (最多 8%), 目的是让画面「活着」, 不是炫技——幅度一大, 卡片上的字就
+    开始飘, 反而更难读。
+
+    四种方向轮换, 相邻两个 scene 不会同向, 否则整片像在同一个方向漂。
+    """
+    span = 0.08
+    per = span / max(frames, 1)
+    cx = "iw/2-(iw/zoom/2)"
+    cy = "ih/2-(ih/zoom/2)"
+    moves = [
+        (f"'min(1+{per:.6f}*on,{1 + span})'", cx, cy),                  # 推近
+        (f"'max({1 + span}-{per:.6f}*on,1)'", cx, cy),                  # 拉远
+        (f"'min(1+{per:.6f}*on,{1 + span})'", f"'(iw-iw/zoom)*(on/{max(frames,1)})'", cy),   # 推近 + 右移
+        (f"'min(1+{per:.6f}*on,{1 + span})'", f"'(iw-iw/zoom)*(1-on/{max(frames,1)})'", cy), # 推近 + 左移
+    ]
+    z, x, y = moves[idx % len(moves)]
+    x = x if x.startswith("'") else f"'{x}'"
+    y = y if y.startswith("'") else f"'{y}'"
+    return f"zoompan=z={z}:d={frames}:x={x}:y={y}:s={w}x{h}:fps=24"
+
+
+def make_clip(shot, dur, out, size, idx=0, motion=True):
     """画面铺满配音时长。图片就 loop, 视频短了定格末帧、长了截断。"""
     w, h = size.split("x")
-    pad = (
-        f"scale={w}:{h}:force_original_aspect_ratio=decrease,"
-        f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=#1a1a19,setsar=1,fps=24"
-    )
+    frames = max(1, int(round(dur * 24)))
+    fade = min(0.4, dur / 4)
+    tail = f"fade=t=in:st=0:d={fade:.2f},fade=t=out:st={max(dur - fade, 0):.2f}:d={fade:.2f}"
+
     if shot.suffix.lower() in (".mp4", ".mov", ".webm"):
+        pad = (
+            f"scale={w}:{h}:force_original_aspect_ratio=decrease,"
+            f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=#1a1a19,setsar=1,fps=24"
+        )
         cmd = ["ffmpeg", "-y", "-i", str(shot), "-an",
-               "-vf", f"{pad},tpad=stop_mode=clone:stop_duration={dur}"]
+               "-vf", f"{pad},tpad=stop_mode=clone:stop_duration={dur},{tail}"]
+    elif motion:
+        # zoompan 在原分辨率上做会抖。先放大一倍再采样, 抖动就看不出来了。
+        big = f"scale={int(w) * 2}:{int(h) * 2}:force_original_aspect_ratio=decrease,pad={int(w) * 2}:{int(h) * 2}:(ow-iw)/2:(oh-ih)/2:color=#1a1a19"
+        vf = f"{big},{ken_burns(idx, frames, w, h)},setsar=1,{tail}"
+        cmd = ["ffmpeg", "-y", "-loop", "1", "-i", str(shot), "-vf", vf]
     else:
-        cmd = ["ffmpeg", "-y", "-loop", "1", "-i", str(shot), "-vf", pad]
+        pad = (
+            f"scale={w}:{h}:force_original_aspect_ratio=decrease,"
+            f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=#1a1a19,setsar=1,fps=24"
+        )
+        cmd = ["ffmpeg", "-y", "-loop", "1", "-i", str(shot), "-vf", f"{pad},{tail}"]
     # 画面基本是静止的, stillimage + veryfast 能把编码时间压掉一个量级,
     # 而这种素材看不出画质差别。
     cmd += ["-t", f"{dur:.3f}", "-c:v", "libx264", "-preset", "veryfast",
@@ -363,9 +402,9 @@ def main(argv):
         return argv[argv.index(name) + 1] if name in argv else default
 
     engine = opt("--tts", "say")
-    voice = opt("--voice", "101016" if engine == "tencent" else "Tingting")
+    voice = opt("--voice", "501000" if engine == "tencent" else "Tingting")
     rate = opt("--rate", "180")
-    speed = opt("--speed", "0.5")
+    speed = opt("--speed", "1.0")
     size = opt("--size", "1920x1080")
     if engine not in ("say", "tencent"):
         die(f"--tts 只支持 say / tencent, 收到 '{engine}'")
@@ -420,10 +459,11 @@ def main(argv):
     total = sum(s["duration"] for s in scenes)
     print(f"总时长 {total // 60:.0f}:{total % 60:04.1f}")
 
-    print("\n铺画面…")
-    for s in scenes:
+    motion = "--no-motion" not in argv
+    print(f"\n铺画面（{'带推拉' if motion else '静止'}）…")
+    for i, s in enumerate(scenes):
         clip = build / "clips" / f"{s['id']}.mp4"
-        make_clip(resolve(base, s["画面"]), s["duration"], clip, size)
+        make_clip(resolve(base, s["画面"]), s["duration"], clip, size, i, motion)
         print(f"  {s['id']}  {s['画面']}")
 
     srt = build / "subtitles.srt"
