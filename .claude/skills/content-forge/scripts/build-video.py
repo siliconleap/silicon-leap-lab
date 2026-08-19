@@ -12,9 +12,12 @@
     --burn          把字幕烧进画面 (需要 libass)。默认只输出外挂 srt
     --size WxH      输出尺寸, 默认 1920x1080
 
-腾讯云 TTS 需要环境变量:
-    TENCENTCLOUD_SECRET_ID
-    TENCENTCLOUD_SECRET_KEY
+腾讯云 TTS 需要环境变量 (两种写法都认):
+    TENCENTCLOUD_SECRET_ID   或 TENCENT_CLOUD_SECRET_ID
+    TENCENTCLOUD_SECRET_KEY  或 TENCENT_CLOUD_SECRET_KEY
+
+密钥不要写进仓库, 也不要贴进跟 agent 的对话——会话记录会被 extract-timeline.py
+提取成公开的实验素材。
 
 设计:
     scenes.md 是唯一的源。时长不写在源里——TTS 跑完才知道每段多长, 总长是
@@ -174,6 +177,23 @@ def resolve(base, ref):
     return p if p.exists() else Path(ref)
 
 
+def tencent_creds():
+    """腾讯云凭据。两种变量名都认——官方 SDK 用 TENCENTCLOUD_, 但手写
+    export 时很多人会写成 TENCENT_CLOUD_, 为一个下划线debug不值得。"""
+    import os
+
+    def pick(*names):
+        for n in names:
+            v = os.environ.get(n)
+            if v:
+                return v
+        return None
+
+    sid = pick("TENCENTCLOUD_SECRET_ID", "TENCENT_CLOUD_SECRET_ID")
+    skey = pick("TENCENTCLOUD_SECRET_KEY", "TENCENT_CLOUD_SECRET_KEY")
+    return sid, skey
+
+
 def tencent_tts(text, out, voice, tmp_dir):
     """腾讯云语音合成 (TextToVoice)。
 
@@ -192,10 +212,7 @@ def tencent_tts(text, out, voice, tmp_dir):
     import time
     import urllib.request
 
-    sid = os.environ.get("TENCENTCLOUD_SECRET_ID")
-    skey = os.environ.get("TENCENTCLOUD_SECRET_KEY")
-    if not sid or not skey:
-        die("腾讯云 TTS 需要 TENCENTCLOUD_SECRET_ID / TENCENTCLOUD_SECRET_KEY")
+    sid, skey = tencent_creds()
 
     host, service, version, action = "tts.tencentcloudapi.com", "tts", "2019-08-23", "TextToVoice"
 
@@ -376,11 +393,10 @@ def main(argv):
     if engine == "say" and not shutil.which("say"):
         die("缺少 say (macOS TTS)——用 --tts tencent 换腾讯云")
     if engine == "tencent":
-        import os
-        missing = [k for k in ("TENCENTCLOUD_SECRET_ID", "TENCENTCLOUD_SECRET_KEY")
-                   if not os.environ.get(k)]
-        if missing:
-            die(f"腾讯云 TTS 缺少环境变量: {', '.join(missing)}")
+        sid, skey = tencent_creds()
+        if not sid or not skey:
+            die("腾讯云 TTS 缺少凭据: 需要 TENCENTCLOUD_SECRET_ID / _KEY "
+                "(或 TENCENT_CLOUD_SECRET_ID / _KEY)")
 
     build = base / "build"
     for sub in ("audio", "clips"):

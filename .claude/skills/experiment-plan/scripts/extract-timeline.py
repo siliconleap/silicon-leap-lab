@@ -69,9 +69,32 @@ NOISE = {
 
 HOME_RE = re.compile(r"/Users/[^/\s\"']+")
 
+# 密钥。人在对话里贴过一次 key, 它就永远留在会话记录里了——而这份产物是要
+# 公开的。宁可误伤: 被错删的是一串乱码, 漏掉的是一次真实泄露。
+SECRET_RES = [
+    re.compile(r"\bAKID[A-Za-z0-9]{20,}"),                     # 腾讯云 SecretId
+    re.compile(r"\bAKIA[A-Za-z0-9]{16,}"),                     # AWS
+    re.compile(r"\b(?:sk|pk)-[A-Za-z0-9_-]{20,}"),             # OpenAI 等
+    re.compile(r"\b(?:ghp|gho|ghs|ghr)_[A-Za-z0-9]{20,}"),     # GitHub
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{20,}"),
+    re.compile(r"\bxox[abprs]-[A-Za-z0-9-]{10,}"),             # Slack
+    # KEY=值 / TOKEN: 值 这类显式赋值, 覆盖上面没列到的服务
+    re.compile(
+        r"((?:SECRET|TOKEN|API[_-]?KEY|PASSWORD|PASSWD|ACCESS[_-]?KEY)[A-Z_]*"
+        r"\s*[:=]\s*)[\"']?[A-Za-z0-9/+_-]{12,}[\"']?",
+        re.IGNORECASE,
+    ),
+]
+
 
 def redact(text):
-    return HOME_RE.sub("~", text)
+    text = HOME_RE.sub("~", text)
+    for i, rx in enumerate(SECRET_RES):
+        # 最后一条是带前缀的赋值形式, 保留变量名, 只抹值。
+        text = rx.sub(
+            r"\1<REDACTED>" if i == len(SECRET_RES) - 1 else "<REDACTED>", text
+        )
+    return text
 
 
 def parse_claude(path):
