@@ -1,22 +1,32 @@
 ---
-title: "The pipeline took half a day. Publishing its first draft took a week."
+title: "You cannot bookmark your way to growth"
 date: 2026-08-09
 slug: markdown-only-content-pipeline
 tags: [claude-code, ai-agents, content-pipeline, tooling, workflow]
-summary: "An agent built a full content pipeline in half a day. Its first draft then held publication up for more than a week, exposing a gap that tools cannot close: factual review, editorial judgment, and human publishing work."
+summary: "A thousand saved articles buy no growth. An agent built the content pipeline in half a day; the first draft then held publication up for more than a week, on the part no tool closes: factual review, editorial judgment, and human publishing work."
 experiment: 2026-08-markdown-only-content-pipeline
 lang: en
 translations:
   zh: markdown-only-content-pipeline-zh
 ---
 
-My own starting condition, and I suspect it is not just mine: you follow the field, you have opinions worth writing down, and you publish nothing. Tools get compared. Approaches get researched. Best practices get collected. Nothing ships.
+A thousand saved articles buy nothing you could call growth. Growth happens when you finish one thing, not when you read the thousand and first.
+
+So I used an agent to build a content pipeline, then used the pipeline to record the experiment itself. The skeleton took half a day. The first draft took more than a week.
+
+The week was not a coding outage. An agent is fast, but an ordinary prompt buys an ordinary result, and mediocrity is not a property of the model. It is the default: with no explicit constraint, generation returns to the mean, and the mean is mediocre. Getting above it means writing down what you do not want and why, item by item, and only a human can do that.
+
+The system does not remove the human. It moves the human out of the deterministic work, and the judgment left over is exactly the part a thousand bookmarks cannot buy.
+
+What follows is what actually happened during that week.
+
+## The starting condition
+
+My own, and I suspect it is not just mine: the bookmarks pile up, you have opinions worth writing down, and you publish nothing. Tools get compared. Approaches get researched. Best practices get collected. Nothing ships.
 
 The fix I settled on was a container: treat every idea worth trying as an *experiment*, one directory, one record, one public write-up. And the first experiment was to build the recording machinery itself, using an agent.
 
-The pipeline skeleton took half a day. The first draft then took more than a week to become something I was willing to publish.
-
-That week was not a coding outage. The draft looked complete, but felt empty; each rewrite made me more reluctant to publish. I was close to reproducing the problem this system was meant to solve: researching and refining instead of shipping.
+The draft looked complete, but felt empty; each rewrite made me more reluctant to publish. I was close to reproducing the problem this system was meant to solve: researching and refining instead of shipping.
 
 ## The question
 
@@ -44,7 +54,7 @@ The generated skill had frontmatter, a numbered flow, a hard-constraints list, a
 
 Running it produced the failure. The Xiaohongshu draft was unreadable. Not wrong, just dead. Tracing it back, the template hardcoded a three-part list skeleton: *Results / What worked / What went wrong*.
 
-In a different file of the same configuration sat this line:
+In a different file of the same configuration (`platforms/xiaohongshu.md`) sat this line:
 
 > States the facts, then falls into a list. No situation, no reaction, numbers with no reference point.
 
@@ -64,7 +74,7 @@ The useful change is therefore operational, not a claim about model limits: put 
 - A required narrative arc (shared situation → what was done → what it hit → what was learned) added to the distillation step, so a record with only the middle beat is caught as a log dump.
 - The Xiaohongshu template rewritten from a list skeleton back into narrative structure.
 - Determinism pushed down into shell scripts: directory scaffolding, validation, image rendering.
-- A maximum of three independent review-and-revision rounds. Reviewers score factual traceability, conclusion support, logic, readability, platform fit, and the disclosed human work; a draft that misses the gate is marked not publish-ready.
+- A maximum of three independent review-and-revision rounds per batch. Reviewers score factual traceability, conclusion support, logic, readability, platform fit, and the disclosed human work; a draft that misses the gate is marked not publish-ready. Three is the ceiling for wording work: overturning a fact, a title, or the structure starts a new batch and resets the count, which is why this piece went through six.
 
 ![Three layers of responsibility: script for deterministic work, agent for inferable drafting, human for actual decisions.](assets/02-layers.png)
 *Determinism belongs in scripts. What remains is what a human actually has to decide.*
@@ -73,7 +83,7 @@ That last one is the durable part. A validation script now checks the determinis
 
 Images follow the same principle: HTML source is committed and diffable, PNGs are build products rendered by headless Chrome. No additional install.
 
-The missing evidence matters: the original terminal output for the four dead links was overwritten. The diagrams here explain the process; they are not a substitute for that output. Any future capture must be labelled as a reproduction.
+The output of that first run was not kept, and recapturing it would prove nothing: I never opened a terminal. The agent ran the commands, so the "terminal session" this kind of evidence assumes does not exist here. The real artifacts are the session log and the git history.
 
 ## Results
 
@@ -88,6 +98,7 @@ The missing evidence matters: the original terminal output for the four dead lin
 | Platform-tool dependencies | 0 | no n8n / Coze / Dify |
 | From starting to being willing to publish | more than one week; exact hours not recorded | author supplement, 2026-08-15 |
 | Screen recordings | 0 (process evidence came from the session log instead: 105 human turns) | `notes/session-timeline.md` |
+| Video channel delivery | failed (a 4:24 cut exists; not publishable) | author judgment, 2026-08-20 |
 | Wall-clock time, token usage | not recorded | see caveats |
 
 ## Caveats
@@ -96,19 +107,23 @@ This record is retroactive. `plan.md` was reconstructed after the run, so the "e
 
 No timing or token data was captured, and `--reset-author` overwrote the commit timestamps, so git history cannot substitute for it. There are no recordings: `asciinema` was never installed on this machine, and more fundamentally, the work happens as a conversation with an agent rather than as hand-typed commands, so there is no "human operating a terminal" to record. The real process record is the conversation, and it was recovered after the fact: 105 human turns, timestamped from 08-08 to 08-18.
 
-Video was written off as impossible during the run, and that call was wrong. Recordings were indeed zero, but the missing piece was footage, not assembly: assembly is deterministic, so scenes go in as plain text, narration goes through TTS, images are laid out against the narration length, and the narration doubles as subtitles. The first cut runs 4 minutes 24 seconds at 1920x1080 with 60 subtitle lines, built entirely from session-log cards, structure diagrams, and data cards.
+The video channel failed outright. Script, title, and thumbnail plans all generate fine because they are plain text, and even the assembly worked: scenes as plain text, TTS narration, images laid out against the narration length, narration doubling as subtitles, which produced a 4 minute 24 second cut. It is not publishable. With zero recordings, every frame is a session-log card or a diagram, and none of it is footage of the thing actually happening. The plain-text approach held for the written channels and broke here. The bar is higher than it looked.
 
 Zero platform-tool dependencies are not zero publishing cost. Account registration and maintenance, real screenshots, author sign-off, mobile preview, layout, publishing, and comment handling are all human work. None of those actions have been performed or verified by this content package.
 
-## Conclusion
+## Summary
 
-All three criteria held, but none of them held automatically. The front stage turns a one-line topic into a runnable experiment directory, the back stage produces genuinely different packages per platform, and platform-tool dependencies stayed at zero. Every judgment in between was mine: which gap was worth closing, why a draft read dead, which quote to keep, how far the conclusion could go. The system does not remove the human. It moves the human out of the deterministic work.
+All three criteria held, none of them automatically. The front stage turns a one-line topic into a runnable experiment directory, the back stage produces genuinely different packages per platform, and platform-tool dependencies stayed at zero. Every judgment in between was mine: which gap was worth closing, why a draft read dead, which quote to keep, how far the conclusion could go.
 
-An agent is fast, but an ordinary prompt buys an ordinary result. Mediocrity is not a property of the model, it is the default: with no explicit constraint, generation returns to the mean, and the mean is mediocre. A bigger model just returns a more polished mean. What works is writing the refusal of mediocrity into the instructions themselves, item by item, including why. The polishing happens to the instructions, not to the output.
+Two things transfer beyond this topic. Comprehension cost does not disappear, it defers: the questions skipped at approval time come back with interest at use time. And pushing determinism into scripts shrinks the surface a human has to understand at all.
 
-And what actually blocked me was not the agent. The skeleton took half a day; the first piece took more than a week. So the lesson is one line: do not demand perfection, do not settle for mediocrity. Both ends fail. Demand perfection and you never publish; settle for mediocrity and nobody reads what you publish.
+The platform configs do not: they are written against these specific channels, so a new channel means a rewrite.
 
-Boundary: sample size is one. This run shows only that the generation did not surface a cross-file contradiction on its own and could not decide whether the text was worth publishing. It says nothing about all models, and it does not imply that switching models is useless.
+Sample size is one. This run shows only that the generation did not surface a cross-file contradiction on its own and could not decide whether the text was worth publishing. It says nothing about models in general, and it does not imply that switching models is useless.
+
+The next experiment starts with `plan.md` written up front, so there is a prediction to be wrong about.
+
+As for me, the lesson is one line: do not demand perfection, do not settle for mediocrity. Demand perfection and you never publish; settle for mediocrity and nobody reads what you publish.
 
 ## Reproduce
 
