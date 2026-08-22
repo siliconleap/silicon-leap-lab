@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """把 scenes.md 构建成带字幕的成片。
 
+状态: 暂不启用。视频主线正在迁往 editorial-video (Remotion + 分层素材),
+那边能做分层、关键帧和转场, 这里做不到。本脚本保留为轻量通道——零 Node
+依赖, ffmpeg 直出, 适合不需要动画的片子。下面的音频时间轴逻辑 (裁静音、
+受控停顿、逐句真实时长) 先在这里验证, 再移植到 editorial-video。
+
 用法:
     build-video.py <drafts/youtube 目录> [选项]
 
@@ -9,7 +14,11 @@
     --tts ENGINE    say (默认, macOS 自带) | tencent (腾讯云)
     --voice NAME    say 用音色名, 默认 Tingting；tencent 用 VoiceType 数字, 默认 501000
     --rate N        say 的语速, 默认 180 字/分。tencent 不用这项
-    --speed N       tencent 语速, -2~2, 0 是正常, 正数更快。默认 1.0
+    --speed N       tencent 语速, -2~2, 0 是正常, 正数更快。默认 0。
+                    实测 501000 音色: Speed=0 约 331 字/分, Speed=1.0 约 396
+                    字/分——后者明显赶。旧默认值是 1.0, 已改回 0
+    --gap N         句间停顿秒数, 默认 0.25。合成器自带的头尾静音会被裁掉,
+                    停顿全部由这个参数补回
     --burn          把字幕烧进画面 (需要 libass)。默认只输出外挂 srt
     --no-motion     关掉 Ken Burns 推拉, 画面完全静止
     --size WxH      输出尺寸, 默认 1920x1080
@@ -27,7 +36,16 @@
     反过来 (先定时长再配音) 就要对轴, 而对轴是人干的活。
 
     字幕不是单独一道工序。旁白文本就是字幕内容, 音频时长就是字幕时间码,
-    两者同源, 不可能对不上。
+    两者同源, 不可能对不上。而且旁白是按句合成的, 每句多长是合成端的真值,
+    量一下就有——不需要强制对齐模型去反推已经知道的事。
+
+    停顿是参数, 不是副产品。合成器给每句都填了头尾静音, 拼起来每个句子
+    边界就攒下半秒空白。裁掉再按标点补回, 节奏才是可调的。
+
+    第一支成片的教训: 观感上的「拖」来自停顿, 不来自语速——语速其实一直
+    偏快 (Speed=1.0 时 396 字/分)。填充把每句撑开, 听感是一顿一顿的, 于是
+    很容易误判成「读得慢」, 然后去调快语速, 结果两头都更糟。先把停顿处理
+    干净, 再谈语速。
 
     剪辑退化成 concat: 画面是静态图和 5 秒 B-roll, 没有多轨也没有转场
     (youtube.md: 不要用转场和音乐掩盖信息不足)。确定性的部分全在这里,
@@ -49,6 +67,8 @@ import sys
 from pathlib import Path
 
 LEVELS = {"一手", "复现", "示意", "缺"}
+GAP_SENTENCE = 0.25   # 句间停顿
+GAP_SCENE_END = 0.10  # scene 末句——转场本身就是一次停顿, 不用给满
 SCENE_RE = re.compile(r"^###\s+(S\d+)\s+·\s+(.+?)\s*$")
 FIELD_RE = re.compile(r"^\*\*(旁白|画面|证据级别|B-roll)：\*\*\s*(.*)$")
 # 拆句给字幕用。一条字幕最多一句, 太长了手机上看不清。
@@ -196,7 +216,7 @@ def tencent_creds():
     return sid, skey
 
 
-def tencent_tts(text, out, voice, speed, tmp_dir):
+def tencent_tts(text, out, voice, speed, tmp_dir, gap=GAP_SENTENCE):
     """腾讯云语音合成 (TextToVoice)。
 
     走 REST + TC3 签名, 不装 SDK——这条流水线的前提是零额外依赖, 为一个
@@ -269,23 +289,45 @@ def tencent_tts(text, out, voice, speed, tmp_dir):
         return base64.b64decode(r["Audio"])
 
     sentences = split_sentences(text)
-    parts = []
+    parts, cues = [], []
     for i, sent in enumerate(sentences):
-        part = tmp_dir / f"{out.stem}-{i:02d}.mp3"
-        part.write_bytes(one(sent, i))
+        raw = tmp_dir / f"{out.stem}-{i:02d}.raw.mp3"
+        raw.write_bytes(one(sent, i))
+        # 末句的停顿留给转场, 给满反而拖
+        g = GAP_SCENE_END if i == len(sentences) - 1 else gap
+        part = tmp_dir / f"{out.stem}-{i:02d}.wav"
+        trim_silence(raw, part, g)
+        raw.unlink()
+        span = duration(part)
+        cues.append({"text": sent, "speech": max(span - g, 0.01), "span": span})
         parts.append(part)
-
-    if len(parts) == 1:
-        parts[0].replace(out)
-        return
 
     lst = tmp_dir / f"{out.stem}-parts.txt"
     lst.write_text("".join(f"file '{p.name}'\n" for p in parts), encoding="utf-8")
     run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
-         "-c", "copy", str(out)], cwd=tmp_dir)
+         "-c:a", "libmp3lame", "-q:a", "2", str(out)], cwd=tmp_dir)
     for p in parts:
         p.unlink()
     lst.unlink()
+    return cues
+
+
+def trim_silence(src, dst, gap):
+    """裁掉合成音频头尾的静音, 再补一个受控的停顿。
+
+    腾讯云按句合成, 每句自带头尾静音填充。整段拼起来后每个句子边界就攒下
+    半秒空白——实测第一支成片 66 段静音全部落在 0.53-0.55 秒, 这种整齐度
+    不可能是语气停顿, 是填充累加出来的, 占了全片 12%。
+
+    裁掉再按标点补回, 停顿就成了可调参数。
+    """
+    strip = ("silenceremove=start_periods=1:start_duration=0:"
+             "start_threshold=-45dB:detection=peak")
+    af = f"{strip},areverse,{strip},areverse"
+    if gap > 0:
+        af += f",apad=pad_dur={gap:.3f}"
+    # 输出 PCM: 后面要按帧精确拼接, mp3 的编码器填充会把裁掉的空白又加回来
+    run(["ffmpeg", "-y", "-i", str(src), "-af", af, "-c:a", "pcm_s16le", str(dst)])
 
 
 def duration(path):
@@ -310,23 +352,34 @@ def split_sentences(text):
 
 
 def make_srt(scenes, out):
-    """字幕时间码来自配音时长, 句内按字符数比例切分。
+    """字幕时间码优先用逐句合成的真实时长。
 
-    比例切分不是精确对齐——一句话里字符密度不均。但误差在半秒内, 而精确
-    对齐要么靠强制对齐模型, 要么靠人对轴。这里选够用的那个。
+    旁白是一句一句合成的, 每句音频多长是合成端的真值, ffprobe 量一下就有。
+    比按字符数比例切分准, 也比用 ASR 反推准——反推是猜一件已经知道的事。
+
+    只有 say 通道整段合成、拿不到分句时长时, 才退回比例切分。那条路误差
+    在半秒内, 够用。
     """
     lines = []
     n = 0
     t = 0.0
     for s in scenes:
-        sents = split_sentences(s["旁白"])
-        total = sum(len(x) for x in sents) or 1
         cursor = t
-        for sent in sents:
-            span = s["duration"] * len(sent) / total
-            n += 1
-            lines.append(f"{n}\n{srt_time(cursor)} --> {srt_time(cursor + span)}\n{sent}\n")
-            cursor += span
+        if s.get("cues"):
+            for c in s["cues"]:
+                n += 1
+                lines.append(
+                    f"{n}\n{srt_time(cursor)} --> {srt_time(cursor + c['speech'])}\n{c['text']}\n"
+                )
+                cursor += c["span"]
+        else:
+            sents = split_sentences(s["旁白"])
+            total = sum(len(x) for x in sents) or 1
+            for sent in sents:
+                span = s["duration"] * len(sent) / total
+                n += 1
+                lines.append(f"{n}\n{srt_time(cursor)} --> {srt_time(cursor + span)}\n{sent}\n")
+                cursor += span
         t += s["duration"]
     out.write_text("\n".join(lines), encoding="utf-8")
     return n
@@ -404,7 +457,8 @@ def main(argv):
     engine = opt("--tts", "say")
     voice = opt("--voice", "501000" if engine == "tencent" else "Tingting")
     rate = opt("--rate", "180")
-    speed = opt("--speed", "1.0")
+    speed = opt("--speed", "0")
+    gap = float(opt("--gap", str(GAP_SENTENCE)))
     size = opt("--size", "1920x1080")
     if engine not in ("say", "tencent"):
         die(f"--tts 只支持 say / tencent, 收到 '{engine}'")
@@ -449,9 +503,10 @@ def main(argv):
     for s in scenes:
         wav = build / "audio" / f"{s['id']}.{ext}"
         if engine == "tencent":
-            tencent_tts(s["旁白"], wav, voice, speed, build / "audio")
+            s["cues"] = tencent_tts(s["旁白"], wav, voice, speed, build / "audio", gap)
         else:
             run_retry(["say", "-v", voice, "-r", rate, "-o", str(wav), s["旁白"]], timeout=60)
+            s["cues"] = None
         s["audio"] = wav.name
         s["duration"] = duration(wav)
         print(f"  {s['id']}  {s['duration']:6.2f}s")
