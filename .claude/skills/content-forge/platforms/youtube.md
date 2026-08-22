@@ -41,11 +41,15 @@ publish_skill: null
 
 **默认：editorial-video（Remotion）**。分层素材、语义关键帧、转场、BGM。
 
+`narration.txt` 也在这一步产出：把各 scene 的 `**旁白：**` 按编号顺序拼起来，
+scene 之间空一行，scene 内部的段落空行原样保留。它不是新写的文案，是旁白字段
+的另一种排布。
+
 ```sh
-# 1. 配音 + 真实时间码 (一段旁白对一个 scene)
+# 1. 配音 + 真实时间码
 node scripts/generate-voice.mjs --provider tencent \
   --text-file narration.txt --out public/assets/audio/voice.mp3 \
-  --scene-ids S01,S02,S03
+  --scene-ids S01,S01,S02,S03
 # 2. 展开运动模板
 node scripts/expand-motion.mjs --project public/project.json
 # 3. 回填帧数: durationInFrames、scene from/duration、captions
@@ -55,6 +59,10 @@ node scripts/apply-caption-timings.mjs \
 node scripts/validate-manifest.mjs && node scripts/audit-project.mjs
 npm run render
 ```
+
+`--scene-ids` 是**按段落**对齐的，不是按 scene。一个 scene 的旁白分成几段，
+就把它的 id 重复几次——上面 S01 有两段所以写两次。个数对不上会直接报错退出，
+不会静默错位。
 
 时长不写在源里。配音跑完才知道每段多长，总长是加出来的。
 
