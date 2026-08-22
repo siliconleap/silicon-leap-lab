@@ -52,7 +52,7 @@ translationOf: markdown-only-content-pipeline
 
 > 可以，写出来，后续软链我想办法建
 
-（`notes/session-timeline.md`，2026-08-09 07:11:50）
+（[`notes/session-timeline.md`](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/notes/session-timeline.md)，2026-08-09 07:11:50）
 
 直到我让它真的跑一遍。
 
@@ -89,7 +89,7 @@ translationOf: markdown-only-content-pipeline
 
 > 生成了代码和 skill 之后，我压根没有理解内部的逻辑
 
-（`notes/session-timeline.md`，2026-08-10 14:54:07，措辞经过整理，原话更长）
+（[`notes/session-timeline.md`](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/notes/session-timeline.md)，2026-08-10 14:54:07，措辞经过整理，原话更长）
 
 所以把打磨放进流程，别把初稿当成品。初稿先过一轮独立审核，看事实、结论边界、逻辑、可读性和平台适配；一批稿子最多改三轮，仍不达标就标成「不可发布」。三轮是表达层的上限，事实、标题或结构被推翻就算新一批、重新计轮——这篇到发出来一共跑了六轮。
 
@@ -125,7 +125,7 @@ translationOf: markdown-only-content-pipeline
 | 身份隔离验证场景 | 3 / 3 通过 | `includeIf` 实测 |
 | 平台工具依赖 | 0 | 全程无 n8n / Coze / Dify |
 | 从开跑到愿意发布 | 一周多（精确工时未记录） | 作者补充，2026-08-15 |
-| 录屏片段 | 0（过程证据改用会话记录，105 条真人输入） | `notes/session-timeline.md` |
+| 录屏片段 | 0（过程证据改用会话记录，105 条真人输入） | [`notes/session-timeline.md`](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/notes/session-timeline.md) |
 | 视频渠道交付 | 失败（试出一版 4 分 24 秒，达不到可发布标准） | 作者判断，2026-08-20 |
 | 耗时 / token 消耗 | 未记录 | 见下文说明 |
 

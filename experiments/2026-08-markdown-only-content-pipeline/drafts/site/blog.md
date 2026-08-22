@@ -97,7 +97,7 @@ The output of that first run was not kept, and recapturing it would prove nothin
 | Identity-isolation scenarios verified | 3 / 3 | `includeIf` test |
 | Platform-tool dependencies | 0 | no n8n / Coze / Dify |
 | From starting to being willing to publish | more than one week; exact hours not recorded | author supplement, 2026-08-15 |
-| Screen recordings | 0 (process evidence came from the session log instead: 105 human turns) | `notes/session-timeline.md` |
+| Screen recordings | 0 (process evidence came from the session log instead: 105 human turns) | [`notes/session-timeline.md`](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/notes/session-timeline.md) |
 | Video channel delivery | failed (a 4:24 cut exists; not publishable) | author judgment, 2026-08-20 |
 | Wall-clock time, token usage | not recorded | see caveats |
 
