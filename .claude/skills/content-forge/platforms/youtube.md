@@ -5,6 +5,9 @@ aliases: [youtube, yt, video, shorts, 视频, 长视频]
 outputs:
   - path: drafts/youtube/scenes.md
     template: templates/youtube/scenes.md
+  - path: drafts/youtube/project.json
+    template: templates/youtube/project.json
+    when: 走分层渲染（默认）
   - path: drafts/youtube/packaging.md
     template: templates/youtube/packaging.md
   - path: drafts/youtube/broll-brief.md
@@ -20,8 +23,44 @@ publish_skill: null
 
 视频内容包。目标不是把 Blog 念出来，而是把实验过程、失败现场和数据结论剪成有留存的故事。
 
-产物是 `scenes.md`——分镜，不是散文脚本。它同时是人审的对象和 `build-video.py`
-的输入：旁白字段一份三用，喂 TTS、当字幕、给人看。
+产物是 `scenes.md` 和 `project.json`——**同一步产出两份，不是两个阶段**。同一次
+决策的两个视图：
+
+| 文件 | 给谁看 | 装什么 |
+| --- | --- | --- |
+| `scenes.md` | 人 | 旁白、证据级别、选了哪张图、这一拍用哪个运动模板 |
+| `project.json` | 机器 | 图层、坐标、z-index、关键帧 |
+
+不要「先审完 scenes.md 再转换成 project.json」。人改了 scenes.md 就重新生成一次，
+几秒的事。审的落点必须是可读的那份——旁白埋在几百行 JSON 里没法审，而结论段
+旁白必须由作者手写这条规矩就会失效。
+
+旁白字段一份三用：喂 TTS、当字幕、给人看。
+
+## 渲染走哪条
+
+**默认：editorial-video（Remotion）**。分层素材、语义关键帧、转场、BGM。
+
+```sh
+# 1. 配音 + 真实时间码 (一段旁白对一个 scene)
+node scripts/generate-voice.mjs --provider tencent \
+  --text-file narration.txt --out public/assets/audio/voice.mp3 \
+  --scene-ids S01,S02,S03
+# 2. 展开运动模板
+node scripts/expand-motion.mjs --project public/project.json
+# 3. 回填帧数: durationInFrames、scene from/duration、captions
+node scripts/apply-caption-timings.mjs \
+  --aligned public/assets/audio/voice.cues.json --project public/project.json
+# 4. 校验 → 渲染
+node scripts/validate-manifest.mjs && node scripts/audit-project.mjs
+npm run render
+```
+
+时长不写在源里。配音跑完才知道每段多长，总长是加出来的。
+
+**轻量通道：`scripts/build-video.py`**。ffmpeg 直出，零 Node 依赖，只有静态图和
+Ken Burns，没有分层也没有转场。**当前不启用**，保留给不需要动画的片子。它只读
+`scenes.md`，不认 `project.json`。
 
 ## Emphasis
 
