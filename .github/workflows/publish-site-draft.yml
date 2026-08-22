@@ -20,7 +20,9 @@ jobs:
       - name: Checkout lab
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # 0 而不是 2：push 事件里 before 可能落在浅克隆之外（一次推多个提交、
+          # 或强推），那时 git diff 会直接报错。
+          fetch-depth: 0
 
       - name: Checkout site
         uses: actions/checkout@v4
@@ -41,7 +43,13 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             printf '%s\n' "${{ inputs.experiment_dir }}" > /tmp/site-experiments.txt
           else
-            git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" \
+            before='${{ github.event.before }}'
+            # 新分支推送时 before 是全 0；对象不在本地时（强推后被回收）也要兜底。
+            if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ] \
+               || ! git cat-file -e "$before^{commit}" 2>/dev/null; then
+              before="${{ github.sha }}^"
+            fi
+            git diff --name-only "$before" "${{ github.sha }}" \
               | awk -F/ '/^experiments\/[^/]+\// { print $1 "/" $2 }' \
               | sort -u > /tmp/site-experiments.txt
           fi
