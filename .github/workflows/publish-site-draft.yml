@@ -7,13 +7,10 @@ on:
         description: Experiment directory, for example experiments/2026-08-markdown-only-content-pipeline
         required: true
         type: string
-  # push 触发暂时关闭：siliconleap/silicon-leap-site 目前只有 LICENSE，
-  # 没有 package.json / package-lock.json，Setup Node 的 npm 缓存必然失败。
-  # 站点项目建起来之后再打开下面三行。
-  # push:
-  #   paths:
-  #     - 'experiments/**/README.md'
-  #     - 'experiments/**/drafts/site/**'
+  push:
+    paths:
+      - 'experiments/**/README.md'
+      - 'experiments/**/drafts/site/**'
 
 jobs:
   publish:
@@ -74,6 +71,7 @@ jobs:
         with:
           token: ${{ secrets.SITE_REPO_TOKEN }}
           path: site
+          base: main
           branch: content/lab-${{ github.run_id }}
           delete-branch: true
           commit-message: Publish site draft from silicon-leap-lab
