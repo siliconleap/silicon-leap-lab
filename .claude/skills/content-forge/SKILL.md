@@ -240,7 +240,7 @@ AI 写中文有固定的病：翻译腔和欧化长句。
 | 网站 / 静态站 | `platforms/site.md` | `drafts/site/blog.md` |
 | GitHub | `platforms/github.md` | `drafts/github/readme-section.md` |
 | 小红书 | `platforms/xiaohongshu.md` | `drafts/xiaohongshu/note.md`, `carousel-brief.md` |
-| YouTube | `platforms/youtube.md` | `drafts/youtube/scenes.md`, `packaging.md` |
+| YouTube | `platforms/youtube.md` | `drafts/youtube/scenes.md`, `project.json`, `packaging.md` |
 
 平台适配不是简单改长度。必须按配置改变开头、结构、证据密度、排版、素材需求和 CTA。
 

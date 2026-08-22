@@ -1,0 +1,51 @@
+{
+  "_comment": [
+    "Remotion 运行时分镜, 与 scenes.md 同一步产出, 不是从它转换来的。",
+    "两份是同一次决策的两个视图: scenes.md 给人审 (旁白、证据、选图),",
+    "这份给机器 (图层、坐标、运动)。改了一份就要改另一份。",
+    "",
+    "帧数留占位即可。真实时间轴由配音产生:",
+    "  1. generate-voice.mjs --provider tencent --scene-ids ... → voice.cues.json",
+    "     scene-ids 按旁白段落对齐: 一个 scene 有两段旁白就重复两次它的 id",
+    "  2. expand-motion.mjs --project project.json      展开运动模板",
+    "  3. apply-caption-timings.mjs --aligned voice.cues.json --project project.json",
+    "第 3 步会回填 durationInFrames、每个 scene 的 from/duration 和全局 captions。",
+    "发布前删掉这个 _comment 字段。"
+  ],
+  "title": "{{视频标题}}",
+  "contentMode": "explainer",
+  "assetStrategy": "layered",
+  "stylePreset": "paper-cut",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationInFrames": 1,
+  "captionSafeBottom": 180,
+  "palette": {"paper": "#f5f2e8", "ink": "#1a1a19", "accent": "#c0563a", "gold": "#c8a24a"},
+  "audio": {"voice": "assets/audio/voice.mp3", "tailSeconds": 0.35},
+  "scenes": [
+    {
+      "id": "S01",
+      "storyBeatId": "{{对应 scenes.md 的哪一拍}}",
+      "layerPlanRationale": "{{为什么这一拍要分这几层}}",
+      "from": 0,
+      "duration": 1,
+      "hero": true,
+      "background": "assets/backgrounds/{{背景}}.png",
+      "transition": "fade",
+      "camera": {"scaleFrom": 1.0, "scaleTo": 1.04},
+      "layers": [
+        {
+          "id": "{{图层 id}}",
+          "src": "assets/layers/{{素材}}.png",
+          "role": "primary",
+          "x": 300, "y": 200, "width": 700,
+          "zIndex": 5,
+          "delay": 6,
+          "enterFrom": "left",
+          "motion": {"template": "reveal-left"}
+        }
+      ]
+    }
+  ]
+}

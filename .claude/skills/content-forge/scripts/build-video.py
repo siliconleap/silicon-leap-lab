@@ -70,7 +70,10 @@ LEVELS = {"一手", "复现", "示意", "缺"}
 GAP_SENTENCE = 0.25   # 句间停顿
 GAP_SCENE_END = 0.10  # scene 末句——转场本身就是一次停顿, 不用给满
 SCENE_RE = re.compile(r"^###\s+(S\d+)\s+·\s+(.+?)\s*$")
-FIELD_RE = re.compile(r"^\*\*(旁白|画面|证据级别|B-roll)：\*\*\s*(.*)$")
+# 图层是分层渲染 (editorial-video) 的字段, 这条轻量通道用不上。但必须认得它:
+# 不认的话, 写在旁白后面的图层说明会被当成旁白收进去, 然后被念出来。
+FIELD_RE = re.compile(r"^\*\*(旁白|画面|证据级别|B-roll|图层)：\*\*\s*(.*)$")
+IGNORED_FIELDS = {"图层"}
 # 拆句给字幕用。一条字幕最多一句, 太长了手机上看不清。
 SENT_RE = re.compile(r"[^。！？!?\n]+[。！？!?]?")
 
@@ -143,7 +146,8 @@ def parse_scenes(path):
         m = FIELD_RE.match(line)
         if m:
             field = m.group(1)
-            cur[field] = m.group(2).strip()
+            if field not in IGNORED_FIELDS:
+                cur[field] = m.group(2).strip()
             if field != "旁白":
                 field = None
             continue
