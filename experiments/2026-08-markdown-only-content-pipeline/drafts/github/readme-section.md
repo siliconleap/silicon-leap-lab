@@ -21,6 +21,14 @@ This is a single retroactive record. It supports the narrower finding that this 
 | From starting to being willing to publish | more than one week; exact hours not recorded |
 | Screen recordings | 0 (session log used as process evidence instead) |
 
+| Practice | Effective | Transfers |
+| --- | --- | --- |
+| Agent-built pipeline drafting for several platforms at once | yes | yes |
+| Adopting an existing community skill (Waza's `write`) for prose | yes | yes |
+| Process over re-rolling: confirmed brief, independent review, three-round ceiling | yes | yes |
+| Deterministic work pushed into scripts | yes | yes |
+| Agent-assembled video from generated images | not yet | no |
+
 **Inspect:** [experiment README](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/README.md) · [content brief](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/content-brief.md) · [artifacts](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/README.md#artifacts) · [full experiment directory](https://github.com/siliconleap/silicon-leap-lab/tree/master/experiments/2026-08-markdown-only-content-pipeline)
 
 **Reusable output:** the two skills, five platform configs, seven templates, and the validation script are all plain text and listed in [artifacts](https://github.com/siliconleap/silicon-leap-lab/blob/master/experiments/2026-08-markdown-only-content-pipeline/README.md#artifacts).
