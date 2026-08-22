@@ -11,12 +11,14 @@
 - macOS，Claude Code CLI，模型 Opus 5，Node v24.6.0
 - 图像：腾讯云 aiart `TextToImageLite`（`ap-guangzhou`），密钥取自 `TENCENTCLOUD_SECRET_ID` / `_KEY`
 - 配音：腾讯云 TTS，音色 501000，`Speed=0`
-- 渲染：Remotion（`editorial-video` skill 的默认渲染器，本机尚未安装依赖）
+- 渲染：Remotion（首选候选的默认渲染器，本机尚未安装依赖）
 - 无 OpenAI API key，无图形编辑软件，无实拍设备
 
 **被测对象**
 
-`~/Code/editorial-video`（skill 名 `illustrated-videos`）的分层插画视频流水线：每个 scene 拆成不含主体的背景板，加若干独立生成的带 alpha 的主体、道具与前景层，再由 Remotion 合成、加语义动效与字幕。
+首选候选是 `~/Code/editorial-video`（skill 名 `illustrated-videos`）的分层插画视频流水线：每个 scene 拆成不含主体的背景板，加若干独立生成的带 alpha 的主体、道具与前景层，再由 Remotion 合成、加语义动效与字幕。
+
+但它不是前提。步骤 1 先横向调研开源的 story → video 路线，按技术形态分类——素材拼接型（脚本 + 库存素材 + TTS，适合口播和资讯流）、文生视频扩散模型（适合电影质感的短片）、代码合成型（Remotion 这类，适合可控的插画讲解）——判断哪一类匹配本次要的「插画动画」，再决定实测哪一条。没被选中的路线不代表不好，很可能只是适合别的场景，调研结论里要写清楚。调研是分析层面的，不逐个安装。
 
 对照基线是实验一的 `content-forge/scripts/build-video.py`：静态图 concat + TTS + 字幕，已产出一支 4 分 24 秒的成片，作者判定不可发布，理由是「画面是截图的简单拼接，算不上动画，非常不连贯」。
 
@@ -28,12 +30,13 @@
 
 **形式约束**
 
+- 画幅 16:9，1920×1080，开跑前定死（理由见 `plan.md` 的画幅一节）
 - 非口播：不出镜，不用真人画面，旁白只走 TTS
 - 全程由 AI 执行，人只做审核和局部微调，每次干预逐条记进 `data/interventions.md`
 
 **判据**
 
-1. 能不能产出一支 180 秒以内、通过 `editorial-video` 自带 QA（`scripts/verify-video.sh` + `references/quality-rubric.md`）的成片
+1. 能不能产出一支 180 秒以内、通过所选流水线自带 QA（若为 `editorial-video`，即 `scripts/verify-video.sh` + `references/quality-rubric.md`）的成片
 2. 成片里有没有单张静止画面连续超过 8 秒——这是实验一被判不合格的直接病根
 3. 从「交出实验一目录」到「成片产出」，人工干预次数是多少，其中哪几次是不可省的
 
