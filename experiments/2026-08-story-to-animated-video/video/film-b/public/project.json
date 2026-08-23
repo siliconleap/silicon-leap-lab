@@ -1,12 +1,12 @@
 {
-  "title": "过河",
+  "title": "最后一盏灯",
   "contentMode": "explainer",
   "assetStrategy": "layered",
   "stylePreset": "paper-cut",
   "width": 1920,
   "height": 1080,
   "fps": 30,
-  "durationInFrames": 2483,
+  "durationInFrames": 1988,
   "durationPlan": {
     "source": "user",
     "requestedSeconds": 100,
@@ -15,10 +15,10 @@
     "finalAudioDeterminesRuntime": true
   },
   "palette": {
-    "paper": "#F3EBD8",
-    "ink": "#20251E",
-    "accent": "#A9362B",
-    "gold": "#C49649"
+    "paper": "#F2F4F7",
+    "ink": "#1B2438",
+    "accent": "#E8712F",
+    "gold": "#F2C14E"
   },
   "brand": {
     "handle": "",
@@ -32,1170 +32,292 @@
     "voice": "assets/audio/narration.mp3",
     "music": null,
     "musicVolume": 0.1,
-    "tailSeconds": 1.2,
+    "tailSeconds": 1.6,
     "intentionalSilence": false
   },
   "scenes": [
     {
       "id": "s1",
-      "background": "assets/backgrounds/bg-hill.png",
+      "background": "assets/backgrounds/bg-dusk.png",
       "hero": true,
       "transition": "fade",
+      "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/herd.png",
-          "role": "secondary",
-          "x": 560,
-          "y": 470,
-          "width": 900,
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "tertiary",
+          "x": 240,
+          "y": 435,
+          "width": 360,
           "zIndex": 3,
-          "enterFrom": "left",
+          "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "牛群稳定地向右走出画面，建立「队伍在前进」",
+            "action": "第一盏光晕先亮起来",
             "keyframes": [
               {
                 "at": 0,
-                "x": -160,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1,
-                "opacity": 1
+                "scale": 0.5,
+                "opacity": 0
               },
               {
-                "at": 0.55,
-                "x": 240,
+                "at": 0.22,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 1
+                "opacity": 0.75
               },
               {
                 "at": 1,
-                "x": 760,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1,
-                "opacity": 0.9
+                "scale": 1.05,
+                "opacity": 0.7
               }
             ]
           },
-          "assetId": "herd",
-          "id": "s1-herd"
+          "id": "s1-glow-0"
         },
         {
-          "src": "assets/layers/calf-walk.png",
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "tertiary",
+          "x": 780,
+          "y": 475,
+          "width": 360,
+          "zIndex": 3,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "第二盏隔一拍亮",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.5,
+                "opacity": 0
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.5,
+                "opacity": 0
+              },
+              {
+                "at": 0.52,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.75
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 0.7
+              }
+            ]
+          },
+          "id": "s1-glow-1"
+        },
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "tertiary",
+          "x": 1320,
+          "y": 425,
+          "width": 360,
+          "zIndex": 3,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "第三盏最后亮，完成「一盏一盏」",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.5,
+                "opacity": 0
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.5,
+                "opacity": 0
+              },
+              {
+                "at": 0.78,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.75
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 0.7
+              }
+            ]
+          },
+          "id": "s1-glow-2"
+        },
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
           "role": "primary",
-          "x": 420,
-          "y": 690,
-          "width": 460,
+          "x": 840,
+          "y": 336,
+          "width": 240,
           "zIndex": 6,
-          "enterFrom": "left",
-          "delay": 12,
+          "enterFrom": "up",
+          "delay": 6,
           "motion": {
-            "action": "小牛跟着走，走到一半停住不动，被队伍拉开距离",
+            "action": "一盏灯落到画面中央，成为这一拍的主体",
             "keyframes": [
               {
                 "at": 0,
-                "x": -260,
+                "x": 0,
+                "y": -140,
+                "rotation": -6,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.25,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.42,
-                "x": 60,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
+                "at": 0.6,
+                "x": 0,
+                "y": -18,
+                "rotation": 2,
+                "scale": 1.04,
                 "opacity": 1
               },
               {
-                "at": 0.55,
-                "x": 90,
+                "at": 1,
+                "x": 0,
                 "y": -6,
-                "rotation": -2,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.62,
-                "x": 90,
-                "y": 0,
                 "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 110,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
+                "scale": 1.02,
                 "opacity": 1
               }
             ]
           },
-          "assetId": "calf-walk",
-          "id": "s1-calf-walk"
-        },
-        {
-          "src": "assets/layers/grass-fore.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 1010,
-          "width": 2100,
-          "zIndex": 9,
-          "enterFrom": "down",
-          "delay": 0,
-          "motion": {
-            "action": "前景草叶轻微起伏，给画面一点深度",
-            "loop": "sway",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 14,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.5,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": 8,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "grass-fore",
-          "id": "s1-grass-fore"
+          "id": "s1-lamp-on-3"
         }
       ],
       "from": 0,
-      "duration": 319,
+      "duration": 262,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-hill"
+      "backgroundAssetId": "bg-dusk"
     },
     {
       "id": "s2",
-      "background": "assets/backgrounds/bg-bank.png",
+      "background": "assets/backgrounds/bg-slope.png",
       "hero": true,
       "transition": "paper-wipe",
+      "decorations": false,
       "camera": {
         "pan": {
-          "x": -70
+          "x": -50
         }
       },
       "layers": [
         {
-          "src": "assets/layers/calf-look.png",
+          "src": "assets/layers/fox-run.png",
+          "assetId": "fox-run",
           "role": "primary",
-          "x": 430,
-          "y": 700,
-          "width": 440,
-          "zIndex": 6,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "小牛走到岸边站定，头朝对岸的方向送出去",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -200,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.35,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.6,
-                "x": 20,
-                "y": -4,
-                "rotation": 1,
-                "scale": 1.02,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 24,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1.02,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "calf-look",
-          "id": "s2-calf-look"
-        },
-        {
-          "src": "assets/layers/ripple.png",
-          "role": "tertiary",
-          "x": 1180,
-          "y": 820,
-          "width": 1000,
-          "zIndex": 4,
-          "enterFrom": "right",
-          "delay": 18,
-          "motion": {
-            "action": "河面波纹横向推移，把观众的视线带向对岸",
-            "loop": "sway",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -80,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.3,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.85
-              },
-              {
-                "at": 1,
-                "x": 120,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.85
-              }
-            ]
-          },
-          "assetId": "ripple",
-          "id": "s2-ripple"
-        },
-        {
-          "src": "assets/layers/grass-fore.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 1020,
-          "width": 2100,
-          "zIndex": 9,
-          "enterFrom": "down",
-          "delay": 0,
-          "motion": {
-            "action": "前景草被风压向右侧",
-            "loop": "sway",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 20,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.45,
-                "x": -18,
-                "y": 0,
-                "rotation": -1,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": -30,
-                "y": 6,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "grass-fore",
-          "id": "s2-grass-fore"
-        }
-      ],
-      "from": 319,
-      "duration": 323,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-bank"
-    },
-    {
-      "id": "s3",
-      "background": "assets/backgrounds/bg-bank.png",
-      "hero": true,
-      "transition": "cut",
-      "layers": [
-        {
-          "src": "assets/layers/calf-hoof.png",
-          "role": "primary",
-          "x": 560,
-          "y": 700,
-          "width": 460,
-          "zIndex": 6,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "小牛靠近水边，前身抬起一下，随即整体后退两步",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -120,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.28,
-                "x": 40,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.44,
-                "x": 52,
-                "y": -26,
-                "rotation": -5,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.58,
-                "x": 44,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.8,
-                "x": -70,
-                "y": 0,
-                "rotation": 2,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": -96,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "calf-hoof",
-          "id": "s3-calf-hoof"
-        },
-        {
-          "src": "assets/layers/ripple.png",
-          "role": "tertiary",
-          "x": 1120,
-          "y": 880,
-          "width": 1100,
-          "zIndex": 4,
-          "enterFrom": "right",
-          "delay": 0,
-          "motion": {
-            "action": "水面在小牛靠近时晃了一下",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.8
-              },
-              {
-                "at": 0.42,
-                "x": 0,
-                "y": -10,
-                "rotation": 0,
-                "scale": 1.04,
-                "opacity": 0.9
-              },
-              {
-                "at": 0.6,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.8
-              },
-              {
-                "at": 1,
-                "x": 60,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.8
-              }
-            ]
-          },
-          "assetId": "ripple",
-          "id": "s3-ripple"
-        }
-      ],
-      "from": 642,
-      "duration": 304,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-bank"
-    },
-    {
-      "id": "s4",
-      "background": "assets/backgrounds/bg-bank.png",
-      "hero": true,
-      "transition": "cut",
-      "layers": [
-        {
-          "src": "assets/layers/calf-hoof.png",
-          "role": "primary",
-          "x": 620,
-          "y": 700,
-          "width": 460,
-          "zIndex": 6,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "前蹄踩进水里，整个身体一缩，然后掉头冲出画面左侧",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -80,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.22,
-                "x": 40,
-                "y": 10,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.34,
-                "x": 40,
-                "y": -18,
-                "rotation": -3,
-                "scale": 0.97,
-                "opacity": 1
-              },
-              {
-                "at": 0.46,
-                "x": 20,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.72,
-                "x": -420,
-                "y": 0,
-                "rotation": 3,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": -900,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.95
-              }
-            ]
-          },
-          "assetId": "calf-hoof",
-          "id": "s4-calf-hoof"
-        },
-        {
-          "src": "assets/layers/ripple.png",
-          "role": "tertiary",
-          "x": 900,
-          "y": 900,
-          "width": 1200,
-          "zIndex": 4,
-          "enterFrom": "scale",
-          "delay": 0,
-          "motion": {
-            "action": "踩点处荡开一圈水纹",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.6,
-                "opacity": 0
-              },
-              {
-                "at": 0.3,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.95
-              },
-              {
-                "at": 0.7,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1.35,
-                "opacity": 0.35
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1.5,
-                "opacity": 0
-              }
-            ]
-          },
-          "assetId": "ripple",
-          "id": "s4-ripple"
-        }
-      ],
-      "from": 946,
-      "duration": 276,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-bank"
-    },
-    {
-      "id": "s5",
-      "background": "assets/backgrounds/bg-hill.png",
-      "hero": true,
-      "transition": "paper-wipe",
-      "layers": [
-        {
-          "src": "assets/layers/calf-walk.png",
-          "role": "primary",
-          "x": 760,
-          "y": 700,
+          "x": 545,
+          "y": 692,
           "width": 430,
-          "zIndex": 5,
-          "enterFrom": "scale",
-          "delay": 0,
-          "motion": {
-            "action": "小时候的小牛淡出，交给长大后的那张，完成时间流逝",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.42,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.56,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              }
-            ]
-          },
-          "assetId": "calf-walk",
-          "id": "s5-calf-walk"
-        },
-        {
-          "src": "assets/layers/calf-grown.png",
-          "role": "primary",
-          "x": 760,
-          "y": 672,
-          "width": 500,
           "zIndex": 6,
-          "enterFrom": "scale",
+          "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "长大的小牛接上位置，站得更高，仍然朝着对岸",
+            "action": "狐狸跑上雪坡",
             "keyframes": [
               {
                 "at": 0,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.42,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.6,
-                "x": 0,
+                "x": -560,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
                 "opacity": 1
-              },
-              {
-                "at": 0.82,
-                "x": 14,
-                "y": -6,
-                "rotation": 0,
-                "scale": 1.02,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 14,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1.02,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "calf-grown",
-          "id": "s5-calf-grown"
-        },
-        {
-          "src": "assets/layers/grass-fore.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 1000,
-          "width": 2100,
-          "zIndex": 9,
-          "enterFrom": "down",
-          "delay": 0,
-          "motion": {
-            "action": "前景的草长高再压下去，跟着季节走",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 30,
-                "rotation": 0,
-                "scale": 0.9,
-                "opacity": 1
-              },
-              {
-                "at": 0.45,
-                "x": 0,
-                "y": -10,
-                "rotation": 0,
-                "scale": 1.08,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": 4,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "grass-fore",
-          "id": "s5-grass-fore"
-        }
-      ],
-      "from": 1222,
-      "duration": 246,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-hill"
-    },
-    {
-      "id": "s6",
-      "background": "assets/backgrounds/bg-bank.png",
-      "hero": true,
-      "transition": "cut",
-      "layers": [
-        {
-          "src": "assets/layers/lamb-call.png",
-          "role": "primary",
-          "x": 700,
-          "y": 780,
-          "width": 300,
-          "zIndex": 6,
-          "enterFrom": "right",
-          "delay": 0,
-          "motion": {
-            "action": "羊羔在水边一下一下地叫，幅度越来越小",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 120,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.2,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.34,
-                "x": 0,
-                "y": -22,
-                "rotation": -4,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.46,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.6,
-                "x": 0,
-                "y": -14,
-                "rotation": -2,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.72,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.86,
-                "x": 0,
-                "y": -6,
-                "rotation": -1,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "lamb-call",
-          "id": "s6-lamb-call"
-        },
-        {
-          "src": "assets/layers/herd.png",
-          "role": "tertiary",
-          "x": 1420,
-          "y": 430,
-          "width": 620,
-          "zIndex": 3,
-          "enterFrom": "right",
-          "delay": 0,
-          "motion": {
-            "action": "对岸的羊群低头吃草，始终没有回头",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 80,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.55,
-                "opacity": 0.85
               },
               {
                 "at": 0.4,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 0.55,
-                "opacity": 0.85
-              },
-              {
-                "at": 1,
-                "x": -30,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.55,
-                "opacity": 0.85
-              }
-            ]
-          },
-          "assetId": "herd",
-          "id": "s6-herd"
-        },
-        {
-          "src": "assets/layers/grass-fore.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 1020,
-          "width": 2100,
-          "zIndex": 9,
-          "enterFrom": "down",
-          "delay": 0,
-          "motion": {
-            "action": "前景草缓慢摆动",
-            "loop": "sway",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": 16,
-                "rotation": 0,
                 "scale": 1,
                 "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": 2,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "grass-fore",
-          "id": "s6-grass-fore"
-        }
-      ],
-      "from": 1468,
-      "duration": 305,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-bank"
-    },
-    {
-      "id": "s7",
-      "background": "assets/backgrounds/bg-water.png",
-      "hero": true,
-      "transition": "paper-wipe",
-      "layers": [
-        {
-          "src": "assets/layers/calf-bow.png",
-          "role": "primary",
-          "x": 600,
-          "y": 700,
-          "width": 520,
-          "zIndex": 6,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "小牛走到羊羔跟前，把背低下去，然后带着它离开画面",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -300,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.2,
-                "x": -40,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.3,
-                "x": -40,
-                "y": 18,
-                "rotation": 3,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.42,
-                "x": -40,
-                "y": 18,
-                "rotation": 3,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.56,
-                "x": 120,
-                "y": 10,
-                "rotation": 1,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.78,
-                "x": 520,
-                "y": 4,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 900,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "calf-bow",
-          "id": "s7-calf-bow"
-        },
-        {
-          "src": "assets/layers/lamb-ride.png",
-          "role": "secondary",
-          "x": 540,
-          "y": 600,
-          "width": 240,
-          "zIndex": 7,
-          "enterFrom": "down",
-          "delay": 0,
-          "motion": {
-            "action": "羊羔爬上牛背，之后跟着牛一起向右移动",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -260,
-                "y": 120,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.28,
-                "x": -100,
-                "y": 60,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.42,
-                "x": -64,
-                "y": -16,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.56,
-                "x": 96,
-                "y": -24,
-                "rotation": 1,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.78,
-                "x": 496,
-                "y": -30,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 876,
-                "y": -34,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              }
-            ]
-          },
-          "assetId": "lamb-ride",
-          "id": "s7-lamb-ride"
-        },
-        {
-          "src": "assets/layers/ripple.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 880,
-          "width": 1600,
-          "zIndex": 8,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "水纹从牛身两侧向后推开，说明它在往前趟",
-            "loop": "sway",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -200,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0.9
               },
               {
                 "at": 0.5,
-                "x": 60,
-                "y": -8,
-                "rotation": 0,
-                "scale": 1.05,
-                "opacity": 0.95
-              },
-              {
-                "at": 1,
-                "x": 320,
+                "x": 0,
                 "y": 0,
-                "rotation": 0,
-                "scale": 1.1,
-                "opacity": 0.9
-              }
-            ]
-          },
-          "assetId": "ripple",
-          "id": "s7-ripple"
-        }
-      ],
-      "from": 1773,
-      "duration": 407,
-      "captionStyle": "strip",
-      "backgroundAssetId": "bg-water"
-    },
-    {
-      "id": "s8",
-      "background": "assets/backgrounds/bg-green.png",
-      "hero": true,
-      "transition": "fade",
-      "camera": {
-        "zoom": {
-          "to": 1.04
-        }
-      },
-      "layers": [
-        {
-          "src": "assets/layers/lamb-run.png",
-          "role": "secondary",
-          "x": 760,
-          "y": 760,
-          "width": 280,
-          "zIndex": 7,
-          "enterFrom": "left",
-          "delay": 0,
-          "motion": {
-            "action": "羊羔跳下来一路跑进草里",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": -160,
-                "y": -40,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.16,
-                "x": -60,
-                "y": 10,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.44,
-                "x": 340,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.9,
-                "opacity": 1
-              },
-              {
-                "at": 0.66,
-                "x": 720,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.75,
-                "opacity": 0.6
-              },
-              {
-                "at": 1,
-                "x": 900,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.7,
                 "opacity": 0
               }
             ]
           },
-          "assetId": "lamb-run",
-          "id": "s8-lamb-run"
+          "id": "s2-fox-run-0"
         },
         {
-          "src": "assets/layers/calf-turn.png",
+          "src": "assets/layers/fox-sit.png",
+          "assetId": "fox-sit",
           "role": "primary",
-          "x": 620,
-          "y": 690,
-          "width": 470,
+          "x": 560,
+          "y": 532,
+          "width": 400,
           "zIndex": 6,
-          "enterFrom": "left",
+          "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "小牛走上岸，停住，最后把头转回去看那条河",
+            "action": "跑到位后坐下，抬头看向远处的灯",
             "keyframes": [
               {
                 "at": 0,
-                "x": -240,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 1
+                "opacity": 0
               },
               {
-                "at": 0.3,
-                "x": -20,
+                "at": 0.4,
+                "x": 0,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 1
+                "opacity": 0
               },
               {
                 "at": 0.52,
@@ -1206,267 +328,1754 @@
                 "opacity": 1
               },
               {
-                "at": 0.74,
-                "x": 0,
-                "y": -6,
+                "at": 0.75,
+                "x": 10,
+                "y": -10,
                 "rotation": -3,
                 "scale": 1.02,
                 "opacity": 1
               },
               {
                 "at": 1,
-                "x": 0,
-                "y": -4,
-                "rotation": -4,
-                "scale": 1.03,
+                "x": 10,
+                "y": -6,
+                "rotation": -2,
+                "scale": 1.02,
                 "opacity": 1
               }
             ]
           },
-          "assetId": "calf-turn",
-          "id": "s8-calf-turn"
+          "id": "s2-fox-sit-1"
         },
         {
-          "src": "assets/layers/grass-fore.png",
-          "role": "foreground",
-          "x": 960,
-          "y": 1010,
-          "width": 2200,
-          "zIndex": 9,
-          "enterFrom": "down",
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "tertiary",
+          "x": 1460,
+          "y": 440,
+          "width": 200,
+          "zIndex": 3,
+          "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "对岸的草在前景轻轻翻动",
-            "loop": "sway",
+            "action": "远处谷底的灯依次亮起",
             "keyframes": [
               {
                 "at": 0,
                 "x": 0,
-                "y": 24,
+                "y": 0,
                 "rotation": 0,
-                "scale": 1,
-                "opacity": 1
+                "scale": 0.6,
+                "opacity": 0
               },
               {
-                "at": 0.5,
-                "x": -14,
+                "at": 0.55,
+                "x": 0,
                 "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.6
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 0.55
+              }
+            ]
+          },
+          "id": "s2-glow-2"
+        },
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "tertiary",
+          "x": 1640,
+          "y": 480,
+          "width": 200,
+          "zIndex": 3,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "第二点灯光晚一拍亮",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.6,
+                "opacity": 0
+              },
+              {
+                "at": 0.72,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.6,
+                "opacity": 0
+              },
+              {
+                "at": 0.86,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.6
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 0.55
+              }
+            ]
+          },
+          "id": "s2-glow-3"
+        }
+      ],
+      "from": 262,
+      "duration": 241,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-slope"
+    },
+    {
+      "id": "s3",
+      "background": "assets/backgrounds/bg-slope.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
+          "role": "primary",
+          "x": 835,
+          "y": 338,
+          "width": 250,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "灯比往年亮得更早也更久，光在雪里稳住",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.94,
+                "opacity": 0.6
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": -14,
                 "rotation": 0,
                 "scale": 1.02,
                 "opacity": 1
               },
               {
                 "at": 1,
-                "x": -24,
-                "y": 6,
+                "x": 0,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.04,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s3-lamp-on-1"
+        },
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "secondary",
+          "x": 700,
+          "y": 431,
+          "width": 520,
+          "zIndex": 4,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "光晕随时间扩大",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.7,
+                "opacity": 0.3
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.2,
+                "opacity": 0.85
+              }
+            ]
+          },
+          "id": "s3-glow-2"
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s3-snow-0",
+          "role": "foreground",
+          "x": 240,
+          "y": -120,
+          "width": 96,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.14,
+                "x": 0,
+                "y": 220,
+                "rotation": 30,
+                "scale": 1,
+                "opacity": 1.0
+              },
+              {
+                "at": 1.0,
+                "x": -40,
+                "y": 1180,
+                "rotation": 90,
+                "scale": 1,
+                "opacity": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s3-snow-1",
+          "role": "foreground",
+          "x": 700,
+          "y": -260,
+          "width": 64,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.29000000000000004,
+                "x": 0,
+                "y": 260,
+                "rotation": 48,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 1.0,
+                "x": -18,
+                "y": 1210,
+                "rotation": 126,
+                "scale": 1,
+                "opacity": 0.85
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s3-snow-2",
+          "role": "foreground",
+          "x": 1420,
+          "y": -80,
+          "width": 110,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.44,
+                "x": 0,
+                "y": 300,
+                "rotation": 66,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1.0,
+                "x": 4,
+                "y": 1240,
+                "rotation": 162,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s3-snow-3",
+          "role": "foreground",
+          "x": 1700,
+          "y": -320,
+          "width": 72,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.5900000000000001,
+                "x": 0,
+                "y": 340,
+                "rotation": 84,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 1.0,
+                "x": 26,
+                "y": 1270,
+                "rotation": 198,
+                "scale": 1,
+                "opacity": 0.8
+              }
+            ]
+          }
+        }
+      ],
+      "from": 503,
+      "duration": 220,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-slope"
+    },
+    {
+      "id": "s4",
+      "background": "assets/backgrounds/bg-window.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
+          "role": "primary",
+          "x": 830,
+          "y": 301,
+          "width": 260,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "灯被风推得晃了两下，然后不动了",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.3,
+                "x": 26,
+                "y": -8,
+                "rotation": 5,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.44,
+                "x": -22,
+                "y": -4,
+                "rotation": -4,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 10,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
                 "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               }
             ]
           },
-          "assetId": "grass-fore",
-          "id": "s8-grass-fore"
+          "id": "s4-lamp-on-0"
+        },
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "secondary",
+          "x": 680,
+          "y": 375,
+          "width": 560,
+          "zIndex": 4,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "光晕跟着晃，然后在一拍之内彻底熄掉——这是本拍的事件",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 0.3,
+                "x": 26,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 0.85
+              },
+              {
+                "at": 0.44,
+                "x": -22,
+                "y": -4,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0.7
+              },
+              {
+                "at": 0.58,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 0.66,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.7,
+                "opacity": 0.25
+              },
+              {
+                "at": 0.72,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.4,
+                "opacity": 0
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.4,
+                "opacity": 0
+              }
+            ]
+          },
+          "id": "s4-glow-1"
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s4-snow-0",
+          "role": "foreground",
+          "x": 180,
+          "y": -160,
+          "width": 88,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.14,
+                "x": 0,
+                "y": 220,
+                "rotation": 30,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1.0,
+                "x": -40,
+                "y": 1180,
+                "rotation": 90,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s4-snow-1",
+          "role": "foreground",
+          "x": 620,
+          "y": -300,
+          "width": 60,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": 260,
+                "rotation": 48,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 1.0,
+                "x": -18,
+                "y": 1210,
+                "rotation": 126,
+                "scale": 1,
+                "opacity": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s4-snow-2",
+          "role": "foreground",
+          "x": 1180,
+          "y": -100,
+          "width": 100,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.49,
+                "x": 0,
+                "y": 300,
+                "rotation": 66,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1.0,
+                "x": 4,
+                "y": 1240,
+                "rotation": 162,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s4-snow-3",
+          "role": "foreground",
+          "x": 1620,
+          "y": -260,
+          "width": 70,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.64,
+                "x": 0,
+                "y": 340,
+                "rotation": 84,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 1.0,
+                "x": 26,
+                "y": 1270,
+                "rotation": 198,
+                "scale": 1,
+                "opacity": 0.85
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s4-snow-4",
+          "role": "foreground",
+          "x": 900,
+          "y": -380,
+          "width": 54,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.74,
+                "x": 0,
+                "y": 380,
+                "rotation": 102,
+                "scale": 1,
+                "opacity": 0.75
+              },
+              {
+                "at": 1.0,
+                "x": 48,
+                "y": 1300,
+                "rotation": 234,
+                "scale": 1,
+                "opacity": 0.75
+              }
+            ]
+          }
         }
       ],
-      "from": 2180,
-      "duration": 303,
+      "from": 723,
+      "duration": 242,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-green"
+      "backgroundAssetId": "bg-window"
+    },
+    {
+      "id": "s5",
+      "background": "assets/backgrounds/bg-window.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "camera": {
+        "zoom": {
+          "to": 1.06
+        }
+      },
+      "layers": [
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
+          "role": "primary",
+          "x": 835,
+          "y": 338,
+          "width": 250,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "灭掉的灯是这一拍的主体：它先被雪推得歪了一下，然后一点点沉进雪色里，没有人来扶",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": -30,
+                "rotation": 0,
+                "scale": 1.0,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.22,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.0,
+                "opacity": 0.85
+              },
+              {
+                "at": 0.44,
+                "x": 14,
+                "y": 6,
+                "rotation": 4,
+                "scale": 0.99,
+                "opacity": 0.7
+              },
+              {
+                "at": 0.7,
+                "x": 10,
+                "y": 22,
+                "rotation": 5,
+                "scale": 0.97,
+                "opacity": 0.5
+              },
+              {
+                "at": 1.0,
+                "x": 8,
+                "y": 42,
+                "rotation": 6,
+                "scale": 0.95,
+                "opacity": 0.3
+              }
+            ]
+          },
+          "id": "s5-lamp-on-1"
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-0",
+          "role": "foreground",
+          "x": 300,
+          "y": -140,
+          "width": 120,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.14,
+                "x": 0,
+                "y": 220,
+                "rotation": 30,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 1.0,
+                "x": -40,
+                "y": 1180,
+                "rotation": 90,
+                "scale": 1,
+                "opacity": 0.95
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-1",
+          "role": "foreground",
+          "x": 780,
+          "y": -280,
+          "width": 84,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.26,
+                "x": 0,
+                "y": 260,
+                "rotation": 48,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1.0,
+                "x": -18,
+                "y": 1210,
+                "rotation": 126,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-2",
+          "role": "foreground",
+          "x": 1300,
+          "y": -60,
+          "width": 104,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": 300,
+                "rotation": 66,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 1.0,
+                "x": 4,
+                "y": 1240,
+                "rotation": 162,
+                "scale": 1,
+                "opacity": 0.95
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-3",
+          "role": "foreground",
+          "x": 1680,
+          "y": -240,
+          "width": 92,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.54,
+                "x": 0,
+                "y": 340,
+                "rotation": 84,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1.0,
+                "x": 26,
+                "y": 1270,
+                "rotation": 198,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-4",
+          "role": "foreground",
+          "x": 520,
+          "y": -400,
+          "width": 66,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.6900000000000001,
+                "x": 0,
+                "y": 380,
+                "rotation": 102,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 1.0,
+                "x": 48,
+                "y": 1300,
+                "rotation": 234,
+                "scale": 1,
+                "opacity": 0.85
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s5-snow-5",
+          "role": "foreground",
+          "x": 1050,
+          "y": -340,
+          "width": 76,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.8200000000000001,
+                "x": 0,
+                "y": 420,
+                "rotation": 120,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 1.0,
+                "x": 70,
+                "y": 1330,
+                "rotation": 270,
+                "scale": 1,
+                "opacity": 0.85
+              }
+            ]
+          }
+        }
+      ],
+      "from": 965,
+      "duration": 165,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-window"
+    },
+    {
+      "id": "s6",
+      "background": "assets/backgrounds/bg-window.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/fox-run.png",
+          "assetId": "fox-run",
+          "role": "primary",
+          "x": 480,
+          "y": 717,
+          "width": 440,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "狐狸从画面外跑到窗下",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -900,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.26,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.32,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              }
+            ]
+          },
+          "id": "s6-fox-run-0"
+        },
+        {
+          "src": "assets/layers/fox-jump.png",
+          "assetId": "fox-jump",
+          "role": "primary",
+          "x": 490,
+          "y": 478,
+          "width": 420,
+          "zIndex": 7,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "跳第一次没够着，落回来，再跳第二次，还是没够着",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.44,
+                "x": 20,
+                "y": -190,
+                "rotation": -8,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 10,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.72,
+                "x": 26,
+                "y": -210,
+                "rotation": -9,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.86,
+                "x": 12,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 4,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s6-fox-jump-1"
+        },
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
+          "role": "secondary",
+          "x": 1105,
+          "y": 205,
+          "width": 150,
+          "zIndex": 5,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "窗台上那盏灭掉的灯，够不着",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -40,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.5
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              }
+            ]
+          },
+          "id": "s6-lamp-on-2"
+        }
+      ],
+      "from": 1130,
+      "duration": 177,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-window"
+    },
+    {
+      "id": "s7",
+      "background": "assets/backgrounds/bg-slope.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/moon.png",
+          "assetId": "moon",
+          "role": "tertiary",
+          "x": 1420,
+          "y": 151,
+          "width": 280,
+          "zIndex": 2,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "月亮升上来，给这一拍提供唯一的光源",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -150,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -18,
+                "rotation": 0,
+                "scale": 1.03,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s7-moon-0"
+        },
+        {
+          "src": "assets/layers/fox-belly.png",
+          "assetId": "fox-belly",
+          "role": "primary",
+          "x": 620,
+          "y": 375,
+          "width": 520,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "狐狸退到雪地中间，趴下，然后把整个身子翻过去，白肚皮朝天",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 340,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.2,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": 10,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": 6,
+                "rotation": 72,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.64,
+                "x": 0,
+                "y": 0,
+                "rotation": 150,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.76,
+                "x": 0,
+                "y": -6,
+                "rotation": 180,
+                "scale": 1.05,
+                "opacity": 1
+              },
+              {
+                "at": 1.0,
+                "x": 0,
+                "y": -8,
+                "rotation": 180,
+                "scale": 1.06,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s7-fox-belly-1"
+        },
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "secondary",
+          "x": 570,
+          "y": 291,
+          "width": 620,
+          "zIndex": 5,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "雪面把这点白反出去，在最后亮成一小簇——本片的高潮",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.4,
+                "opacity": 0
+              },
+              {
+                "at": 0.66,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.5,
+                "opacity": 0
+              },
+              {
+                "at": 0.8,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 0.92,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.3,
+                "opacity": 0.85
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.45,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "id": "s7-glow-2"
+        }
+      ],
+      "from": 1307,
+      "duration": 409,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-slope"
+    },
+    {
+      "id": "s8",
+      "background": "assets/backgrounds/bg-morning.png",
+      "hero": true,
+      "transition": "fade",
+      "decorations": false,
+      "camera": {
+        "zoom": {
+          "to": 1.05
+        }
+      },
+      "layers": [
+        {
+          "src": "assets/layers/glow.png",
+          "assetId": "glow",
+          "role": "secondary",
+          "x": 620,
+          "y": 395,
+          "width": 560,
+          "zIndex": 4,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "昨夜那点亮在天光里淡掉，只留下雪地上的痕",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.4,
+                "opacity": 0.75
+              },
+              {
+                "at": 0.35,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.3
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.85,
+                "opacity": 0.16
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.8,
+                "opacity": 0.12
+              }
+            ]
+          },
+          "id": "s8-glow-0"
+        },
+        {
+          "src": "assets/layers/lamp-on.png",
+          "assetId": "lamp-on",
+          "role": "primary",
+          "x": 785,
+          "y": 474,
+          "width": 230,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "雪地上那个凹痕慢慢显出灯的形状，从看不清到看得出来，最后停住",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 60,
+                "rotation": 0,
+                "scale": 0.55,
+                "opacity": 0
+              },
+              {
+                "at": 0.28,
+                "x": 0,
+                "y": 24,
+                "rotation": 0,
+                "scale": 0.82,
+                "opacity": 0.12
+              },
+              {
+                "at": 0.55,
+                "x": 0,
+                "y": 4,
+                "rotation": 0,
+                "scale": 0.98,
+                "opacity": 0.26
+              },
+              {
+                "at": 0.8,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.06,
+                "opacity": 0.34
+              },
+              {
+                "at": 1.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.06,
+                "opacity": 0.32
+              }
+            ]
+          },
+          "id": "s8-lamp-on-1"
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s8-snow-0",
+          "role": "foreground",
+          "x": 420,
+          "y": -200,
+          "width": 58,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.14,
+                "x": 0,
+                "y": 220,
+                "rotation": 30,
+                "scale": 1,
+                "opacity": 0.5
+              },
+              {
+                "at": 1.0,
+                "x": -40,
+                "y": 1180,
+                "rotation": 90,
+                "scale": 1,
+                "opacity": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "src": "assets/layers/snow-fall.png",
+          "assetId": "snow-fall",
+          "id": "s8-snow-1",
+          "role": "foreground",
+          "x": 1240,
+          "y": -320,
+          "width": 46,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
+            "keyframes": [
+              {
+                "at": 0.0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.39,
+                "x": 0,
+                "y": 260,
+                "rotation": 48,
+                "scale": 1,
+                "opacity": 0.45
+              },
+              {
+                "at": 1.0,
+                "x": -18,
+                "y": 1210,
+                "rotation": 126,
+                "scale": 1,
+                "opacity": 0.45
+              }
+            ]
+          }
+        }
+      ],
+      "from": 1716,
+      "duration": 272,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-morning"
     }
   ],
   "captions": [
     {
       "id": "cue-1",
       "from": 0,
-      "duration": 97,
-      "text": "山脚下，牛群往前走，尘土跟在后面。"
+      "duration": 42,
+      "text": "山谷里有个老规矩。"
     },
     {
       "id": "cue-2",
-      "from": 104,
-      "duration": 64,
-      "text": "有一头小牛，总是落在最后。"
+      "from": 49,
+      "duration": 87,
+      "text": "天一黑，家家都要在窗台上点一盏灯。"
     },
     {
       "id": "cue-3",
-      "from": 174,
-      "duration": 132,
-      "text": "它不是走不动，是走两步就要停下来，朝右边看一眼。"
+      "from": 142,
+      "duration": 107,
+      "text": "灯不是给自己点的，是给夜里赶路的人指路的。"
     },
     {
       "id": "cue-4",
-      "from": 319,
-      "duration": 34,
-      "text": "右边是一条河。"
+      "from": 262,
+      "duration": 42,
+      "text": "谷底住着一只小狐狸。"
     },
     {
       "id": "cue-5",
-      "from": 360,
-      "duration": 137,
-      "text": "河的对岸有一片草，绿得发亮，风一过就翻出银色的一层。"
+      "from": 311,
+      "duration": 53,
+      "text": "它没有窗台，也没有灯。"
     },
     {
       "id": "cue-6",
-      "from": 504,
-      "duration": 72,
-      "text": "这边的草是黄的，早就被啃平了。"
+      "from": 370,
+      "duration": 120,
+      "text": "每天入夜，它就蹲在雪坡上，看那些灯一盏一盏亮起来。"
     },
     {
       "id": "cue-7",
-      "from": 583,
-      "duration": 46,
-      "text": "小牛每天都看着对岸。"
+      "from": 503,
+      "duration": 45,
+      "text": "那年冬天雪下得早。"
     },
     {
       "id": "cue-8",
-      "from": 642,
-      "duration": 44,
-      "text": "有一天它走到水边。"
+      "from": 555,
+      "duration": 76,
+      "text": "路埋住了，山口的岔道看不出来了。"
     },
     {
       "id": "cue-9",
-      "from": 693,
-      "duration": 55,
-      "text": "水面很静，映着它自己。"
+      "from": 638,
+      "duration": 73,
+      "text": "灯比往年亮得早，也亮得更久。"
     },
     {
       "id": "cue-10",
-      "from": 754,
-      "duration": 96,
-      "text": "它抬起一只前蹄，停在半空，又放回来。"
+      "from": 723,
+      "duration": 36,
+      "text": "有天夜里起了风。"
     },
     {
       "id": "cue-11",
-      "from": 856,
-      "duration": 78,
-      "text": "它退了两步，转身跟上牛群。"
+      "from": 766,
+      "duration": 71,
+      "text": "最东边那户人家的灯被吹灭了。"
     },
     {
       "id": "cue-12",
-      "from": 946,
-      "duration": 35,
-      "text": "第二天它又来了。"
+      "from": 844,
+      "duration": 108,
+      "text": "那是进谷的第一盏，也是山口唯一看得见的一盏。"
     },
     {
       "id": "cue-13",
-      "from": 987,
-      "duration": 43,
-      "text": "这次前蹄踩进去了。"
+      "from": 965,
+      "duration": 59,
+      "text": "屋里的人睡着了，没有发现。"
     },
     {
       "id": "cue-14",
-      "from": 1036,
-      "duration": 91,
-      "text": "水是凉的，凉得它整个背都缩了一下。"
+      "from": 1031,
+      "duration": 86,
+      "text": "雪越下越大，山口那边一片黑。"
     },
     {
       "id": "cue-15",
-      "from": 1134,
-      "duration": 75,
-      "text": "它掉头就跑，跑出很远才停。"
+      "from": 1130,
+      "duration": 47,
+      "text": "小狐狸跑到那扇窗下。"
     },
     {
       "id": "cue-16",
-      "from": 1222,
-      "duration": 25,
-      "text": "春天过去了。"
+      "from": 1184,
+      "duration": 49,
+      "text": "它跳了一次，没够着。"
     },
     {
       "id": "cue-17",
-      "from": 1253,
-      "duration": 65,
-      "text": "这边的草长高一点，又黄了。"
+      "from": 1239,
+      "duration": 56,
+      "text": "又跳了一次，还是没够着。"
     },
     {
       "id": "cue-18",
-      "from": 1324,
-      "duration": 31,
-      "text": "对岸还是绿的。"
+      "from": 1307,
+      "duration": 178,
+      "text": "它退回到雪地中间，趴下来，把身子整个翻过去，让白色的肚皮朝着天。"
     },
     {
       "id": "cue-19",
-      "from": 1362,
-      "duration": 93,
-      "text": "小牛长高了一些，角冒了尖，还在这一边。"
+      "from": 1492,
+      "duration": 75,
+      "text": "月光落在雪上，也落在它身上。"
     },
     {
       "id": "cue-20",
-      "from": 1468,
-      "duration": 103,
-      "text": "一天下午，一只羊羔崴了脚，站在水边叫。"
+      "from": 1573,
+      "duration": 47,
+      "text": "雪把这点白反了出去。"
     },
     {
       "id": "cue-21",
-      "from": 1577,
-      "duration": 109,
-      "text": "它的群已经过去了，在对岸低头吃草，没有回头。"
+      "from": 1627,
+      "duration": 77,
+      "text": "在山口看，那里像有一小簇亮。"
     },
     {
       "id": "cue-22",
-      "from": 1693,
-      "duration": 68,
-      "text": "羊羔叫了很久，越叫越小声。"
+      "from": 1716,
+      "duration": 55,
+      "text": "天亮的时候，狐狸已经走了。"
     },
     {
       "id": "cue-23",
-      "from": 1773,
-      "duration": 53,
-      "text": "小牛看着它，看了很久。"
-    },
-    {
-      "id": "cue-24",
-      "from": 1833,
-      "duration": 105,
-      "text": "然后它走过去，低下头，把背凑到羊羔跟前。"
-    },
-    {
-      "id": "cue-25",
-      "from": 1944,
-      "duration": 30,
-      "text": "羊羔爬上来。"
-    },
-    {
-      "id": "cue-26",
-      "from": 1981,
-      "duration": 44,
-      "text": "小牛一脚踏进水里。"
-    },
-    {
-      "id": "cue-27",
-      "from": 2032,
-      "duration": 82,
-      "text": "水漫过蹄子，漫过膝盖，漫过肚子。"
-    },
-    {
-      "id": "cue-28",
-      "from": 2121,
-      "duration": 46,
-      "text": "它晃了一下，没有停。"
-    },
-    {
-      "id": "cue-29",
-      "from": 2180,
-      "duration": 78,
-      "text": "到了对岸，羊羔跳下来跑进草里。"
-    },
-    {
-      "id": "cue-30",
-      "from": 2264,
-      "duration": 49,
-      "text": "小牛回过头看那条河。"
-    },
-    {
-      "id": "cue-31",
-      "from": 2319,
-      "duration": 35,
-      "text": "河还是那么宽。"
-    },
-    {
-      "id": "cue-32",
-      "from": 2361,
-      "duration": 72,
-      "text": "不一样的是，它现在知道有多宽了。"
+      "from": 1778,
+      "duration": 149,
+      "text": "那家人推开窗，只看见雪地上一个浅浅的坑，形状像一盏灯。"
     }
   ]
 }

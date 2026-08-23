@@ -5,262 +5,171 @@
   "voiceProvider": "tencent",
   "assets": [
     {
-      "id": "bg-hill",
+      "id": "bg-dusk",
       "type": "background",
-      "path": "assets/backgrounds/bg-hill.png",
-      "source": "assets/source/bg-hill.png",
-      "promptFile": "prompts/bg-hill.txt",
+      "path": "assets/backgrounds/bg-dusk.png",
+      "source": "assets/source/bg-dusk.png",
+      "promptFile": "prompts/bg-dusk.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-hill.watermark.json"
+        "report": "assets/qa/bg-dusk.watermark.json"
       }
     },
     {
-      "id": "bg-bank",
+      "id": "bg-slope",
       "type": "background",
-      "path": "assets/backgrounds/bg-bank.png",
-      "source": "assets/source/bg-bank.png",
-      "promptFile": "prompts/bg-bank.txt",
+      "path": "assets/backgrounds/bg-slope.png",
+      "source": "assets/source/bg-slope.png",
+      "promptFile": "prompts/bg-slope.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-bank.watermark.json"
+        "report": "assets/qa/bg-slope.watermark.json"
       }
     },
     {
-      "id": "bg-water",
+      "id": "bg-window",
       "type": "background",
-      "path": "assets/backgrounds/bg-water.png",
-      "source": "assets/source/bg-water.png",
-      "promptFile": "prompts/bg-water.txt",
+      "path": "assets/backgrounds/bg-window.png",
+      "source": "assets/source/bg-window.png",
+      "promptFile": "prompts/bg-window.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-water.watermark.json"
+        "report": "assets/qa/bg-window.watermark.json"
       }
     },
     {
-      "id": "bg-green",
+      "id": "bg-morning",
       "type": "background",
-      "path": "assets/backgrounds/bg-green.png",
-      "source": "assets/source/bg-green.png",
-      "promptFile": "prompts/bg-green.txt",
+      "path": "assets/backgrounds/bg-morning.png",
+      "source": "assets/source/bg-morning.png",
+      "promptFile": "prompts/bg-morning.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-green.watermark.json"
+        "report": "assets/qa/bg-morning.watermark.json"
       }
     },
     {
-      "id": "calf-walk",
+      "id": "fox-sit",
       "type": "layer",
-      "path": "assets/layers/calf-walk.png",
-      "source": "assets/source/calf-walk.png",
+      "path": "assets/layers/fox-sit.png",
+      "source": "assets/source/fox-sit.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/calf-walk.txt",
+      "promptFile": "prompts/fox-sit.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/calf-walk.watermark.json"
+        "report": "assets/qa/fox-sit.watermark.json"
       },
-      "characterId": "calf"
+      "characterId": "fox"
     },
     {
-      "id": "calf-look",
+      "id": "fox-run",
       "type": "layer",
-      "path": "assets/layers/calf-look.png",
-      "source": "assets/source/calf-look.png",
+      "path": "assets/layers/fox-run.png",
+      "source": "assets/source/fox-run.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/calf-look.txt",
+      "promptFile": "prompts/fox-run.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/calf-look.watermark.json"
+        "report": "assets/qa/fox-run.watermark.json"
       },
-      "characterId": "calf"
+      "characterId": "fox"
     },
     {
-      "id": "calf-hoof",
+      "id": "fox-jump",
       "type": "layer",
-      "path": "assets/layers/calf-hoof.png",
-      "source": "assets/source/calf-hoof.png",
+      "path": "assets/layers/fox-jump.png",
+      "source": "assets/source/fox-jump.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/calf-hoof.txt",
+      "promptFile": "prompts/fox-jump.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/calf-hoof.watermark.json"
+        "report": "assets/qa/fox-jump.watermark.json"
       },
-      "characterId": "calf"
+      "characterId": "fox"
     },
     {
-      "id": "calf-back",
+      "id": "fox-belly",
       "type": "layer",
-      "path": "assets/layers/calf-back.png",
-      "source": "assets/source/calf-back.png",
+      "path": "assets/layers/fox-belly.png",
+      "source": "assets/source/fox-belly.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/calf-back.txt",
+      "promptFile": "prompts/fox-belly.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/calf-back.watermark.json"
+        "report": "assets/qa/fox-belly.watermark.json"
       },
-      "characterId": "calf"
+      "characterId": "fox"
     },
     {
-      "id": "calf-grown",
+      "id": "lamp-on",
       "type": "layer",
-      "path": "assets/layers/calf-grown.png",
-      "source": "assets/source/calf-grown.png",
+      "path": "assets/layers/lamp-on.png",
+      "source": "assets/source/lamp-on.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/calf-grown.txt",
+      "promptFile": "prompts/lamp-on.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/calf-grown.watermark.json"
-      },
-      "characterId": "calf"
-    },
-    {
-      "id": "calf-bow",
-      "type": "layer",
-      "path": "assets/layers/calf-bow.png",
-      "source": "assets/source/calf-bow.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/calf-bow.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/calf-bow.watermark.json"
-      },
-      "characterId": "calf"
-    },
-    {
-      "id": "calf-wade",
-      "type": "layer",
-      "path": "assets/layers/calf-wade.png",
-      "source": "assets/source/calf-wade.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/calf-wade.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/calf-wade.watermark.json"
-      },
-      "characterId": "calf"
-    },
-    {
-      "id": "calf-turn",
-      "type": "layer",
-      "path": "assets/layers/calf-turn.png",
-      "source": "assets/source/calf-turn.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/calf-turn.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/calf-turn.watermark.json"
-      },
-      "characterId": "calf"
-    },
-    {
-      "id": "lamb-call",
-      "type": "layer",
-      "path": "assets/layers/lamb-call.png",
-      "source": "assets/source/lamb-call.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/lamb-call.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/lamb-call.watermark.json"
-      },
-      "characterId": "lamb"
-    },
-    {
-      "id": "lamb-ride",
-      "type": "layer",
-      "path": "assets/layers/lamb-ride.png",
-      "source": "assets/source/lamb-ride.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/lamb-ride.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/lamb-ride.watermark.json"
-      },
-      "characterId": "lamb"
-    },
-    {
-      "id": "lamb-run",
-      "type": "layer",
-      "path": "assets/layers/lamb-run.png",
-      "source": "assets/source/lamb-run.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/lamb-run.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/lamb-run.watermark.json"
-      },
-      "characterId": "lamb"
-    },
-    {
-      "id": "herd",
-      "type": "layer",
-      "path": "assets/layers/herd.png",
-      "source": "assets/source/herd.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/herd.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/herd.watermark.json"
+        "report": "assets/qa/lamp-on.watermark.json"
       }
     },
     {
-      "id": "grass-fore",
+      "id": "moon",
       "type": "layer",
-      "path": "assets/layers/grass-fore.png",
-      "source": "assets/source/grass-fore.png",
+      "path": "assets/layers/moon.png",
+      "source": "assets/source/moon.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/grass-fore.txt",
+      "promptFile": "prompts/moon.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/grass-fore.watermark.json"
+        "report": "assets/qa/moon.watermark.json"
       }
     },
     {
-      "id": "ripple",
+      "id": "glow",
       "type": "layer",
-      "path": "assets/layers/ripple.png",
-      "source": "assets/source/ripple.png",
+      "path": "assets/layers/glow.png",
+      "source": "assets/source/glow.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
-      "promptFile": "prompts/ripple.txt",
+      "promptFile": "prompts/glow.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/ripple.watermark.json"
+        "report": "assets/qa/glow.watermark.json"
+      }
+    },
+    {
+      "id": "snow-fall",
+      "type": "layer",
+      "path": "assets/layers/snow-fall.png",
+      "source": "assets/source/snow-fall.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/snow-fall.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/snow-fall.watermark.json"
       }
     }
   ]
