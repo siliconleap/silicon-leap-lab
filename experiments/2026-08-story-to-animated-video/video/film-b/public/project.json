@@ -6,7 +6,7 @@
   "width": 1920,
   "height": 1080,
   "fps": 30,
-  "durationInFrames": 3000,
+  "durationInFrames": 2483,
   "durationPlan": {
     "source": "user",
     "requestedSeconds": 100,
@@ -29,11 +29,1444 @@
     "opacity": 0.94
   },
   "audio": {
-    "voice": null,
+    "voice": "assets/audio/narration.mp3",
     "music": null,
     "musicVolume": 0.1,
-    "tailSeconds": 0,
+    "tailSeconds": 1.2,
     "intentionalSilence": false
   },
-  "scenes": []
+  "scenes": [
+    {
+      "id": "s1",
+      "background": "assets/backgrounds/bg-hill.png",
+      "hero": true,
+      "transition": "fade",
+      "layers": [
+        {
+          "src": "assets/layers/herd.png",
+          "role": "secondary",
+          "x": 560,
+          "y": 470,
+          "width": 900,
+          "zIndex": 3,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "牛群稳定地向右走出画面，建立「队伍在前进」",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -160,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.55,
+                "x": 240,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 760,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "assetId": "herd",
+          "id": "s1-herd"
+        },
+        {
+          "src": "assets/layers/calf-walk.png",
+          "role": "primary",
+          "x": 420,
+          "y": 690,
+          "width": 460,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 12,
+          "motion": {
+            "action": "小牛跟着走，走到一半停住不动，被队伍拉开距离",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -260,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": 60,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.55,
+                "x": 90,
+                "y": -6,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 90,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 110,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-walk",
+          "id": "s1-calf-walk"
+        },
+        {
+          "src": "assets/layers/grass-fore.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 1010,
+          "width": 2100,
+          "zIndex": 9,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "前景草叶轻微起伏，给画面一点深度",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 14,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 8,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "grass-fore",
+          "id": "s1-grass-fore"
+        }
+      ],
+      "from": 0,
+      "duration": 319,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-hill"
+    },
+    {
+      "id": "s2",
+      "background": "assets/backgrounds/bg-bank.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "camera": {
+        "pan": {
+          "x": -70
+        }
+      },
+      "layers": [
+        {
+          "src": "assets/layers/calf-look.png",
+          "role": "primary",
+          "x": 430,
+          "y": 700,
+          "width": 440,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "小牛走到岸边站定，头朝对岸的方向送出去",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -200,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.35,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.6,
+                "x": 20,
+                "y": -4,
+                "rotation": 1,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 24,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-look",
+          "id": "s2-calf-look"
+        },
+        {
+          "src": "assets/layers/ripple.png",
+          "role": "tertiary",
+          "x": 1180,
+          "y": 820,
+          "width": 1000,
+          "zIndex": 4,
+          "enterFrom": "right",
+          "delay": 18,
+          "motion": {
+            "action": "河面波纹横向推移，把观众的视线带向对岸",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -80,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.85
+              },
+              {
+                "at": 1,
+                "x": 120,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.85
+              }
+            ]
+          },
+          "assetId": "ripple",
+          "id": "s2-ripple"
+        },
+        {
+          "src": "assets/layers/grass-fore.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 1020,
+          "width": 2100,
+          "zIndex": 9,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "前景草被风压向右侧",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 20,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.45,
+                "x": -18,
+                "y": 0,
+                "rotation": -1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -30,
+                "y": 6,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "grass-fore",
+          "id": "s2-grass-fore"
+        }
+      ],
+      "from": 319,
+      "duration": 323,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-bank"
+    },
+    {
+      "id": "s3",
+      "background": "assets/backgrounds/bg-bank.png",
+      "hero": true,
+      "transition": "cut",
+      "layers": [
+        {
+          "src": "assets/layers/calf-hoof.png",
+          "role": "primary",
+          "x": 560,
+          "y": 700,
+          "width": 460,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "小牛靠近水边，前身抬起一下，随即整体后退两步",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -120,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.28,
+                "x": 40,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.44,
+                "x": 52,
+                "y": -26,
+                "rotation": -5,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.58,
+                "x": 44,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.8,
+                "x": -70,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -96,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-hoof",
+          "id": "s3-calf-hoof"
+        },
+        {
+          "src": "assets/layers/ripple.png",
+          "role": "tertiary",
+          "x": 1120,
+          "y": 880,
+          "width": 1100,
+          "zIndex": 4,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "水面在小牛靠近时晃了一下",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 0.42,
+                "x": 0,
+                "y": -10,
+                "rotation": 0,
+                "scale": 1.04,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.8
+              },
+              {
+                "at": 1,
+                "x": 60,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.8
+              }
+            ]
+          },
+          "assetId": "ripple",
+          "id": "s3-ripple"
+        }
+      ],
+      "from": 642,
+      "duration": 304,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-bank"
+    },
+    {
+      "id": "s4",
+      "background": "assets/backgrounds/bg-bank.png",
+      "hero": true,
+      "transition": "cut",
+      "layers": [
+        {
+          "src": "assets/layers/calf-hoof.png",
+          "role": "primary",
+          "x": 620,
+          "y": 700,
+          "width": 460,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "前蹄踩进水里，整个身体一缩，然后掉头冲出画面左侧",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -80,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.22,
+                "x": 40,
+                "y": 10,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.34,
+                "x": 40,
+                "y": -18,
+                "rotation": -3,
+                "scale": 0.97,
+                "opacity": 1
+              },
+              {
+                "at": 0.46,
+                "x": 20,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.72,
+                "x": -420,
+                "y": 0,
+                "rotation": 3,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -900,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              }
+            ]
+          },
+          "assetId": "calf-hoof",
+          "id": "s4-calf-hoof"
+        },
+        {
+          "src": "assets/layers/ripple.png",
+          "role": "tertiary",
+          "x": 900,
+          "y": 900,
+          "width": 1200,
+          "zIndex": 4,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "踩点处荡开一圈水纹",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.6,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 0.7,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.35,
+                "opacity": 0.35
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.5,
+                "opacity": 0
+              }
+            ]
+          },
+          "assetId": "ripple",
+          "id": "s4-ripple"
+        }
+      ],
+      "from": 946,
+      "duration": 276,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-bank"
+    },
+    {
+      "id": "s5",
+      "background": "assets/backgrounds/bg-hill.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "layers": [
+        {
+          "src": "assets/layers/calf-walk.png",
+          "role": "primary",
+          "x": 760,
+          "y": 700,
+          "width": 430,
+          "zIndex": 5,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "小时候的小牛淡出，交给长大后的那张，完成时间流逝",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              }
+            ]
+          },
+          "assetId": "calf-walk",
+          "id": "s5-calf-walk"
+        },
+        {
+          "src": "assets/layers/calf-grown.png",
+          "role": "primary",
+          "x": 760,
+          "y": 672,
+          "width": 500,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "长大的小牛接上位置，站得更高，仍然朝着对岸",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.42,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.82,
+                "x": 14,
+                "y": -6,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 14,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-grown",
+          "id": "s5-calf-grown"
+        },
+        {
+          "src": "assets/layers/grass-fore.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 1000,
+          "width": 2100,
+          "zIndex": 9,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "前景的草长高再压下去，跟着季节走",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 30,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 1
+              },
+              {
+                "at": 0.45,
+                "x": 0,
+                "y": -10,
+                "rotation": 0,
+                "scale": 1.08,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 4,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "grass-fore",
+          "id": "s5-grass-fore"
+        }
+      ],
+      "from": 1222,
+      "duration": 246,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-hill"
+    },
+    {
+      "id": "s6",
+      "background": "assets/backgrounds/bg-bank.png",
+      "hero": true,
+      "transition": "cut",
+      "layers": [
+        {
+          "src": "assets/layers/lamb-call.png",
+          "role": "primary",
+          "x": 700,
+          "y": 780,
+          "width": 300,
+          "zIndex": 6,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "羊羔在水边一下一下地叫，幅度越来越小",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 120,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.2,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": -22,
+                "rotation": -4,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.46,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": -14,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.72,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.86,
+                "x": 0,
+                "y": -6,
+                "rotation": -1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "lamb-call",
+          "id": "s6-lamb-call"
+        },
+        {
+          "src": "assets/layers/herd.png",
+          "role": "tertiary",
+          "x": 1420,
+          "y": 430,
+          "width": 620,
+          "zIndex": 3,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "对岸的羊群低头吃草，始终没有回头",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 80,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.55,
+                "opacity": 0.85
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.55,
+                "opacity": 0.85
+              },
+              {
+                "at": 1,
+                "x": -30,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.55,
+                "opacity": 0.85
+              }
+            ]
+          },
+          "assetId": "herd",
+          "id": "s6-herd"
+        },
+        {
+          "src": "assets/layers/grass-fore.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 1020,
+          "width": 2100,
+          "zIndex": 9,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "前景草缓慢摆动",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 16,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 2,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "grass-fore",
+          "id": "s6-grass-fore"
+        }
+      ],
+      "from": 1468,
+      "duration": 305,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-bank"
+    },
+    {
+      "id": "s7",
+      "background": "assets/backgrounds/bg-water.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "layers": [
+        {
+          "src": "assets/layers/calf-bow.png",
+          "role": "primary",
+          "x": 600,
+          "y": 700,
+          "width": 520,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "小牛走到羊羔跟前，把背低下去，然后带着它离开画面",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -300,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.2,
+                "x": -40,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.3,
+                "x": -40,
+                "y": 18,
+                "rotation": 3,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": -40,
+                "y": 18,
+                "rotation": 3,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 120,
+                "y": 10,
+                "rotation": 1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.78,
+                "x": 520,
+                "y": 4,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 900,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-bow",
+          "id": "s7-calf-bow"
+        },
+        {
+          "src": "assets/layers/lamb-ride.png",
+          "role": "secondary",
+          "x": 540,
+          "y": 600,
+          "width": 240,
+          "zIndex": 7,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "羊羔爬上牛背，之后跟着牛一起向右移动",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -260,
+                "y": 120,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.28,
+                "x": -100,
+                "y": 60,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": -64,
+                "y": -16,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 96,
+                "y": -24,
+                "rotation": 1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.78,
+                "x": 496,
+                "y": -30,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 876,
+                "y": -34,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "lamb-ride",
+          "id": "s7-lamb-ride"
+        },
+        {
+          "src": "assets/layers/ripple.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 880,
+          "width": 1600,
+          "zIndex": 8,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "水纹从牛身两侧向后推开，说明它在往前趟",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -200,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.5,
+                "x": 60,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 0.95
+              },
+              {
+                "at": 1,
+                "x": 320,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.1,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "assetId": "ripple",
+          "id": "s7-ripple"
+        }
+      ],
+      "from": 1773,
+      "duration": 407,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-water"
+    },
+    {
+      "id": "s8",
+      "background": "assets/backgrounds/bg-green.png",
+      "hero": true,
+      "transition": "fade",
+      "camera": {
+        "zoom": {
+          "to": 1.04
+        }
+      },
+      "layers": [
+        {
+          "src": "assets/layers/lamb-run.png",
+          "role": "secondary",
+          "x": 760,
+          "y": 760,
+          "width": 280,
+          "zIndex": 7,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "羊羔跳下来一路跑进草里",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -160,
+                "y": -40,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.16,
+                "x": -60,
+                "y": 10,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.44,
+                "x": 340,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 720,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.75,
+                "opacity": 0.6
+              },
+              {
+                "at": 1,
+                "x": 900,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.7,
+                "opacity": 0
+              }
+            ]
+          },
+          "assetId": "lamb-run",
+          "id": "s8-lamb-run"
+        },
+        {
+          "src": "assets/layers/calf-turn.png",
+          "role": "primary",
+          "x": 620,
+          "y": 690,
+          "width": 470,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "小牛走上岸，停住，最后把头转回去看那条河",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -240,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.3,
+                "x": -20,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.52,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.74,
+                "x": 0,
+                "y": -6,
+                "rotation": -3,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -4,
+                "rotation": -4,
+                "scale": 1.03,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "calf-turn",
+          "id": "s8-calf-turn"
+        },
+        {
+          "src": "assets/layers/grass-fore.png",
+          "role": "foreground",
+          "x": 960,
+          "y": 1010,
+          "width": 2200,
+          "zIndex": 9,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "对岸的草在前景轻轻翻动",
+            "loop": "sway",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 24,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.5,
+                "x": -14,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -24,
+                "y": 6,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "assetId": "grass-fore",
+          "id": "s8-grass-fore"
+        }
+      ],
+      "from": 2180,
+      "duration": 303,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-green"
+    }
+  ],
+  "captions": [
+    {
+      "id": "cue-1",
+      "from": 0,
+      "duration": 97,
+      "text": "山脚下，牛群往前走，尘土跟在后面。"
+    },
+    {
+      "id": "cue-2",
+      "from": 104,
+      "duration": 64,
+      "text": "有一头小牛，总是落在最后。"
+    },
+    {
+      "id": "cue-3",
+      "from": 174,
+      "duration": 132,
+      "text": "它不是走不动，是走两步就要停下来，朝右边看一眼。"
+    },
+    {
+      "id": "cue-4",
+      "from": 319,
+      "duration": 34,
+      "text": "右边是一条河。"
+    },
+    {
+      "id": "cue-5",
+      "from": 360,
+      "duration": 137,
+      "text": "河的对岸有一片草，绿得发亮，风一过就翻出银色的一层。"
+    },
+    {
+      "id": "cue-6",
+      "from": 504,
+      "duration": 72,
+      "text": "这边的草是黄的，早就被啃平了。"
+    },
+    {
+      "id": "cue-7",
+      "from": 583,
+      "duration": 46,
+      "text": "小牛每天都看着对岸。"
+    },
+    {
+      "id": "cue-8",
+      "from": 642,
+      "duration": 44,
+      "text": "有一天它走到水边。"
+    },
+    {
+      "id": "cue-9",
+      "from": 693,
+      "duration": 55,
+      "text": "水面很静，映着它自己。"
+    },
+    {
+      "id": "cue-10",
+      "from": 754,
+      "duration": 96,
+      "text": "它抬起一只前蹄，停在半空，又放回来。"
+    },
+    {
+      "id": "cue-11",
+      "from": 856,
+      "duration": 78,
+      "text": "它退了两步，转身跟上牛群。"
+    },
+    {
+      "id": "cue-12",
+      "from": 946,
+      "duration": 35,
+      "text": "第二天它又来了。"
+    },
+    {
+      "id": "cue-13",
+      "from": 987,
+      "duration": 43,
+      "text": "这次前蹄踩进去了。"
+    },
+    {
+      "id": "cue-14",
+      "from": 1036,
+      "duration": 91,
+      "text": "水是凉的，凉得它整个背都缩了一下。"
+    },
+    {
+      "id": "cue-15",
+      "from": 1134,
+      "duration": 75,
+      "text": "它掉头就跑，跑出很远才停。"
+    },
+    {
+      "id": "cue-16",
+      "from": 1222,
+      "duration": 25,
+      "text": "春天过去了。"
+    },
+    {
+      "id": "cue-17",
+      "from": 1253,
+      "duration": 65,
+      "text": "这边的草长高一点，又黄了。"
+    },
+    {
+      "id": "cue-18",
+      "from": 1324,
+      "duration": 31,
+      "text": "对岸还是绿的。"
+    },
+    {
+      "id": "cue-19",
+      "from": 1362,
+      "duration": 93,
+      "text": "小牛长高了一些，角冒了尖，还在这一边。"
+    },
+    {
+      "id": "cue-20",
+      "from": 1468,
+      "duration": 103,
+      "text": "一天下午，一只羊羔崴了脚，站在水边叫。"
+    },
+    {
+      "id": "cue-21",
+      "from": 1577,
+      "duration": 109,
+      "text": "它的群已经过去了，在对岸低头吃草，没有回头。"
+    },
+    {
+      "id": "cue-22",
+      "from": 1693,
+      "duration": 68,
+      "text": "羊羔叫了很久，越叫越小声。"
+    },
+    {
+      "id": "cue-23",
+      "from": 1773,
+      "duration": 53,
+      "text": "小牛看着它，看了很久。"
+    },
+    {
+      "id": "cue-24",
+      "from": 1833,
+      "duration": 105,
+      "text": "然后它走过去，低下头，把背凑到羊羔跟前。"
+    },
+    {
+      "id": "cue-25",
+      "from": 1944,
+      "duration": 30,
+      "text": "羊羔爬上来。"
+    },
+    {
+      "id": "cue-26",
+      "from": 1981,
+      "duration": 44,
+      "text": "小牛一脚踏进水里。"
+    },
+    {
+      "id": "cue-27",
+      "from": 2032,
+      "duration": 82,
+      "text": "水漫过蹄子，漫过膝盖，漫过肚子。"
+    },
+    {
+      "id": "cue-28",
+      "from": 2121,
+      "duration": 46,
+      "text": "它晃了一下，没有停。"
+    },
+    {
+      "id": "cue-29",
+      "from": 2180,
+      "duration": 78,
+      "text": "到了对岸，羊羔跳下来跑进草里。"
+    },
+    {
+      "id": "cue-30",
+      "from": 2264,
+      "duration": 49,
+      "text": "小牛回过头看那条河。"
+    },
+    {
+      "id": "cue-31",
+      "from": 2319,
+      "duration": 35,
+      "text": "河还是那么宽。"
+    },
+    {
+      "id": "cue-32",
+      "from": 2361,
+      "duration": 72,
+      "text": "不一样的是，它现在知道有多宽了。"
+    }
+  ]
 }
