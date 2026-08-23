@@ -1,0 +1,26 @@
+{
+  "contentMode": "explainer",
+  "assetStrategy": "layered",
+  "image": {
+    "provider": "tencent-aiart",
+    "model": null,
+    "resolution": "1920:1080"
+  },
+  "voice": {
+    "provider": "tencent",
+    "voice": "501000",
+    "speed": 0,
+    "model": null
+  },
+  "timing": {
+    "provider": "synthesis",
+    "model": null
+  },
+  "renderer": {
+    "provider": "remotion"
+  },
+  "brand": {
+    "handle": "",
+    "show": false
+  }
+}
