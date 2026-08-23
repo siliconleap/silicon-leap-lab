@@ -6,7 +6,7 @@
   "width": 1920,
   "height": 1080,
   "fps": 30,
-  "durationInFrames": 1988,
+  "durationInFrames": 2298,
   "durationPlan": {
     "source": "user",
     "requestedSeconds": 100,
@@ -489,7 +489,7 @@
               }
             ]
           },
-          "id": "s3-lamp-on-1"
+          "id": "s3-lamp-on-0"
         },
         {
           "src": "assets/layers/glow.png",
@@ -530,12 +530,12 @@
               }
             ]
           },
-          "id": "s3-glow-2"
+          "id": "s3-glow-1"
         },
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s3-snow-0",
+          "id": "s3-snow-fall-2",
           "role": "foreground",
           "x": 240,
           "y": -120,
@@ -547,7 +547,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -560,15 +560,15 @@
                 "y": 220,
                 "rotation": 30,
                 "scale": 1,
-                "opacity": 1.0
+                "opacity": 1
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -40,
                 "y": 1180,
                 "rotation": 90,
                 "scale": 1,
-                "opacity": 1.0
+                "opacity": 1
               }
             ]
           }
@@ -576,7 +576,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s3-snow-1",
+          "id": "s3-snow-fall-3",
           "role": "foreground",
           "x": 700,
           "y": -260,
@@ -588,7 +588,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -604,7 +604,7 @@
                 "opacity": 0.85
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -18,
                 "y": 1210,
                 "rotation": 126,
@@ -617,7 +617,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s3-snow-2",
+          "id": "s3-snow-fall-4",
           "role": "foreground",
           "x": 1420,
           "y": -80,
@@ -629,7 +629,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -645,7 +645,7 @@
                 "opacity": 0.9
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 4,
                 "y": 1240,
                 "rotation": 162,
@@ -658,7 +658,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s3-snow-3",
+          "id": "s3-snow-fall-5",
           "role": "foreground",
           "x": 1700,
           "y": -320,
@@ -670,7 +670,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -686,7 +686,7 @@
                 "opacity": 0.8
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 26,
                 "y": 1270,
                 "rotation": 198,
@@ -850,7 +850,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s4-snow-0",
+          "id": "s4-snow-fall-2",
           "role": "foreground",
           "x": 180,
           "y": -160,
@@ -862,7 +862,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -878,7 +878,7 @@
                 "opacity": 0.9
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -40,
                 "y": 1180,
                 "rotation": 90,
@@ -891,7 +891,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s4-snow-1",
+          "id": "s4-snow-fall-3",
           "role": "foreground",
           "x": 620,
           "y": -300,
@@ -903,7 +903,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -919,7 +919,7 @@
                 "opacity": 0.8
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -18,
                 "y": 1210,
                 "rotation": 126,
@@ -932,7 +932,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s4-snow-2",
+          "id": "s4-snow-fall-4",
           "role": "foreground",
           "x": 1180,
           "y": -100,
@@ -944,7 +944,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -960,7 +960,7 @@
                 "opacity": 0.9
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 4,
                 "y": 1240,
                 "rotation": 162,
@@ -973,7 +973,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s4-snow-3",
+          "id": "s4-snow-fall-5",
           "role": "foreground",
           "x": 1620,
           "y": -260,
@@ -985,7 +985,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1001,7 +1001,7 @@
                 "opacity": 0.85
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 26,
                 "y": 1270,
                 "rotation": 198,
@@ -1014,7 +1014,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s4-snow-4",
+          "id": "s4-snow-fall-6",
           "role": "foreground",
           "x": 900,
           "y": -380,
@@ -1026,7 +1026,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1042,7 +1042,7 @@
                 "opacity": 0.75
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 48,
                 "y": 1300,
                 "rotation": 234,
@@ -1084,11 +1084,11 @@
             "action": "灭掉的灯是这一拍的主体：它先被雪推得歪了一下，然后一点点沉进雪色里，没有人来扶",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": -30,
                 "rotation": 0,
-                "scale": 1.0,
+                "scale": 1,
                 "opacity": 0.9
               },
               {
@@ -1096,7 +1096,7 @@
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1.0,
+                "scale": 1,
                 "opacity": 0.85
               },
               {
@@ -1116,7 +1116,7 @@
                 "opacity": 0.5
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 8,
                 "y": 42,
                 "rotation": 6,
@@ -1125,12 +1125,12 @@
               }
             ]
           },
-          "id": "s5-lamp-on-1"
+          "id": "s5-lamp-on-0"
         },
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-0",
+          "id": "s5-snow-fall-1",
           "role": "foreground",
           "x": 300,
           "y": -140,
@@ -1142,7 +1142,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1158,7 +1158,7 @@
                 "opacity": 0.95
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -40,
                 "y": 1180,
                 "rotation": 90,
@@ -1171,7 +1171,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-1",
+          "id": "s5-snow-fall-2",
           "role": "foreground",
           "x": 780,
           "y": -280,
@@ -1183,7 +1183,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1199,7 +1199,7 @@
                 "opacity": 0.9
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -18,
                 "y": 1210,
                 "rotation": 126,
@@ -1212,7 +1212,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-2",
+          "id": "s5-snow-fall-3",
           "role": "foreground",
           "x": 1300,
           "y": -60,
@@ -1224,7 +1224,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1240,7 +1240,7 @@
                 "opacity": 0.95
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 4,
                 "y": 1240,
                 "rotation": 162,
@@ -1253,7 +1253,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-3",
+          "id": "s5-snow-fall-4",
           "role": "foreground",
           "x": 1680,
           "y": -240,
@@ -1265,7 +1265,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1281,7 +1281,7 @@
                 "opacity": 0.9
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 26,
                 "y": 1270,
                 "rotation": 198,
@@ -1294,7 +1294,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-4",
+          "id": "s5-snow-fall-5",
           "role": "foreground",
           "x": 520,
           "y": -400,
@@ -1306,7 +1306,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1322,7 +1322,7 @@
                 "opacity": 0.85
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 48,
                 "y": 1300,
                 "rotation": 234,
@@ -1335,7 +1335,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s5-snow-5",
+          "id": "s5-snow-fall-6",
           "role": "foreground",
           "x": 1050,
           "y": -340,
@@ -1347,7 +1347,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1363,7 +1363,7 @@
                 "opacity": 0.85
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 70,
                 "y": 1330,
                 "rotation": 270,
@@ -1390,14 +1390,14 @@
           "src": "assets/layers/fox-run.png",
           "assetId": "fox-run",
           "role": "primary",
-          "x": 480,
-          "y": 717,
           "width": 440,
+          "x": 440,
+          "y": 717,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "狐狸从画面外跑到窗下",
+            "action": "狐狸跑到窗下停住",
             "keyframes": [
               {
                 "at": 0,
@@ -1408,7 +1408,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.26,
+                "at": 0.2,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1416,7 +1416,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.32,
+                "at": 0.26,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1431,14 +1431,14 @@
           "src": "assets/layers/fox-jump.png",
           "assetId": "fox-jump",
           "role": "primary",
-          "x": 490,
-          "y": 478,
-          "width": 420,
+          "width": 430,
+          "x": 465,
+          "y": 468,
           "zIndex": 7,
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "跳第一次没够着，落回来，再跳第二次，还是没够着",
+            "action": "狐狸盯住窗台上的灯，先蹲下蓄力，再蹬起来往灯的方向扑，落回时前腿缓冲；第二次幅度更小，明显够不到",
             "keyframes": [
               {
                 "at": 0,
@@ -1449,7 +1449,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.3,
+                "at": 0.22,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1457,42 +1457,106 @@
                 "opacity": 1
               },
               {
-                "at": 0.44,
-                "x": 20,
-                "y": -190,
+                "at": 0.3,
+                "x": 0,
+                "y": 26,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.34,
+                "x": 4,
+                "y": 34,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": 72,
+                "y": -176,
+                "rotation": -13,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.47,
+                "x": 104,
+                "y": -214,
+                "rotation": -17,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.53,
+                "x": 80,
+                "y": -120,
                 "rotation": -8,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.56,
-                "x": 10,
+                "at": 0.58,
+                "x": 44,
+                "y": 18,
+                "rotation": 3,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 36,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.72,
-                "x": 26,
-                "y": -210,
-                "rotation": -9,
+                "at": 0.7,
+                "x": 32,
+                "y": 22,
+                "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.86,
-                "x": 12,
-                "y": 0,
-                "rotation": 0,
+                "at": 0.78,
+                "x": 86,
+                "y": -136,
+                "rotation": -11,
+                "scale": 1.01,
+                "opacity": 1
+              },
+              {
+                "at": 0.82,
+                "x": 104,
+                "y": -158,
+                "rotation": -14,
+                "scale": 1.01,
+                "opacity": 1
+              },
+              {
+                "at": 0.88,
+                "x": 78,
+                "y": -84,
+                "rotation": -6,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.93,
+                "x": 40,
+                "y": 14,
+                "rotation": 2,
                 "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
-                "x": 4,
+                "x": 34,
                 "y": 0,
-                "rotation": 2,
+                "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               }
@@ -1504,14 +1568,14 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "secondary",
+          "width": 150,
           "x": 1105,
           "y": 205,
-          "width": 150,
           "zIndex": 5,
           "enterFrom": "up",
           "delay": 0,
           "motion": {
-            "action": "窗台上那盏灭掉的灯，够不着",
+            "action": "窗台上那盏灭掉的灯，被狐狸扑起来的风带着晃了两下——够不着，但差一点",
             "keyframes": [
               {
                 "at": 0,
@@ -1519,13 +1583,45 @@
                 "y": -40,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 0.5
+                "opacity": 0.4
               },
               {
-                "at": 0.4,
+                "at": 0.24,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 0.48,
+                "x": -6,
+                "y": 2,
+                "rotation": -4,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 0.55,
+                "x": 4,
+                "y": 0,
+                "rotation": 3,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 0.62,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 0.84,
+                "x": -5,
+                "y": 1,
+                "rotation": -3,
                 "scale": 1,
                 "opacity": 0.55
               },
@@ -1543,7 +1639,7 @@
         }
       ],
       "from": 1130,
-      "duration": 177,
+      "duration": 301,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-window"
     },
@@ -1558,14 +1654,14 @@
           "src": "assets/layers/moon.png",
           "assetId": "moon",
           "role": "tertiary",
+          "width": 280,
           "x": 1420,
           "y": 151,
-          "width": 280,
           "zIndex": 2,
           "enterFrom": "up",
           "delay": 0,
           "motion": {
-            "action": "月亮升上来，给这一拍提供唯一的光源",
+            "action": "月亮升上来，这一拍唯一的光源",
             "keyframes": [
               {
                 "at": 0,
@@ -1576,7 +1672,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.3,
+                "at": 0.24,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1599,17 +1695,17 @@
           "src": "assets/layers/fox-belly.png",
           "assetId": "fox-belly",
           "role": "primary",
-          "x": 620,
-          "y": 375,
           "width": 520,
+          "x": 620,
+          "y": 495,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "狐狸退到雪地中间，趴下，然后把整个身子翻过去，白肚皮朝天",
+            "action": "狐狸退到雪地中间，趴下来——这是翻身之前的最后一个侧面姿态",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 340,
                 "y": 0,
                 "rotation": 0,
@@ -1617,7 +1713,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.2,
+                "at": 0.16,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1625,61 +1721,110 @@
                 "opacity": 1
               },
               {
-                "at": 0.34,
+                "at": 0.3,
                 "x": 0,
-                "y": 10,
+                "y": 12,
                 "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.5,
+                "at": 0.44,
                 "x": 0,
-                "y": 6,
-                "rotation": 72,
+                "y": 16,
+                "rotation": 0,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.64,
+                "at": 0.52,
                 "x": 0,
-                "y": 0,
-                "rotation": 150,
-                "scale": 1.02,
-                "opacity": 1
-              },
-              {
-                "at": 0.76,
-                "x": 0,
-                "y": -6,
-                "rotation": 180,
-                "scale": 1.05,
-                "opacity": 1
-              },
-              {
-                "at": 1.0,
-                "x": 0,
-                "y": -8,
-                "rotation": 180,
-                "scale": 1.06,
-                "opacity": 1
+                "y": 16,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
               }
             ]
           },
           "id": "s7-fox-belly-1"
         },
         {
+          "src": "assets/layers/fox-up.png",
+          "assetId": "fox-up",
+          "role": "primary",
+          "width": 700,
+          "x": 530,
+          "y": 559,
+          "zIndex": 7,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "身子整个翻过去，白肚皮朝天——由侧躺交叉淡入到仰躺，不是把侧面图转过来",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.94,
+                "opacity": 0
+              },
+              {
+                "at": 0.44,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.96,
+                "opacity": 0
+              },
+              {
+                "at": 0.54,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.68,
+                "x": 0,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.84,
+                "x": 0,
+                "y": -12,
+                "rotation": 0,
+                "scale": 1.04,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -12,
+                "rotation": 0,
+                "scale": 1.05,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s7-fox-up-2"
+        },
+        {
           "src": "assets/layers/glow.png",
           "assetId": "glow",
           "role": "secondary",
-          "x": 570,
-          "y": 291,
           "width": 620,
+          "x": 570,
+          "y": 401,
           "zIndex": 5,
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "雪面把这点白反出去，在最后亮成一小簇——本片的高潮",
+            "action": "雪面把这点白反出去，在最后亮成一小簇——它自己成了那盏灯",
             "keyframes": [
               {
                 "at": 0,
@@ -1690,7 +1835,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.66,
+                "at": 0.54,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1698,19 +1843,19 @@
                 "opacity": 0
               },
               {
-                "at": 0.8,
+                "at": 0.7,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 0.55
+                "opacity": 0.5
               },
               {
-                "at": 0.92,
+                "at": 0.88,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1.3,
+                "scale": 1.32,
                 "opacity": 0.85
               },
               {
@@ -1718,16 +1863,16 @@
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1.45,
-                "opacity": 0.9
+                "scale": 1.5,
+                "opacity": 0.92
               }
             ]
           },
-          "id": "s7-glow-2"
+          "id": "s7-glow-3"
         }
       ],
-      "from": 1307,
-      "duration": 409,
+      "from": 1431,
+      "duration": 595,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-slope"
     },
@@ -1806,7 +1951,7 @@
             "action": "雪地上那个凹痕慢慢显出灯的形状，从看不清到看得出来，最后停住",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 60,
                 "rotation": 0,
@@ -1838,7 +1983,7 @@
                 "opacity": 0.34
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1852,7 +1997,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s8-snow-0",
+          "id": "s8-snow-fall-2",
           "role": "foreground",
           "x": 420,
           "y": -200,
@@ -1864,7 +2009,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1880,7 +2025,7 @@
                 "opacity": 0.5
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -40,
                 "y": 1180,
                 "rotation": 90,
@@ -1893,7 +2038,7 @@
         {
           "src": "assets/layers/snow-fall.png",
           "assetId": "snow-fall",
-          "id": "s8-snow-1",
+          "id": "s8-snow-fall-3",
           "role": "foreground",
           "x": 1240,
           "y": -320,
@@ -1905,7 +2050,7 @@
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1921,7 +2066,7 @@
                 "opacity": 0.45
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": -18,
                 "y": 1210,
                 "rotation": 126,
@@ -1932,7 +2077,7 @@
           }
         }
       ],
-      "from": 1716,
+      "from": 2026,
       "duration": 272,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-morning"
@@ -2032,49 +2177,61 @@
     {
       "id": "cue-16",
       "from": 1184,
-      "duration": 49,
-      "text": "它跳了一次，没够着。"
+      "duration": 88,
+      "text": "它想把那盏灯够下来，重新点上。"
     },
     {
       "id": "cue-17",
-      "from": 1239,
-      "duration": 56,
-      "text": "又跳了一次，还是没够着。"
+      "from": 1278,
+      "duration": 71,
+      "text": "它蹲下去，往上一跳，没够着。"
     },
     {
       "id": "cue-18",
-      "from": 1307,
-      "duration": 178,
-      "text": "它退回到雪地中间，趴下来，把身子整个翻过去，让白色的肚皮朝着天。"
+      "from": 1356,
+      "duration": 63,
+      "text": "再蹲，再跳，还是差得远。"
     },
     {
       "id": "cue-19",
-      "from": 1492,
-      "duration": 75,
-      "text": "月光落在雪上，也落在它身上。"
+      "from": 1431,
+      "duration": 101,
+      "text": "它退回到雪地中间，忽然想明白了一件事。"
     },
     {
       "id": "cue-20",
-      "from": 1573,
+      "from": 1538,
+      "duration": 187,
+      "text": "它趴下来，把身子整个翻过去，让白色的肚皮朝着天——它要自己去当那盏灯。"
+    },
+    {
+      "id": "cue-21",
+      "from": 1732,
+      "duration": 93,
+      "text": "月光落下来，照在雪上，也照在它身上。"
+    },
+    {
+      "id": "cue-22",
+      "from": 1832,
       "duration": 47,
       "text": "雪把这点白反了出去。"
     },
     {
-      "id": "cue-21",
-      "from": 1627,
-      "duration": 77,
-      "text": "在山口看，那里像有一小簇亮。"
+      "id": "cue-23",
+      "from": 1885,
+      "duration": 129,
+      "text": "在山口那边看，那里真的亮起一小簇，像有人点了灯。"
     },
     {
-      "id": "cue-22",
-      "from": 1716,
+      "id": "cue-24",
+      "from": 2026,
       "duration": 55,
       "text": "天亮的时候，狐狸已经走了。"
     },
     {
-      "id": "cue-23",
-      "from": 1778,
-      "duration": 149,
+      "id": "cue-25",
+      "from": 2088,
+      "duration": 148,
       "text": "那家人推开窗，只看见雪地上一个浅浅的坑，形状像一盏灯。"
     }
   ]

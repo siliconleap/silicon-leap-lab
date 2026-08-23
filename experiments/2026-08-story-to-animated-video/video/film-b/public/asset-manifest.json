@@ -171,6 +171,21 @@
         "status": "clear",
         "report": "assets/qa/snow-fall.watermark.json"
       }
+    },
+    {
+      "id": "fox-up",
+      "type": "layer",
+      "path": "assets/layers/fox-up.png",
+      "source": "assets/source/fox-up.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/fox-up.txt",
+      "characterId": "fox",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/fox-up.watermark.json"
+      }
     }
   ]
 }
