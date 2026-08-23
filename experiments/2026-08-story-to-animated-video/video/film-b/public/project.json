@@ -1,0 +1,39 @@
+{
+  "title": "过河",
+  "contentMode": "explainer",
+  "assetStrategy": "layered",
+  "stylePreset": "paper-cut",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationInFrames": 3000,
+  "durationPlan": {
+    "source": "user",
+    "requestedSeconds": 100,
+    "planningTargetSeconds": 100,
+    "planningRangeSeconds": null,
+    "finalAudioDeterminesRuntime": true
+  },
+  "palette": {
+    "paper": "#F3EBD8",
+    "ink": "#20251E",
+    "accent": "#A9362B",
+    "gold": "#C49649"
+  },
+  "brand": {
+    "handle": "",
+    "logo": null,
+    "show": false,
+    "placement": "top-right",
+    "logoWidth": 96,
+    "opacity": 0.94
+  },
+  "audio": {
+    "voice": null,
+    "music": null,
+    "musicVolume": 0.1,
+    "tailSeconds": 0,
+    "intentionalSilence": false
+  },
+  "scenes": []
+}
