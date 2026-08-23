@@ -240,6 +240,104 @@
         "status": "clear",
         "report": "assets/qa/clock-face.watermark.json"
       }
+    },
+    {
+      "id": "polish",
+      "type": "layer",
+      "path": "assets/layers/polish.png",
+      "source": "实验一 notes/polish-pass-2026-08-19.diff 的真实 before/after，逐字照抄渲染成图",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/polish.watermark.json"
+      },
+      "evidence": "一手"
+    },
+    {
+      "id": "reviews",
+      "type": "layer",
+      "path": "assets/layers/reviews.png",
+      "source": "实验一 internal/review1-6.md 的文件清单，渲染成图",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/reviews.watermark.json"
+      },
+      "evidence": "一手"
+    },
+    {
+      "id": "pen",
+      "type": "layer",
+      "path": "assets/layers/pen.png",
+      "source": "assets/source/pen.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/pen.watermark.json"
+      },
+      "promptFile": "prompts/pen.txt"
+    },
+    {
+      "id": "lens",
+      "type": "layer",
+      "path": "assets/layers/lens.png",
+      "source": "assets/source/lens.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/lens.watermark.json"
+      },
+      "promptFile": "prompts/lens.txt"
+    },
+    {
+      "id": "funnel",
+      "type": "layer",
+      "path": "assets/layers/funnel.png",
+      "source": "assets/source/funnel.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/funnel.watermark.json"
+      },
+      "promptFile": "prompts/funnel.txt"
+    },
+    {
+      "id": "chain",
+      "type": "layer",
+      "path": "assets/layers/chain.png",
+      "source": "assets/source/chain.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/chain.watermark.json"
+      },
+      "promptFile": "prompts/chain.txt"
+    },
+    {
+      "id": "crosslist",
+      "type": "layer",
+      "path": "assets/layers/crosslist.png",
+      "source": "assets/source/crosslist.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/crosslist.watermark.json"
+      },
+      "promptFile": "prompts/crosslist.txt"
     }
   ]
 }

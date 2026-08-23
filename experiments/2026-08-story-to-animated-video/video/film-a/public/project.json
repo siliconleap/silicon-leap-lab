@@ -6,7 +6,7 @@
   "width": 1920,
   "height": 1080,
   "fps": 30,
-  "durationInFrames": 3504,
+  "durationInFrames": 4972,
   "durationPlan": {
     "source": "user",
     "requestedSeconds": 110,
@@ -47,25 +47,25 @@
           "src": "assets/layers/stack.png",
           "assetId": "stack",
           "role": "primary",
-          "width": 430,
-          "x": 665,
-          "y": 565,
+          "width": 440,
+          "x": 660,
+          "y": 556,
           "zIndex": 6,
           "enterFrom": "down",
           "delay": 0,
           "motion": {
-            "action": "那一摞「以后要做」越堆越高，歪了一下，没倒",
+            "action": "那一摞「以后要做」越堆越高，歪一下，没倒",
             "keyframes": [
               {
                 "at": 0,
                 "x": 0,
-                "y": 300,
+                "y": 320,
                 "rotation": 0,
                 "scale": 0.85,
                 "opacity": 0
               },
               {
-                "at": 0.2,
+                "at": 0.22,
                 "x": 0,
                 "y": 60,
                 "rotation": -1,
@@ -73,7 +73,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.42,
+                "at": 0.5,
                 "x": 0,
                 "y": 0,
                 "rotation": 1,
@@ -81,35 +81,27 @@
                 "opacity": 1
               },
               {
-                "at": 0.58,
-                "x": 0,
-                "y": -18,
-                "rotation": -4,
-                "scale": 1.05,
-                "opacity": 1
-              },
-              {
                 "at": 0.68,
                 "x": 0,
-                "y": -12,
-                "rotation": 3,
-                "scale": 1.05,
+                "y": -20,
+                "rotation": -4,
+                "scale": 1.06,
                 "opacity": 1
               },
               {
-                "at": 0.78,
+                "at": 0.82,
                 "x": 0,
                 "y": -14,
-                "rotation": 0,
-                "scale": 1.05,
+                "rotation": 3,
+                "scale": 1.06,
                 "opacity": 1
               },
               {
                 "at": 1,
-                "x": -90,
-                "y": -14,
-                "rotation": -1,
-                "scale": 1.02,
+                "x": 0,
+                "y": -16,
+                "rotation": 0,
+                "scale": 1.05,
                 "opacity": 1
               }
             ]
@@ -117,41 +109,34 @@
           "id": "s1-stack-0"
         },
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
-          "role": "secondary",
-          "width": 480,
-          "x": 1210,
-          "y": 568,
-          "zIndex": 7,
+          "src": "assets/layers/clock.png",
+          "assetId": "clock",
+          "role": "tertiary",
+          "width": 200,
+          "x": 1500,
+          "y": 160,
+          "zIndex": 4,
           "enterFrom": "right",
           "delay": 0,
           "motion": {
-            "action": "一个空文件夹落到旁边摊开——那个「容器」",
+            "action": "墙上的钟一直在走",
+            "transformOrigin": "50% 50%",
             "keyframes": [
               {
                 "at": 0,
-                "x": 520,
-                "y": -140,
-                "rotation": -8,
-                "scale": 0.9,
+                "x": 140,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
                 "opacity": 0
               },
               {
-                "at": 0.72,
+                "at": 0.34,
                 "x": 0,
                 "y": 0,
-                "rotation": -2,
+                "rotation": 0,
                 "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.84,
-                "x": 0,
-                "y": -12,
-                "rotation": 1,
-                "scale": 1.02,
-                "opacity": 1
+                "opacity": 0.85
               },
               {
                 "at": 1,
@@ -159,15 +144,16 @@
                 "y": 0,
                 "rotation": 0,
                 "scale": 1,
-                "opacity": 1
+                "opacity": 0.85
               }
             ]
           },
-          "id": "s1-folder-1"
+          "transformOrigin": "50% 50%",
+          "id": "s1-clock-1"
         }
       ],
       "from": 0,
-      "duration": 476,
+      "duration": 265,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-shelf"
     },
@@ -182,73 +168,67 @@
           "src": "assets/layers/gear.png",
           "assetId": "gear",
           "role": "primary",
-          "width": 420,
-          "x": 490,
-          "y": 360,
+          "width": 430,
+          "x": 475,
+          "y": 351,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
           "motion": {
             "action": "齿轮转得起来——AI 确实能自动化",
+            "transformOrigin": "50% 50%",
             "keyframes": [
               {
                 "at": 0,
-                "x": -380,
+                "x": -400,
                 "y": 0,
                 "rotation": 0,
                 "scale": 0.9,
                 "opacity": 0
               },
               {
-                "at": 0.18,
+                "at": 0.16,
                 "x": 0,
                 "y": 0,
-                "rotation": 20,
+                "rotation": 16,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.55,
+                "at": 0.6,
                 "x": 0,
                 "y": 0,
-                "rotation": 150,
+                "rotation": 168,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.72,
+                "at": 0.78,
                 "x": 0,
                 "y": 0,
-                "rotation": 196,
+                "rotation": 214,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.8,
-                "x": 6,
-                "y": 8,
-                "rotation": 192,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.9,
-                "x": 4,
-                "y": 4,
-                "rotation": 206,
+                "at": 0.86,
+                "x": 5,
+                "y": 7,
+                "rotation": 210,
                 "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
                 "x": 4,
-                "y": 6,
-                "rotation": 202,
+                "y": 5,
+                "rotation": 222,
                 "scale": 1,
                 "opacity": 1
               }
             ]
           },
+          "transformOrigin": "50% 50%",
           "id": "s2-gear-0"
         },
         {
@@ -256,24 +236,24 @@
           "assetId": "arrow",
           "role": "secondary",
           "width": 340,
-          "x": 1160,
+          "x": 1170,
           "y": 585,
           "zIndex": 7,
           "enterFrom": "right",
           "delay": 0,
           "motion": {
-            "action": "但推进的过程要一下一下顶，不是许个愿就走",
+            "action": "但要一下一下顶，不是许个愿就走",
             "keyframes": [
               {
                 "at": 0,
-                "x": 420,
+                "x": 430,
                 "y": 0,
                 "rotation": 0,
                 "scale": 0.9,
                 "opacity": 0
               },
               {
-                "at": 0.3,
+                "at": 0.26,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -281,23 +261,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.48,
-                "x": -60,
-                "y": 0,
-                "rotation": -2,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.58,
-                "x": -20,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.72,
+                "at": 0.44,
                 "x": -70,
                 "y": 0,
                 "rotation": -2,
@@ -305,7 +269,7 @@
                 "opacity": 1
               },
               {
-                "at": 0.84,
+                "at": 0.54,
                 "x": -24,
                 "y": 0,
                 "rotation": 0,
@@ -313,8 +277,24 @@
                 "opacity": 1
               },
               {
+                "at": 0.68,
+                "x": -78,
+                "y": 0,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.8,
+                "x": -28,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
                 "at": 1,
-                "x": -40,
+                "x": -46,
                 "y": 0,
                 "rotation": -1,
                 "scale": 1,
@@ -325,8 +305,8 @@
           "id": "s2-arrow-1"
         }
       ],
-      "from": 476,
-      "duration": 452,
+      "from": 265,
+      "duration": 499,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-desk"
     },
@@ -334,142 +314,128 @@
       "id": "s3",
       "background": "assets/backgrounds/bg-paper.png",
       "hero": true,
-      "transition": "cut",
+      "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/real-contradiction.png",
+          "assetId": "real-contradiction",
           "role": "primary",
-          "width": 560,
-          "x": 420,
-          "y": 398,
+          "width": 1180,
+          "x": 290,
+          "y": 41,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "把约束一条条写进指令，文件夹从空到摊开对齐",
+            "action": "初稿真的生成出来了，读一遍就发现问题",
             "keyframes": [
               {
                 "at": 0,
-                "x": -460,
+                "x": -880,
                 "y": 0,
-                "rotation": -9,
-                "scale": 0.92,
+                "rotation": -2,
+                "scale": 0.96,
                 "opacity": 0
               },
               {
-                "at": 0.24,
-                "x": 0,
-                "y": 0,
-                "rotation": -3,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.44,
-                "x": 0,
-                "y": -14,
-                "rotation": 0,
-                "scale": 1.03,
-                "opacity": 1
-              },
-              {
-                "at": 0.6,
+                "at": 0.26,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
-                "scale": 1.01,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": -20,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1.01,
-                "opacity": 1
-              }
-            ]
-          },
-          "id": "s3-folder-0"
-        },
-        {
-          "src": "assets/layers/stamp.png",
-          "assetId": "stamp",
-          "role": "secondary",
-          "width": 260,
-          "x": 1290,
-          "y": 609,
-          "zIndex": 7,
-          "enterFrom": "up",
-          "delay": 0,
-          "motion": {
-            "action": "规则一条条落定，不是抽卡抽出来的",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 0,
-                "y": -380,
-                "rotation": -22,
                 "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.34,
-                "x": 0,
-                "y": -160,
-                "rotation": -12,
-                "scale": 1,
-                "opacity": 0.9
+                "opacity": 1
               },
               {
                 "at": 0.5,
                 "x": 0,
-                "y": 12,
-                "rotation": 2,
-                "scale": 1.06,
-                "opacity": 1
-              },
-              {
-                "at": 0.56,
-                "x": 0,
-                "y": 0,
+                "y": -12,
                 "rotation": 0,
-                "scale": 1,
+                "scale": 1.02,
                 "opacity": 1
               },
               {
                 "at": 0.72,
                 "x": 0,
-                "y": -90,
-                "rotation": -8,
-                "scale": 1,
+                "y": -12,
+                "rotation": 0,
+                "scale": 1.02,
                 "opacity": 1
               },
               {
                 "at": 0.86,
+                "x": -40,
+                "y": -16,
+                "rotation": -1,
+                "scale": 1,
+                "opacity": 0.45
+              },
+              {
+                "at": 1,
+                "x": -60,
+                "y": -16,
+                "rotation": -1,
+                "scale": 1,
+                "opacity": 0.35
+              }
+            ]
+          },
+          "id": "s3-real-contradiction-0"
+        },
+        {
+          "src": "assets/layers/clock.png",
+          "assetId": "clock",
+          "role": "secondary",
+          "width": 260,
+          "x": 1470,
+          "y": 160,
+          "zIndex": 7,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "半天搭完，一周多打磨——指针替这句话走完",
+            "transformOrigin": "50% 50%",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 260,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.5,
                 "x": 0,
-                "y": 10,
-                "rotation": 2,
-                "scale": 1.04,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.5
+              },
+              {
+                "at": 0.68,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
                 "x": 0,
                 "y": 0,
-                "rotation": 0,
+                "rotation": 900,
                 "scale": 1,
                 "opacity": 1
               }
             ]
           },
-          "id": "s3-stamp-1"
+          "transformOrigin": "50% 50%",
+          "id": "s3-clock-1"
         }
       ],
-      "from": 928,
-      "duration": 418,
+      "from": 764,
+      "duration": 424,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-paper"
     },
@@ -481,114 +447,122 @@
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/real-quote.png",
-          "assetId": "real-quote",
+          "src": "assets/layers/pen.png",
+          "assetId": "pen",
           "role": "primary",
-          "width": 1240,
-          "x": 340,
-          "y": -15,
+          "width": 620,
+          "x": 450,
+          "y": 259,
           "zIndex": 6,
-          "enterFrom": "scale",
+          "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "当时那句批准的原话推到画面正中，带时间戳，一手记录未改写",
+            "action": "一支笔从左边进来，在稿子上一行行划过去，只改表达",
             "keyframes": [
               {
                 "at": 0,
-                "x": 0,
-                "y": 70,
-                "rotation": 0,
-                "scale": 0.9,
+                "x": -620,
+                "y": -60,
+                "rotation": -14,
+                "scale": 0.94,
                 "opacity": 0
               },
               {
-                "at": 0.26,
-                "x": 0,
+                "at": 0.2,
+                "x": -120,
                 "y": 0,
-                "rotation": 0,
+                "rotation": -4,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.6,
-                "x": 0,
-                "y": -12,
-                "rotation": 0,
-                "scale": 1.02,
+                "at": 0.38,
+                "x": 60,
+                "y": 26,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.52,
+                "x": -60,
+                "y": 54,
+                "rotation": -4,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 80,
+                "y": 82,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.8,
+                "x": -30,
+                "y": 104,
+                "rotation": -3,
+                "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
-                "x": 0,
-                "y": -10,
-                "rotation": 0,
-                "scale": 1.02,
+                "x": 40,
+                "y": 116,
+                "rotation": -2,
+                "scale": 1,
                 "opacity": 1
               }
             ]
           },
-          "id": "s4-real-quote-0"
+          "id": "s4-pen-0"
         },
         {
-          "src": "assets/layers/stamp.png",
-          "assetId": "stamp",
+          "src": "assets/layers/folder.png",
+          "assetId": "folder",
           "role": "secondary",
-          "width": 210,
-          "x": 1515,
-          "y": 781,
-          "zIndex": 8,
+          "width": 420,
+          "x": 1210,
+          "y": 543,
+          "zIndex": 5,
           "enterFrom": "right",
           "delay": 0,
           "motion": {
-            "action": "一句话就盖了章",
+            "action": "稿子摊在旁边",
             "keyframes": [
               {
                 "at": 0,
-                "x": 260,
-                "y": -60,
-                "rotation": -18,
+                "x": 420,
+                "y": 0,
+                "rotation": 7,
                 "scale": 1,
                 "opacity": 0
               },
               {
-                "at": 0.44,
-                "x": 0,
-                "y": -40,
-                "rotation": -10,
-                "scale": 1,
-                "opacity": 0.9
-              },
-              {
-                "at": 0.62,
-                "x": 0,
-                "y": 8,
-                "rotation": 2,
-                "scale": 1.05,
-                "opacity": 1
-              },
-              {
-                "at": 0.7,
+                "at": 0.3,
                 "x": 0,
                 "y": 0,
-                "rotation": 0,
+                "rotation": 2,
                 "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
                 "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
+                "y": -6,
+                "rotation": 1,
+                "scale": 1.01,
                 "opacity": 1
               }
             ]
           },
-          "id": "s4-stamp-1"
+          "id": "s4-folder-1"
         }
       ],
-      "from": 1346,
-      "duration": 357,
+      "from": 1188,
+      "duration": 466,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-desk"
     },
@@ -600,28 +574,28 @@
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/real-contradiction.png",
-          "assetId": "real-contradiction",
+          "src": "assets/layers/polish.png",
+          "assetId": "polish",
           "role": "primary",
-          "width": 1340,
-          "x": 290,
-          "y": -51,
+          "width": 1420,
+          "x": 250,
+          "y": -69,
           "zIndex": 6,
-          "enterFrom": "left",
+          "enterFrom": "up",
           "delay": 0,
           "motion": {
-            "action": "真实的对照图进画面：左边配置在骂，右边模板在犯",
+            "action": "真实的 before / after 进画面，原话未改写",
             "keyframes": [
               {
                 "at": 0,
-                "x": -920,
-                "y": 0,
+                "x": 0,
+                "y": -330,
                 "rotation": -2,
-                "scale": 0.96,
+                "scale": 0.94,
                 "opacity": 0
               },
               {
-                "at": 0.3,
+                "at": 0.24,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -631,7 +605,7 @@
               {
                 "at": 0.56,
                 "x": 0,
-                "y": -12,
+                "y": -14,
                 "rotation": 0,
                 "scale": 1.02,
                 "opacity": 1
@@ -639,27 +613,430 @@
               {
                 "at": 1,
                 "x": 0,
-                "y": -8,
+                "y": -10,
                 "rotation": 0,
+                "scale": 1.03,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s5-polish-0"
+        }
+      ],
+      "from": 1654,
+      "duration": 371,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s6",
+      "background": "assets/backgrounds/bg-desk.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/lens.png",
+          "assetId": "lens",
+          "role": "primary",
+          "width": 560,
+          "x": 440,
+          "y": 234,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "放大镜横着扫过稿面，一项一项挑",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -560,
+                "y": -40,
+                "rotation": -10,
+                "scale": 0.92,
+                "opacity": 0
+              },
+              {
+                "at": 0.2,
+                "x": -140,
+                "y": 0,
+                "rotation": -3,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.42,
+                "x": 120,
+                "y": 18,
+                "rotation": 0,
+                "scale": 1.04,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": -80,
+                "y": 40,
+                "rotation": -4,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.82,
+                "x": 180,
+                "y": 58,
+                "rotation": 1,
+                "scale": 1.04,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 60,
+                "y": 66,
+                "rotation": -1,
                 "scale": 1.02,
                 "opacity": 1
               }
             ]
           },
-          "id": "s5-real-contradiction-0"
+          "id": "s6-lens-0"
+        },
+        {
+          "src": "assets/layers/real-quote.png",
+          "assetId": "real-quote",
+          "role": "secondary",
+          "width": 900,
+          "x": 910,
+          "y": 253,
+          "zIndex": 5,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "被审的稿子在右边",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 620,
+                "y": 0,
+                "rotation": 2,
+                "scale": 0.96,
+                "opacity": 0
+              },
+              {
+                "at": 0.32,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.01,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "id": "s6-real-quote-1"
+        }
+      ],
+      "from": 2025,
+      "duration": 395,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-desk"
+    },
+    {
+      "id": "s7",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/reviews.png",
+          "assetId": "reviews",
+          "role": "primary",
+          "width": 1440,
+          "x": 240,
+          "y": -85,
+          "zIndex": 6,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "六个审核文件铺开——规则是三轮，实际六轮",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -340,
+                "rotation": 2,
+                "scale": 0.94,
+                "opacity": 0
+              },
+              {
+                "at": 0.24,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": 0,
+                "y": -14,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -10,
+                "rotation": 0,
+                "scale": 1.03,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s7-reviews-0"
+        }
+      ],
+      "from": 2420,
+      "duration": 352,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s8",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/funnel.png",
+          "assetId": "funnel",
+          "role": "primary",
+          "width": 520,
+          "x": 440,
+          "y": 422,
+          "zIndex": 6,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "一切都先过漏斗：简报确认了，才往下走",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -360,
+                "rotation": -6,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.22,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.44,
+                "x": 0,
+                "y": -16,
+                "rotation": 2,
+                "scale": 1.03,
+                "opacity": 1
+              },
+              {
+                "at": 0.58,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.78,
+                "x": 0,
+                "y": -10,
+                "rotation": -2,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s8-funnel-0"
+        },
+        {
+          "src": "assets/layers/stamp.png",
+          "assetId": "stamp",
+          "role": "secondary",
+          "width": 260,
+          "x": 1270,
+          "y": 609,
+          "zIndex": 7,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "人确认这一下，是省不掉的",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -400,
+                "rotation": -22,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": -170,
+                "rotation": -12,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.58,
+                "x": 0,
+                "y": 12,
+                "rotation": 2,
+                "scale": 1.06,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s8-stamp-1"
+        }
+      ],
+      "from": 2772,
+      "duration": 401,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s9",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/chain.png",
+          "assetId": "chain",
+          "role": "primary",
+          "width": 720,
+          "x": 520,
+          "y": 295,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "校验脚本第一次跑就抓出四处死链——链子在中间断开",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -700,
+                "y": 0,
+                "rotation": -4,
+                "scale": 0.94,
+                "opacity": 0
+              },
+              {
+                "at": 0.24,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.46,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.56,
+                "x": -26,
+                "y": -10,
+                "rotation": -3,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 26,
+                "y": 8,
+                "rotation": 3,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.7,
+                "x": -14,
+                "y": 0,
+                "rotation": -1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -6,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s9-chain-0"
         },
         {
           "src": "assets/layers/gear.png",
           "assetId": "gear",
           "role": "tertiary",
-          "width": 200,
-          "x": 130,
-          "y": 140,
+          "width": 190,
+          "x": 145,
+          "y": 159,
           "zIndex": 4,
           "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "角落的齿轮匀速转着——两个文件分开看都在正常运转",
+            "action": "脚本在角落匀速跑着",
+            "transformOrigin": "50% 50%",
             "keyframes": [
               {
                 "at": 0,
@@ -670,7 +1047,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.26,
+                "at": 0.24,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -681,179 +1058,168 @@
                 "at": 1,
                 "x": 0,
                 "y": 0,
-                "rotation": 320,
+                "rotation": 330,
                 "scale": 1,
                 "opacity": 0.5
               }
             ]
           },
-          "id": "s5-gear-1"
+          "transformOrigin": "50% 50%",
+          "id": "s9-gear-1"
         }
       ],
-      "from": 1703,
-      "duration": 457,
+      "from": 3173,
+      "duration": 439,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-paper"
     },
     {
-      "id": "s6",
-      "background": "assets/backgrounds/bg-paper.png",
+      "id": "s10",
+      "background": "assets/backgrounds/bg-desk.png",
       "hero": true,
-      "transition": "cut",
+      "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/gear.png",
-          "assetId": "gear",
+          "src": "assets/layers/crosslist.png",
+          "assetId": "crosslist",
           "role": "primary",
-          "width": 430,
-          "x": 505,
-          "y": 321,
+          "width": 560,
+          "x": 500,
+          "y": 380,
           "zIndex": 6,
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "齿轮转着转着卡住，歪下来——这条规则从写下那天起就转不动",
+            "action": "一条条划掉：套路小标题、benefit 列表、buzzword、万能收尾",
             "keyframes": [
               {
                 "at": 0,
                 "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 0.9,
+                "y": 40,
+                "rotation": -8,
+                "scale": 0.7,
                 "opacity": 0
               },
               {
-                "at": 0.2,
+                "at": 0.18,
                 "x": 0,
                 "y": 0,
-                "rotation": 54,
+                "rotation": -2,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.46,
+                "at": 0.36,
                 "x": 0,
                 "y": 0,
-                "rotation": 178,
-                "scale": 1,
+                "rotation": 0,
+                "scale": 1.04,
                 "opacity": 1
               },
               {
-                "at": 0.58,
-                "x": 0,
+                "at": 0.5,
+                "x": -30,
                 "y": 0,
-                "rotation": 224,
+                "rotation": -3,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 0.64,
-                "x": 0,
-                "y": 8,
-                "rotation": 220,
-                "scale": 1,
+                "at": 0.66,
+                "x": 26,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1.02,
                 "opacity": 1
               },
               {
-                "at": 0.8,
-                "x": 0,
-                "y": 30,
-                "rotation": 206,
-                "scale": 0.98,
+                "at": 0.82,
+                "x": -14,
+                "y": 0,
+                "rotation": -1,
+                "scale": 1,
                 "opacity": 1
               },
               {
                 "at": 1,
                 "x": 0,
-                "y": 44,
-                "rotation": 200,
-                "scale": 0.96,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.01,
                 "opacity": 1
               }
             ]
           },
-          "id": "s6-gear-0"
+          "id": "s10-crosslist-0"
         },
         {
           "src": "assets/layers/folder.png",
           "assetId": "folder",
           "role": "secondary",
-          "width": 420,
-          "x": 1210,
-          "y": 473,
+          "width": 400,
+          "x": 1240,
+          "y": 548,
           "zIndex": 5,
           "enterFrom": "right",
           "delay": 0,
           "motion": {
-            "action": "旁边的文件夹翻开，里面是空的",
+            "action": "指令本身摊在旁边",
             "keyframes": [
               {
                 "at": 0,
-                "x": 430,
+                "x": 420,
                 "y": 0,
                 "rotation": 6,
                 "scale": 1,
                 "opacity": 0
               },
               {
-                "at": 0.34,
+                "at": 0.3,
                 "x": 0,
                 "y": 0,
                 "rotation": 2,
                 "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 0.58,
-                "x": 0,
-                "y": -10,
-                "rotation": -2,
-                "scale": 1.02,
-                "opacity": 1
+                "opacity": 0.85
               },
               {
                 "at": 1,
                 "x": 0,
                 "y": -6,
-                "rotation": -1,
-                "scale": 1.02,
-                "opacity": 1
+                "rotation": 1,
+                "scale": 1.01,
+                "opacity": 0.85
               }
             ]
           },
-          "id": "s6-folder-1"
+          "id": "s10-folder-1"
         }
       ],
-      "from": 2160,
-      "duration": 393,
+      "from": 3612,
+      "duration": 518,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper"
+      "backgroundAssetId": "bg-desk"
     },
     {
-      "id": "s7",
+      "id": "s11",
       "background": "assets/backgrounds/bg-night.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
-      "camera": {
-        "zoom": {
-          "to": 1.04
-        }
-      },
       "layers": [
         {
           "src": "assets/layers/clock.png",
           "assetId": "clock",
           "role": "secondary",
           "width": 430,
-          "x": 545,
+          "x": 525,
           "y": 290,
           "zIndex": 5,
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "挂钟本体保持不动，只有指针在走",
+            "action": "钟体不动",
+            "transformOrigin": "50% 50%",
             "keyframes": [
               {
                 "at": 0,
@@ -864,7 +1230,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.14,
+                "at": 0.12,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -881,24 +1247,25 @@
               }
             ]
           },
-          "id": "s7-clock-0",
-          "transformOrigin": "50% 50%"
+          "transformOrigin": "50% 50%",
+          "id": "s11-clock-0"
         },
         {
           "src": "assets/layers/clock-face.png",
           "assetId": "clock-face",
           "role": "primary",
           "width": 430,
-          "x": 545,
+          "x": 525,
           "y": 290,
           "zIndex": 6,
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "指针一圈一圈转过去——绕正中心转，钟体不动，只有指针在走",
+            "action": "指针一圈一圈转过去——这一周多就是这么过去的",
+            "transformOrigin": "50% 50%",
             "keyframes": [
               {
-                "at": 0.0,
+                "at": 0,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -917,35 +1284,35 @@
                 "at": 0.5,
                 "x": 0,
                 "y": 0,
-                "rotation": 600,
+                "rotation": 660,
                 "scale": 1,
                 "opacity": 1
               },
               {
-                "at": 1.0,
+                "at": 1,
                 "x": 0,
                 "y": 0,
-                "rotation": 1560,
+                "rotation": 1680,
                 "scale": 1,
                 "opacity": 1
               }
             ]
           },
-          "id": "s7-clock-face-1",
-          "transformOrigin": "50% 50%"
+          "transformOrigin": "50% 50%",
+          "id": "s11-clock-face-1"
         },
         {
           "src": "assets/layers/lamp-desk.png",
           "assetId": "lamp-desk",
           "role": "secondary",
-          "width": 360,
-          "x": 1270,
-          "y": 257,
+          "width": 350,
+          "x": 1285,
+          "y": 273,
           "zIndex": 5,
           "enterFrom": "right",
           "delay": 0,
           "motion": {
-            "action": "台灯一直亮着，没关过",
+            "action": "台灯一直亮着",
             "keyframes": [
               {
                 "at": 0,
@@ -964,33 +1331,30 @@
                 "opacity": 1
               },
               {
-                "at": 0.7,
-                "x": 0,
-                "y": -6,
-                "rotation": -1,
-                "scale": 1.01,
-                "opacity": 1
-              },
-              {
                 "at": 1,
                 "x": 0,
-                "y": -4,
+                "y": -6,
                 "rotation": 0,
                 "scale": 1.01,
                 "opacity": 1
               }
             ]
           },
-          "id": "s7-lamp-desk-2"
+          "id": "s11-lamp-desk-2"
         }
       ],
-      "from": 2553,
-      "duration": 317,
+      "camera": {
+        "zoom": {
+          "to": 1.05
+        }
+      },
+      "from": 4130,
+      "duration": 290,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-night"
     },
     {
-      "id": "s8",
+      "id": "s12",
       "background": "assets/backgrounds/bg-paper.png",
       "hero": true,
       "transition": "paper-wipe",
@@ -1007,7 +1371,7 @@
           "enterFrom": "up",
           "delay": 0,
           "motion": {
-            "action": "实践清单整张进画面：做了什么、是否有效、是否可复制",
+            "action": "实践清单整张进画面",
             "keyframes": [
               {
                 "at": 0,
@@ -1018,7 +1382,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.26,
+                "at": 0.24,
                 "x": 0,
                 "y": 0,
                 "rotation": 0,
@@ -1043,25 +1407,20 @@
               }
             ]
           },
-          "id": "s8-practices-0"
+          "id": "s12-practices-0"
         }
       ],
-      "from": 2870,
-      "duration": 266,
+      "from": 4420,
+      "duration": 183,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-paper"
     },
     {
-      "id": "s9",
+      "id": "s13",
       "background": "assets/backgrounds/bg-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
-      "camera": {
-        "zoom": {
-          "to": 1.1
-        }
-      },
       "layers": [
         {
           "src": "assets/layers/practices.png",
@@ -1074,7 +1433,7 @@
           "enterFrom": "scale",
           "delay": 0,
           "motion": {
-            "action": "镜头压向表格最后一行，那行是「目前无效，不可复制」",
+            "action": "镜头压向最后一行「目前无效，不可复制」",
             "keyframes": [
               {
                 "at": 0,
@@ -1110,7 +1469,7 @@
               }
             ]
           },
-          "id": "s9-practices-0"
+          "id": "s13-practices-0"
         },
         {
           "src": "assets/layers/arrow.png",
@@ -1123,7 +1482,7 @@
           "enterFrom": "left",
           "delay": 0,
           "motion": {
-            "action": "箭头从左推进来指住那一行——这支片子就是它的下一次尝试",
+            "action": "箭头推进来指住那一行",
             "keyframes": [
               {
                 "at": 0,
@@ -1134,7 +1493,7 @@
                 "opacity": 0
               },
               {
-                "at": 0.5,
+                "at": 0.48,
                 "x": -820,
                 "y": 0,
                 "rotation": 0,
@@ -1167,11 +1526,16 @@
               }
             ]
           },
-          "id": "s9-arrow-1"
+          "id": "s13-arrow-1"
         }
       ],
-      "from": 3136,
-      "duration": 368,
+      "camera": {
+        "zoom": {
+          "to": 1.1
+        }
+      },
+      "from": 4603,
+      "duration": 369,
       "captionStyle": "strip",
       "backgroundAssetId": "bg-paper"
     }
@@ -1197,151 +1561,205 @@
     },
     {
       "id": "cue-4",
-      "from": 259,
-      "duration": 204,
-      "text": "破局的办法，是给「想尝试的东西」找一个容器：一个目录，一份记录，一次公开。"
+      "from": 265,
+      "duration": 234,
+      "text": "第一件改变我判断的事：AI 确实能一次给多个平台写出不同风格的文案，而且能自动化。"
     },
     {
       "id": "cue-5",
-      "from": 476,
-      "duration": 82,
-      "text": "这次实验真正改变的判断有两条。"
+      "from": 505,
+      "duration": 168,
+      "text": "但它默认给你的是均值——生成来自统计概率，没有约束就回归平庸。"
     },
     {
       "id": "cue-6",
-      "from": 565,
-      "duration": 190,
-      "text": "第一条：AI 确实能一次为多个平台生成不同风格的文案，而且能自动化。"
+      "from": 680,
+      "duration": 71,
+      "text": "跟 AI 许愿，换不来一篇好文章。"
     },
     {
       "id": "cue-7",
-      "from": 762,
-      "duration": 153,
-      "text": "但它没有网上说的那么顺——跟 AI 许愿，换不来一篇高质量的文章。"
+      "from": 764,
+      "duration": 70,
+      "text": "四个平台的初稿真的生成出来了。"
     },
     {
       "id": "cue-8",
-      "from": 928,
-      "duration": 86,
-      "text": "第二条：优质的文本不该靠抽卡。"
+      "from": 840,
+      "duration": 113,
+      "text": "然后我发现没法看，小红书那篇枯燥得读不下去。"
     },
     {
       "id": "cue-9",
-      "from": 1020,
-      "duration": 131,
-      "text": "它可以靠工程约束引导出来——skill、prompt、流程。"
+      "from": 960,
+      "duration": 67,
+      "text": "流水线的骨架，半天就搭完了。"
     },
     {
       "id": "cue-10",
-      "from": 1157,
-      "duration": 176,
-      "text": "把「不要什么、为什么不要」逐条写进指令，比换一个更大的模型有用。"
+      "from": 1034,
+      "duration": 72,
+      "text": "接下来这一周多，全花在打磨上。"
     },
     {
       "id": "cue-11",
-      "from": 1346,
-      "duration": 73,
-      "text": "下面是这一周多具体发生了什么。"
+      "from": 1113,
+      "duration": 62,
+      "text": "下面是具体做了哪五件事。"
     },
     {
       "id": "cue-12",
-      "from": 1425,
-      "duration": 145,
-      "text": "生成出来的东西有分步流程，有硬约束清单，还有验收标准。"
+      "from": 1188,
+      "duration": 38,
+      "text": "第一件，不自己写。"
     },
     {
       "id": "cue-13",
-      "from": 1577,
-      "duration": 50,
-      "text": "读起来像个成熟的方案。"
+      "from": 1232,
+      "duration": 332,
+      "text": "装了社区里现成的写作 skill，接成流水线的第五步半——平台稿渲染完、校验之前，逐个文件过一遍，只改表达，不动事实，不动结构。"
     },
     {
       "id": "cue-14",
-      "from": 1634,
-      "duration": 56,
-      "text": "我批准它，只用了一句话。"
+      "from": 1571,
+      "duration": 70,
+      "text": "那一轮改了五个文件，二十六行。"
     },
     {
       "id": "cue-15",
-      "from": 1703,
-      "duration": 57,
-      "text": "真的跑出来才发现是空的。"
+      "from": 1654,
+      "duration": 77,
+      "text": "改的不是词，是句子在耍的花招。"
     },
     {
       "id": "cue-16",
-      "from": 1767,
-      "duration": 199,
-      "text": "小红书的模板硬编码了三段列表，而同一套配置的另一个文件，正在批评这种写法。"
+      "from": 1738,
+      "duration": 195,
+      "text": "「问题不只是 A，而是 B」，先替读者立一个他其实没有的误解，再推翻它来抬价。"
     },
     {
       "id": "cue-17",
-      "from": 1973,
-      "duration": 87,
-      "text": "配置在骂模板，模板在违反配置。"
+      "from": 1939,
+      "duration": 74,
+      "text": "改法很简单，把话直接说了。"
     },
     {
       "id": "cue-18",
-      "from": 2066,
-      "duration": 82,
-      "text": "两个文件分开看，每一个都是对的。"
+      "from": 2025,
+      "duration": 108,
+      "text": "第二件，让另一个没写过这稿子的人来挑毛病。"
     },
     {
       "id": "cue-19",
-      "from": 2160,
-      "duration": 164,
-      "text": "再往下翻，配图那一节写着：输出 SVG 源文件，由人渲染。"
+      "from": 2140,
+      "duration": 267,
+      "text": "每一轮审核都交给独立的 agent，它只读事实源和当前这一版，按评分表逐项打分，没有证据不许给满分。"
     },
     {
       "id": "cue-20",
-      "from": 2330,
-      "duration": 95,
-      "text": "查了这台机器，三个渲染器一个都没装。"
+      "from": 2420,
+      "duration": 99,
+      "text": "而且审核结果必须落成文件，不许覆盖。"
     },
     {
       "id": "cue-21",
-      "from": 2432,
-      "duration": 109,
-      "text": "这条规则从写下的那天起，就没有执行的可能。"
+      "from": 2525,
+      "duration": 235,
+      "text": "规则写的是三轮上限，实际跑了六轮——中途推翻过事实和结构，那就算新的一批稿子，重新计轮。"
     },
     {
       "id": "cue-22",
-      "from": 2553,
-      "duration": 44,
-      "text": "骨架半天就搭完了。"
+      "from": 2772,
+      "duration": 73,
+      "text": "第三件，用流程替代抽卡。"
     },
     {
       "id": "cue-23",
-      "from": 2604,
-      "duration": 51,
-      "text": "第一篇内容拖了一周多。"
+      "from": 2851,
+      "duration": 183,
+      "text": "先出一份简报，把事实和观点交给人确认，确认了才展开成各平台的稿子。"
     },
     {
       "id": "cue-24",
-      "from": 2661,
-      "duration": 197,
-      "text": "卡住我的不是代码，是一直不满意——初稿越像一篇完整的文章，我越觉得它不值得发。"
+      "from": 3041,
+      "duration": 119,
+      "text": "不满意就退回去改，而不是重新生成一版碰运气。"
     },
     {
       "id": "cue-25",
-      "from": 2870,
+      "from": 3173,
+      "duration": 84,
+      "text": "第四件，把确定性的活交给脚本。"
+    },
+    {
+      "id": "cue-26",
+      "from": 3263,
+      "duration": 127,
+      "text": "目录骨架、格式校验、配图渲染，都不再靠人记得。"
+    },
+    {
+      "id": "cue-27",
+      "from": 3396,
+      "duration": 204,
+      "text": "校验脚本第一次跑，就抓出四处死链——在那之前，这种问题得靠人工 review 才能发现。"
+    },
+    {
+      "id": "cue-28",
+      "from": 3612,
+      "duration": 77,
+      "text": "第五件，把不要什么写进指令。"
+    },
+    {
+      "id": "cue-29",
+      "from": 3695,
+      "duration": 235,
+      "text": "套路化小标题、benefit 列表、空泛的 buzzword、万能收尾，一条条列出来，配上正例和反例。"
+    },
+    {
+      "id": "cue-30",
+      "from": 3936,
+      "duration": 137,
+      "text": "判断标准只有一句：这句话换个主题还成立吗？"
+    },
+    {
+      "id": "cue-31",
+      "from": 4079,
+      "duration": 39,
+      "text": "成立，就是废话。"
+    },
+    {
+      "id": "cue-32",
+      "from": 4130,
+      "duration": 74,
+      "text": "这五件事加起来，就是那一周多。"
+    },
+    {
+      "id": "cue-33",
+      "from": 4210,
+      "duration": 141,
+      "text": "搭起流水线花了半天，让它产出能看的东西花了一周多。"
+    },
+    {
+      "id": "cue-34",
+      "from": 4357,
+      "duration": 50,
+      "text": "真正贵的从来不是搭。"
+    },
+    {
+      "id": "cue-35",
+      "from": 4420,
       "duration": 171,
       "text": "所以这次做的每一件事，哪些有效，哪些能被别人照搬，最后列成了一张表。"
     },
     {
-      "id": "cue-26",
-      "from": 3048,
-      "duration": 75,
-      "text": "五行里四行有效，四行可复制。"
-    },
-    {
-      "id": "cue-27",
-      "from": 3136,
-      "duration": 188,
+      "id": "cue-36",
+      "from": 4603,
+      "duration": 189,
       "text": "而最后一行写的是：让 AI 反推图片、合成视频，目前无效，不可复制。"
     },
     {
-      "id": "cue-28",
-      "from": 3331,
+      "id": "cue-37",
+      "from": 4798,
       "duration": 112,
       "text": "你现在看到的这支片子，就是那一行的下一次尝试。"
     }
