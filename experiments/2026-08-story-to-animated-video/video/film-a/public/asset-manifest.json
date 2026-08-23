@@ -213,6 +213,33 @@
       },
       "evidence": "一手",
       "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+    },
+    {
+      "id": "practices",
+      "type": "layer",
+      "path": "assets/layers/practices.png",
+      "source": "实验 2026-08-markdown-only-content-pipeline 的 content-brief.md 实践清单，用 HTML 渲染成图，表格内容逐行照抄",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/practices.watermark.json"
+      },
+      "evidence": "一手"
+    },
+    {
+      "id": "clock-face",
+      "type": "layer",
+      "path": "assets/layers/clock-face.png",
+      "source": "由 Pillow 合成的表盘与指针层，用于只转指针不转钟体",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/clock-face.watermark.json"
+      }
     }
   ]
 }

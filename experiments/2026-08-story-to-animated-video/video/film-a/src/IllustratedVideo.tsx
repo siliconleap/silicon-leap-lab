@@ -150,7 +150,9 @@ const Layer: React.FC<{layer: IllustrationLayer; sceneDuration: number}> = ({lay
         height: layer.height,
         opacity,
         transform: `rotate(${(layer.rotation ?? 0) + settleRotation + semanticRotation + sway}deg) scaleX(${layer.flipX ? -scale : scale}) scaleY(${scale})`,
-        transformOrigin: '50% 80%',
+        // 默认绕靠下的位置转，剪影角色摆动时看起来才像立在地上。但要和另一层
+        // 严格套准的元件(表盘对表框、指针对轴心)必须绕正中心, 否则一转就错位。
+        transformOrigin: layer.transformOrigin ?? '50% 80%',
         filter: layerFilter(layer),
       }}
     >

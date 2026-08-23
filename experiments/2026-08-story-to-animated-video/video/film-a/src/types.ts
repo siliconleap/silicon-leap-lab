@@ -38,6 +38,7 @@ export type IllustrationLayer = {
   scale?: number;
   opacity?: number;
   flipX?: boolean;
+  transformOrigin?: string;
   bob?: number;
   label?: string;
   shadow?: 'strong' | 'soft' | 'none';
