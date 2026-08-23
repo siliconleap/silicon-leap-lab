@@ -1,24 +1,24 @@
 {
-  "title": "插画科普视频",
+  "title": "收藏夹里躺着一千篇「以后要做」",
   "contentMode": "explainer",
   "assetStrategy": "layered",
   "stylePreset": "paper-cut",
   "width": 1920,
   "height": 1080,
   "fps": 30,
-  "durationInFrames": 5400,
+  "durationInFrames": 2983,
   "durationPlan": {
     "source": "user",
-    "requestedSeconds": 180,
-    "planningTargetSeconds": 180,
+    "requestedSeconds": 110,
+    "planningTargetSeconds": 110,
     "planningRangeSeconds": null,
     "finalAudioDeterminesRuntime": true
   },
   "palette": {
-    "paper": "#F3EBD8",
-    "ink": "#20251E",
-    "accent": "#A9362B",
-    "gold": "#C49649"
+    "paper": "#F4EFE3",
+    "ink": "#23262B",
+    "accent": "#D9532B",
+    "gold": "#E0A93B"
   },
   "brand": {
     "handle": "",
@@ -29,11 +29,1160 @@
     "opacity": 0.94
   },
   "audio": {
-    "voice": null,
+    "voice": "assets/audio/narration.mp3",
     "music": null,
     "musicVolume": 0.1,
-    "tailSeconds": 0,
+    "tailSeconds": 1.6,
     "intentionalSilence": false
   },
-  "scenes": []
+  "scenes": [
+    {
+      "id": "s1",
+      "background": "assets/backgrounds/bg-shelf.png",
+      "hero": true,
+      "transition": "fade",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/stack.png",
+          "assetId": "stack",
+          "role": "primary",
+          "width": 430,
+          "x": 685,
+          "y": 565,
+          "zIndex": 6,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "那一摞「以后要做」越堆越高，最后歪过去一下，没倒",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 300,
+                "rotation": 0,
+                "scale": 0.85,
+                "opacity": 0
+              },
+              {
+                "at": 0.24,
+                "x": 0,
+                "y": 60,
+                "rotation": -1,
+                "scale": 0.95,
+                "opacity": 1
+              },
+              {
+                "at": 0.52,
+                "x": 0,
+                "y": 0,
+                "rotation": 1,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.74,
+                "x": 0,
+                "y": -16,
+                "rotation": -4,
+                "scale": 1.04,
+                "opacity": 1
+              },
+              {
+                "at": 0.88,
+                "x": 0,
+                "y": -10,
+                "rotation": 3,
+                "scale": 1.04,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -12,
+                "rotation": 1,
+                "scale": 1.05,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s1-stack-0"
+        },
+        {
+          "src": "assets/layers/clock.png",
+          "assetId": "clock",
+          "role": "tertiary",
+          "width": 190,
+          "x": 1525,
+          "y": 161,
+          "zIndex": 4,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "墙上的钟一直在走，衬出「就是没有一篇发出来」",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 120,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 26,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "id": "s1-clock-1"
+        }
+      ],
+      "from": 0,
+      "duration": 265,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-shelf"
+    },
+    {
+      "id": "s2",
+      "background": "assets/backgrounds/bg-desk.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/folder.png",
+          "assetId": "folder",
+          "role": "primary",
+          "width": 560,
+          "x": 240,
+          "y": 438,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "一个空文件夹落到桌上，摊开——这就是那个「容器」",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -420,
+                "y": -120,
+                "rotation": -8,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.2,
+                "x": 0,
+                "y": 0,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": -10,
+                "rotation": 1,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 0.46,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": -40,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s2-folder-0"
+        },
+        {
+          "src": "assets/layers/arrow.png",
+          "assetId": "arrow",
+          "role": "secondary",
+          "width": 300,
+          "x": 810,
+          "y": 598,
+          "zIndex": 7,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "箭头从文件夹指向右边，把话头带到「第一个实验做了什么」",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -160,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.8,
+                "opacity": 0
+              },
+              {
+                "at": 0.42,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 0.58,
+                "x": 40,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.95
+              },
+              {
+                "at": 1,
+                "x": 80,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "id": "s2-arrow-1"
+        },
+        {
+          "src": "assets/layers/real-pipeline.png",
+          "assetId": "real-pipeline",
+          "role": "secondary",
+          "width": 1000,
+          "x": 800,
+          "y": 115,
+          "zIndex": 8,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "实验一真实产出的流水线示意图推进画面——这是一手证据，未改动",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 700,
+                "y": 40,
+                "rotation": 3,
+                "scale": 0.94,
+                "opacity": 0
+              },
+              {
+                "at": 0.55,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.8,
+                "x": 0,
+                "y": -14,
+                "rotation": -1,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -10,
+                "rotation": -1,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s2-real-pipeline-2"
+        }
+      ],
+      "from": 265,
+      "duration": 415,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-desk"
+    },
+    {
+      "id": "s3",
+      "background": "assets/backgrounds/bg-desk.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/real-quote.png",
+          "assetId": "real-quote",
+          "role": "primary",
+          "width": 1240,
+          "x": 340,
+          "y": -36,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "当时那句批准的原话推到画面正中，带时间戳，一手记录未改写",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 60,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 0,
+                "y": -10,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s3-real-quote-0"
+        },
+        {
+          "src": "assets/layers/stamp.png",
+          "assetId": "stamp",
+          "role": "secondary",
+          "width": 300,
+          "x": 1350,
+          "y": 685,
+          "zIndex": 8,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "印章从上方落下来盖在旁边——批准只花了一句话",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -420,
+                "rotation": -24,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": -160,
+                "rotation": -14,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.72,
+                "x": 0,
+                "y": 10,
+                "rotation": 2,
+                "scale": 1.06,
+                "opacity": 1
+              },
+              {
+                "at": 0.8,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s3-stamp-1"
+        }
+      ],
+      "from": 680,
+      "duration": 308,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-desk"
+    },
+    {
+      "id": "s4",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/real-contradiction.png",
+          "assetId": "real-contradiction",
+          "role": "primary",
+          "width": 1320,
+          "x": 300,
+          "y": -49,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "真实的对照图进画面：左边配置在骂，右边模板在犯",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -900,
+                "y": 0,
+                "rotation": -2,
+                "scale": 0.96,
+                "opacity": 0
+              },
+              {
+                "at": 0.34,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 0,
+                "y": -12,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -8,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s4-real-contradiction-0"
+        },
+        {
+          "src": "assets/layers/gear.png",
+          "assetId": "gear",
+          "role": "tertiary",
+          "width": 220,
+          "x": 110,
+          "y": 111,
+          "zIndex": 4,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "角落的齿轮匀速转着，两个文件分开看都在正常运转",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -120,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.55
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 300,
+                "scale": 1,
+                "opacity": 0.55
+              }
+            ]
+          },
+          "id": "s4-gear-1"
+        }
+      ],
+      "from": 988,
+      "duration": 457,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s5",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/gear.png",
+          "assetId": "gear",
+          "role": "primary",
+          "width": 420,
+          "x": 490,
+          "y": 320,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "齿轮转着转着卡住，歪了下来——这条规则从写下那天起就转不动",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.22,
+                "x": 0,
+                "y": 0,
+                "rotation": 60,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": 0,
+                "rotation": 190,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 0,
+                "y": 0,
+                "rotation": 232,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.68,
+                "x": 0,
+                "y": 6,
+                "rotation": 228,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.82,
+                "x": 0,
+                "y": 26,
+                "rotation": 214,
+                "scale": 0.98,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 40,
+                "rotation": 206,
+                "scale": 0.96,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s5-gear-0"
+        },
+        {
+          "src": "assets/layers/folder.png",
+          "assetId": "folder",
+          "role": "secondary",
+          "width": 420,
+          "x": 1190,
+          "y": 463,
+          "zIndex": 5,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "旁边的文件夹翻开，里面是空的",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 420,
+                "y": 0,
+                "rotation": 6,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.36,
+                "x": 0,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.6,
+                "x": 0,
+                "y": -8,
+                "rotation": -2,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -4,
+                "rotation": -1,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s5-folder-1"
+        }
+      ],
+      "from": 1445,
+      "duration": 393,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s6",
+      "background": "assets/backgrounds/bg-night.png",
+      "hero": true,
+      "transition": "paper-wipe",
+      "decorations": false,
+      "camera": {
+        "zoom": {
+          "to": 1.05
+        }
+      },
+      "layers": [
+        {
+          "src": "assets/layers/clock.png",
+          "assetId": "clock",
+          "role": "primary",
+          "width": 430,
+          "x": 545,
+          "y": 314,
+          "zIndex": 6,
+          "enterFrom": "scale",
+          "delay": 0,
+          "motion": {
+            "action": "钟的指针一圈一圈转过去，一周多就这么过去了",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.16,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 1080,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s6-clock-0"
+        },
+        {
+          "src": "assets/layers/lamp-desk.png",
+          "assetId": "lamp-desk",
+          "role": "secondary",
+          "width": 360,
+          "x": 1270,
+          "y": 257,
+          "zIndex": 5,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "台灯一直亮着，没关过",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 300,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.7,
+                "x": 0,
+                "y": -6,
+                "rotation": -1,
+                "scale": 1.01,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -4,
+                "rotation": 0,
+                "scale": 1.01,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s6-lamp-desk-1"
+        }
+      ],
+      "from": 1838,
+      "duration": 349,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-night"
+    },
+    {
+      "id": "s7",
+      "background": "assets/backgrounds/bg-paper.png",
+      "hero": true,
+      "transition": "cut",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/real-data.png",
+          "assetId": "real-data",
+          "role": "primary",
+          "width": 1420,
+          "x": 250,
+          "y": -79,
+          "zIndex": 6,
+          "enterFrom": "up",
+          "delay": 0,
+          "motion": {
+            "action": "实验一的数据卡进画面，数字全部来自 README 的 Data 段",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": -320,
+                "rotation": -2,
+                "scale": 0.94,
+                "opacity": 0
+              },
+              {
+                "at": 0.3,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.62,
+                "x": 0,
+                "y": -14,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": -10,
+                "rotation": 0,
+                "scale": 1.03,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s7-real-data-0"
+        }
+      ],
+      "from": 2187,
+      "duration": 308,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-paper"
+    },
+    {
+      "id": "s8",
+      "background": "assets/backgrounds/bg-desk.png",
+      "hero": true,
+      "transition": "fade",
+      "decorations": false,
+      "layers": [
+        {
+          "src": "assets/layers/arrow.png",
+          "assetId": "arrow",
+          "role": "primary",
+          "width": 520,
+          "x": 500,
+          "y": 483,
+          "zIndex": 6,
+          "enterFrom": "left",
+          "delay": 0,
+          "motion": {
+            "action": "箭头从左推到画面中间停住——路在中间",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": -700,
+                "y": 0,
+                "rotation": 0,
+                "scale": 0.9,
+                "opacity": 0
+              },
+              {
+                "at": 0.26,
+                "x": -260,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.5,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 0.66,
+                "x": 60,
+                "y": 0,
+                "rotation": 2,
+                "scale": 1.03,
+                "opacity": 1
+              },
+              {
+                "at": 0.78,
+                "x": 20,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 30,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1.02,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s8-arrow-0"
+        },
+        {
+          "src": "assets/layers/stack.png",
+          "assetId": "stack",
+          "role": "secondary",
+          "width": 300,
+          "x": 110,
+          "y": 691,
+          "zIndex": 5,
+          "enterFrom": "down",
+          "delay": 0,
+          "motion": {
+            "action": "左边那摞「以后要做」还在，但矮了",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 0,
+                "y": 200,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.4,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": -2,
+                "scale": 1,
+                "opacity": 0.9
+              }
+            ]
+          },
+          "id": "s8-stack-1"
+        },
+        {
+          "src": "assets/layers/stamp.png",
+          "assetId": "stamp",
+          "role": "secondary",
+          "width": 260,
+          "x": 1430,
+          "y": 709,
+          "zIndex": 5,
+          "enterFrom": "right",
+          "delay": 0,
+          "motion": {
+            "action": "右边的印章落定——发出去了",
+            "keyframes": [
+              {
+                "at": 0,
+                "x": 320,
+                "y": -60,
+                "rotation": -18,
+                "scale": 1,
+                "opacity": 0
+              },
+              {
+                "at": 0.46,
+                "x": 0,
+                "y": -30,
+                "rotation": -8,
+                "scale": 1,
+                "opacity": 0.9
+              },
+              {
+                "at": 0.68,
+                "x": 0,
+                "y": 8,
+                "rotation": 2,
+                "scale": 1.05,
+                "opacity": 1
+              },
+              {
+                "at": 0.76,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              },
+              {
+                "at": 1,
+                "x": 0,
+                "y": 0,
+                "rotation": 0,
+                "scale": 1,
+                "opacity": 1
+              }
+            ]
+          },
+          "id": "s8-stamp-2"
+        }
+      ],
+      "from": 2495,
+      "duration": 488,
+      "captionStyle": "strip",
+      "backgroundAssetId": "bg-desk"
+    }
+  ],
+  "captions": [
+    {
+      "id": "cue-1",
+      "from": 0,
+      "duration": 82,
+      "text": "收藏夹里躺着一千篇「以后要做」。"
+    },
+    {
+      "id": "cue-2",
+      "from": 89,
+      "duration": 108,
+      "text": "工具在比较，方案在研究，最佳实践在找。"
+    },
+    {
+      "id": "cue-3",
+      "from": 204,
+      "duration": 49,
+      "text": "就是没有一篇发出来。"
+    },
+    {
+      "id": "cue-4",
+      "from": 265,
+      "duration": 116,
+      "text": "破局的办法，是给「想尝试的东西」找一个容器。"
+    },
+    {
+      "id": "cue-5",
+      "from": 388,
+      "duration": 137,
+      "text": "用实验把它固定下来：一个目录，一份记录，一次公开。"
+    },
+    {
+      "id": "cue-6",
+      "from": 532,
+      "duration": 48,
+      "text": "而第一个实验选了什么？"
+    },
+    {
+      "id": "cue-7",
+      "from": 587,
+      "duration": 81,
+      "text": "用 AI 把这套实验机制本身做出来。"
+    },
+    {
+      "id": "cue-8",
+      "from": 680,
+      "duration": 145,
+      "text": "生成出来的东西有分步流程，有硬约束清单，还有验收标准。"
+    },
+    {
+      "id": "cue-9",
+      "from": 832,
+      "duration": 88,
+      "text": "该有的都有，读起来像个成熟的方案。"
+    },
+    {
+      "id": "cue-10",
+      "from": 927,
+      "duration": 48,
+      "text": "我批准它，用了一句话。"
+    },
+    {
+      "id": "cue-11",
+      "from": 988,
+      "duration": 57,
+      "text": "真的跑出来才发现是空的。"
+    },
+    {
+      "id": "cue-12",
+      "from": 1052,
+      "duration": 199,
+      "text": "小红书的模板硬编码了三段列表，而同一套配置的另一个文件，正在批评这种写法。"
+    },
+    {
+      "id": "cue-13",
+      "from": 1258,
+      "duration": 87,
+      "text": "配置在骂模板，模板在违反配置。"
+    },
+    {
+      "id": "cue-14",
+      "from": 1351,
+      "duration": 81,
+      "text": "两个文件分开看，每一个都是对的。"
+    },
+    {
+      "id": "cue-15",
+      "from": 1445,
+      "duration": 163,
+      "text": "再往下翻，配图那一节写着：输出 SVG 源文件，由人渲染。"
+    },
+    {
+      "id": "cue-16",
+      "from": 1615,
+      "duration": 95,
+      "text": "查了这台机器，三个渲染器一个都没装。"
+    },
+    {
+      "id": "cue-17",
+      "from": 1716,
+      "duration": 110,
+      "text": "这条规则从写下的那天起，就没有执行的可能。"
+    },
+    {
+      "id": "cue-18",
+      "from": 1838,
+      "duration": 68,
+      "text": "流水线的骨架，半天就搭完了。"
+    },
+    {
+      "id": "cue-19",
+      "from": 1912,
+      "duration": 54,
+      "text": "第一篇内容，拖了一周多。"
+    },
+    {
+      "id": "cue-20",
+      "from": 1973,
+      "duration": 77,
+      "text": "卡住我的不是代码，是一直不满意。"
+    },
+    {
+      "id": "cue-21",
+      "from": 2056,
+      "duration": 119,
+      "text": "初稿越像一篇完整的文章，我越觉得它不值得发。"
+    },
+    {
+      "id": "cue-22",
+      "from": 2187,
+      "duration": 295,
+      "text": "这次实验留下的数字是这样的：一百零五条真人输入，十二个 skill 文件，校验脚本第一次跑就抓出四处死链，录屏零个。"
+    },
+    {
+      "id": "cue-23",
+      "from": 2495,
+      "duration": 140,
+      "text": "所以真正学到的是一句话：不苛求完美，不甘愿平庸。"
+    },
+    {
+      "id": "cue-24",
+      "from": 2641,
+      "duration": 34,
+      "text": "两头都是失败。"
+    },
+    {
+      "id": "cue-25",
+      "from": 2682,
+      "duration": 126,
+      "text": "苛求完美就永远不发布，甘愿平庸就发了也没人看。"
+    },
+    {
+      "id": "cue-26",
+      "from": 2815,
+      "duration": 107,
+      "text": "路在中间，而且要靠反复打磨才走得出来。"
+    }
+  ]
 }

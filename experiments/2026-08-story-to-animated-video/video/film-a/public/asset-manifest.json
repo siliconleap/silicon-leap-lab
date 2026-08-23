@@ -1,7 +1,218 @@
 {
   "contentMode": "explainer",
   "assetStrategy": "layered",
-  "imageProvider": "codex-native",
-  "voiceProvider": "edge-tts",
-  "assets": []
+  "imageProvider": "tencent-aiart",
+  "voiceProvider": "tencent",
+  "assets": [
+    {
+      "id": "bg-desk",
+      "type": "background",
+      "path": "assets/backgrounds/bg-desk.png",
+      "source": "assets/source/bg-desk.png",
+      "promptFile": "prompts/bg-desk.txt",
+      "subjectFree": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/bg-desk.watermark.json"
+      }
+    },
+    {
+      "id": "bg-paper",
+      "type": "background",
+      "path": "assets/backgrounds/bg-paper.png",
+      "source": "assets/source/bg-paper.png",
+      "promptFile": "prompts/bg-paper.txt",
+      "subjectFree": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/bg-paper.watermark.json"
+      }
+    },
+    {
+      "id": "bg-shelf",
+      "type": "background",
+      "path": "assets/backgrounds/bg-shelf.png",
+      "source": "assets/source/bg-shelf.png",
+      "promptFile": "prompts/bg-shelf.txt",
+      "subjectFree": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/bg-shelf.watermark.json"
+      }
+    },
+    {
+      "id": "bg-night",
+      "type": "background",
+      "path": "assets/backgrounds/bg-night.png",
+      "source": "assets/source/bg-night.png",
+      "promptFile": "prompts/bg-night.txt",
+      "subjectFree": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/bg-night.watermark.json"
+      }
+    },
+    {
+      "id": "stack",
+      "type": "layer",
+      "path": "assets/layers/stack.png",
+      "source": "assets/source/stack.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/stack.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/stack.watermark.json"
+      }
+    },
+    {
+      "id": "folder",
+      "type": "layer",
+      "path": "assets/layers/folder.png",
+      "source": "assets/source/folder.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/folder.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/folder.watermark.json"
+      }
+    },
+    {
+      "id": "stamp",
+      "type": "layer",
+      "path": "assets/layers/stamp.png",
+      "source": "assets/source/stamp.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/stamp.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/stamp.watermark.json"
+      }
+    },
+    {
+      "id": "gear",
+      "type": "layer",
+      "path": "assets/layers/gear.png",
+      "source": "assets/source/gear.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/gear.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/gear.watermark.json"
+      }
+    },
+    {
+      "id": "clock",
+      "type": "layer",
+      "path": "assets/layers/clock.png",
+      "source": "assets/source/clock.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/clock.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/clock.watermark.json"
+      }
+    },
+    {
+      "id": "lamp-desk",
+      "type": "layer",
+      "path": "assets/layers/lamp-desk.png",
+      "source": "assets/source/lamp-desk.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/lamp-desk.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/lamp-desk.watermark.json"
+      }
+    },
+    {
+      "id": "arrow",
+      "type": "layer",
+      "path": "assets/layers/arrow.png",
+      "source": "assets/source/arrow.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/arrow.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/arrow.watermark.json"
+      }
+    },
+    {
+      "id": "real-pipeline",
+      "type": "layer",
+      "path": "assets/layers/real-pipeline.png",
+      "source": "assets/source/real-pipeline.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/real-pipeline.watermark.json"
+      },
+      "evidence": "一手",
+      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+    },
+    {
+      "id": "real-contradiction",
+      "type": "layer",
+      "path": "assets/layers/real-contradiction.png",
+      "source": "assets/source/real-contradiction.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/real-contradiction.watermark.json"
+      },
+      "evidence": "一手",
+      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+    },
+    {
+      "id": "real-data",
+      "type": "layer",
+      "path": "assets/layers/real-data.png",
+      "source": "assets/source/real-data.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/real-data.watermark.json"
+      },
+      "evidence": "一手",
+      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+    },
+    {
+      "id": "real-quote",
+      "type": "layer",
+      "path": "assets/layers/real-quote.png",
+      "source": "assets/source/real-quote.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/real-quote.watermark.json"
+      },
+      "evidence": "一手",
+      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+    }
+  ]
 }

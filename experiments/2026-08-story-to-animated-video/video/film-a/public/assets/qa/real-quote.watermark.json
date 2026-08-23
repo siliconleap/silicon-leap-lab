@@ -1,0 +1,251 @@
+{
+  "detector": {
+    "name": "offline-watermark-screen",
+    "version": "1.0.0",
+    "networkCalls": 0,
+    "apiOrModelCalls": 0
+  },
+  "status": "clear",
+  "publishReady": true,
+  "heuristicStatusBeforeConfirmation": "detected",
+  "decisionReason": "A human or Agent visually reviewed the exact source bytes. Heuristic signals are retained in the report but the explicit visual decision is authoritative.",
+  "image": {
+    "path": "/Users/kaidong/Code/silicon-leap-lab/experiments/2026-08-story-to-animated-video/video/film-a/public/assets/layers/real-quote.png",
+    "sha256": "ed5aeadbd4a1709aca3dcf4b27a71eee863cef7635a28da9a261342009bd5cc0",
+    "width": 2286,
+    "height": 1466,
+    "mode": "RGBA",
+    "format": "PNG"
+  },
+  "hashVerification": {
+    "expectedProvided": true,
+    "matched": true
+  },
+  "visualConfirmation": {
+    "provided": true,
+    "reviewerType": "agent",
+    "confirmedSha256": "ed5aeadbd4a1709aca3dcf4b27a71eee863cef7635a28da9a261342009bd5cc0",
+    "expectedSha256Verified": true,
+    "overrodeHeuristicStatus": true
+  },
+  "ocr": {
+    "enabled": true,
+    "available": true,
+    "performed": true,
+    "engine": "tesseract",
+    "version": "tesseract 5.5.3",
+    "language": "engine-default",
+    "minimumConfidence": 45.0,
+    "edgeTextFindings": 1
+  },
+  "regions": [
+    {
+      "name": "top-left",
+      "box": [
+        0,
+        0,
+        823,
+        440
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.024103,
+        "extremeContrastRatio": 0.020804,
+        "meanLocalContrast": 6.05,
+        "partialAlphaRatio": 0.000287
+      },
+      "signals": []
+    },
+    {
+      "name": "top-right",
+      "box": [
+        1463,
+        0,
+        2286,
+        440
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.02474,
+        "extremeContrastRatio": 0.021325,
+        "meanLocalContrast": 6.197,
+        "partialAlphaRatio": 0.000318
+      },
+      "signals": []
+    },
+    {
+      "name": "bottom-left",
+      "box": [
+        0,
+        1026,
+        823,
+        1466
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.02474,
+        "extremeContrastRatio": 0.021325,
+        "meanLocalContrast": 6.197,
+        "partialAlphaRatio": 0.000318
+      },
+      "signals": []
+    },
+    {
+      "name": "bottom-right",
+      "box": [
+        1463,
+        1026,
+        2286,
+        1466
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.024103,
+        "extremeContrastRatio": 0.020804,
+        "meanLocalContrast": 6.05,
+        "partialAlphaRatio": 0.000287
+      },
+      "signals": []
+    },
+    {
+      "name": "top-edge",
+      "box": [
+        686,
+        0,
+        1600,
+        293
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.03785,
+        "extremeContrastRatio": 0.032681,
+        "meanLocalContrast": 9.378,
+        "partialAlphaRatio": 0.0
+      },
+      "signals": [
+        "high-contrast-mark-like-detail"
+      ]
+    },
+    {
+      "name": "bottom-edge",
+      "box": [
+        686,
+        1173,
+        1600,
+        1466
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.03785,
+        "extremeContrastRatio": 0.032681,
+        "meanLocalContrast": 9.378,
+        "partialAlphaRatio": 0.0
+      },
+      "signals": [
+        "high-contrast-mark-like-detail"
+      ]
+    },
+    {
+      "name": "left-edge",
+      "box": [
+        0,
+        366,
+        457,
+        1100
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.058978,
+        "extremeContrastRatio": 0.042088,
+        "meanLocalContrast": 12.552,
+        "partialAlphaRatio": 0.0
+      },
+      "signals": [
+        "high-contrast-mark-like-detail"
+      ]
+    },
+    {
+      "name": "right-edge",
+      "box": [
+        1829,
+        366,
+        2286,
+        1100
+      ],
+      "metrics": {
+        "strongContrastRatio": 0.019544,
+        "extremeContrastRatio": 0.016741,
+        "meanLocalContrast": 4.856,
+        "partialAlphaRatio": 0.0
+      },
+      "signals": []
+    }
+  ],
+  "hits": [
+    {
+      "signal": "high-contrast-mark-like-detail",
+      "strength": "review",
+      "region": "top-edge",
+      "box": [
+        686,
+        0,
+        1600,
+        293
+      ],
+      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
+      "metrics": {
+        "strongContrastRatio": 0.03785,
+        "extremeContrastRatio": 0.032681,
+        "meanLocalContrast": 9.378
+      }
+    },
+    {
+      "signal": "high-contrast-mark-like-detail",
+      "strength": "review",
+      "region": "bottom-edge",
+      "box": [
+        686,
+        1173,
+        1600,
+        1466
+      ],
+      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
+      "metrics": {
+        "strongContrastRatio": 0.03785,
+        "extremeContrastRatio": 0.032681,
+        "meanLocalContrast": 9.378
+      }
+    },
+    {
+      "signal": "high-contrast-mark-like-detail",
+      "strength": "review",
+      "region": "left-edge",
+      "box": [
+        0,
+        366,
+        457,
+        1100
+      ],
+      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
+      "metrics": {
+        "strongContrastRatio": 0.058978,
+        "extremeContrastRatio": 0.042088,
+        "meanLocalContrast": 12.552
+      }
+    },
+    {
+      "signal": "ocr-text",
+      "strength": "strong",
+      "region": "left-edge",
+      "box": [
+        317,
+        627,
+        522,
+        650
+      ],
+      "reason": "Local OCR found text along an image edge. Generated source art is expected to contain no embedded text, so this may be a watermark or label.",
+      "text": "2026-08-09 07",
+      "confidence": 94.35
+    }
+  ],
+  "warnings": [],
+  "limitations": [
+    "This is a heuristic first-pass screen, not proof that an image has no watermark.",
+    "Stylized, low-contrast, non-text, central, repeated-pattern, and flattened translucent graphic watermarks can be missed.",
+    "OCR quality depends on the locally installed Tesseract languages and can produce both misses and false positives.",
+    "A no-hit result stays review-required until a human or Agent visually confirms the exact SHA-256-bound image."
+  ]
+}
