@@ -66,3 +66,57 @@
 | 探测结论 | 水印不可关；ImageToImage 不能换姿态 |
 | 是否阻塞 | 不阻塞主线，但改变了两处设计前提 |
 | 引发的文档更正 | `editorial-video@7adf138` |
+
+---
+
+## 附：这次水印实测具体调了什么、怎么传的参
+
+作者要求看清楚调用细节，记在这里。
+
+**代码路径**
+
+- 发请求：`~/Code/editorial-video/scripts/generate-tencent-image.mjs:40-55`
+- 签名：`~/Code/editorial-video/scripts/lib/tencent.mjs`，TC3-HMAC-SHA256
+- 凭据：`TENCENTCLOUD_SECRET_ID` / `_KEY`，两种变量名都认（本机用的是 `TENCENT_CLOUD_*`）
+
+**请求**
+
+```
+POST https://aiart.tencentcloudapi.com
+X-TC-Action:    TextToImageLite
+X-TC-Version:   2022-12-29
+X-TC-Region:    ap-guangzhou
+Content-Type:   application/json; charset=utf-8
+Authorization:  TC3-HMAC-SHA256 ...（含 SecretId）
+```
+
+```json
+{
+  "Prompt": "<提示词>",
+  "Resolution": "1024:1024",
+  "LogoAdd": 0,
+  "RspImgType": "base64"
+}
+```
+
+`LogoAdd` 的取值由 `generate-tencent-image.mjs:22` 决定：`args.includes('--logo') ? 1 : 0`。也就是说不加 `--logo` 时**确实传的是 0**，不是漏传，也不是走了默认值。
+
+**两次调用的唯一差别**就是这个字段 0 与 1。响应都正常返回 `ResultImage`，无错误码，无警告。
+
+**复现方法**（会产生 2 次计费调用）
+
+```sh
+cd ~/Code/editorial-video
+export TENCENT_CLOUD_SECRET_ID=...   # 本机已配在 ~/.zshrc
+export TENCENT_CLOUD_SECRET_KEY=...
+echo "剪纸风格插画，一只戴眼镜的灰兔子坐在桌前" > /tmp/p.txt
+node scripts/generate-tencent-image.mjs --prompt-file /tmp/p.txt --out /tmp/a.png --resolution 1024:1024
+node scripts/generate-tencent-image.mjs --prompt-file /tmp/p.txt --out /tmp/b.png --resolution 1024:1024 --logo
+```
+
+然后裁两张图右下角 22%×8% 放大对比。本次结果：`notes/probe/no-logo-corner.png` 与 `notes/probe/with-logo-corner.png`，肉眼无差别。
+
+**还没试过的两条**，如果你想继续挖：
+
+- `LogoParam`：文档说可以把标识换成自定义图片。没试过换成一张全透明 1×1 会怎样——但那本质上是绕过合规标，属于你的决定，我没自作主张试。
+- 换产品线：混元生图 2.0 / 3.0 在 `hunyuan` 而不是 `aiart` 下（文档 1729 与 1668 是两套），接口是异步的提交任务加查询任务。有没有同样的行为，没测。
