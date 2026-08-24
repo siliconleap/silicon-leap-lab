@@ -5,240 +5,250 @@
   "voiceProvider": "tencent",
   "assets": [
     {
-      "id": "bg-desk",
+      "id": "bg1-shelf",
       "type": "background",
-      "path": "assets/backgrounds/bg-desk.png",
-      "source": "assets/source/bg-desk.png",
-      "promptFile": "prompts/bg-desk.txt",
+      "path": "assets/backgrounds/bg1-shelf.png",
+      "source": "assets/source3/bg1-shelf.png",
+      "promptFile": "prompts/bg1-shelf.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-desk.watermark.json"
+        "report": "assets/qa/bg1-shelf.watermark.json"
       }
     },
     {
-      "id": "bg-paper",
+      "id": "bg2-desk",
       "type": "background",
-      "path": "assets/backgrounds/bg-paper.png",
-      "source": "assets/source/bg-paper.png",
-      "promptFile": "prompts/bg-paper.txt",
+      "path": "assets/backgrounds/bg2-desk.png",
+      "source": "assets/source3/bg2-desk.png",
+      "promptFile": "prompts/bg2-desk.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-paper.watermark.json"
+        "report": "assets/qa/bg2-desk.watermark.json"
       }
     },
     {
-      "id": "bg-shelf",
+      "id": "bg3-paper",
       "type": "background",
-      "path": "assets/backgrounds/bg-shelf.png",
-      "source": "assets/source/bg-shelf.png",
-      "promptFile": "prompts/bg-shelf.txt",
+      "path": "assets/backgrounds/bg3-paper.png",
+      "source": "assets/source3/bg3-paper.png",
+      "promptFile": "prompts/bg3-paper.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-shelf.watermark.json"
+        "report": "assets/qa/bg3-paper.watermark.json"
       }
     },
     {
-      "id": "bg-night",
+      "id": "bg4-night",
       "type": "background",
-      "path": "assets/backgrounds/bg-night.png",
-      "source": "assets/source/bg-night.png",
-      "promptFile": "prompts/bg-night.txt",
+      "path": "assets/backgrounds/bg4-night.png",
+      "source": "assets/source3/bg4-night.png",
+      "promptFile": "prompts/bg4-night.txt",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg-night.watermark.json"
+        "report": "assets/qa/bg4-night.watermark.json"
       }
     },
     {
-      "id": "stack",
+      "id": "p-drafts",
       "type": "layer",
-      "path": "assets/layers/stack.png",
-      "source": "assets/source/stack.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/stack.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/stack.watermark.json"
-      }
-    },
-    {
-      "id": "folder",
-      "type": "layer",
-      "path": "assets/layers/folder.png",
-      "source": "assets/source/folder.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/folder.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/folder.watermark.json"
-      }
-    },
-    {
-      "id": "stamp",
-      "type": "layer",
-      "path": "assets/layers/stamp.png",
-      "source": "assets/source/stamp.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/stamp.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/stamp.watermark.json"
-      }
-    },
-    {
-      "id": "gear",
-      "type": "layer",
-      "path": "assets/layers/gear.png",
-      "source": "assets/source/gear.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/gear.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/gear.watermark.json"
-      }
-    },
-    {
-      "id": "clock",
-      "type": "layer",
-      "path": "assets/layers/clock.png",
-      "source": "assets/source/clock.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/clock.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/clock.watermark.json"
-      }
-    },
-    {
-      "id": "lamp-desk",
-      "type": "layer",
-      "path": "assets/layers/lamp-desk.png",
-      "source": "assets/source/lamp-desk.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/lamp-desk.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/lamp-desk.watermark.json"
-      }
-    },
-    {
-      "id": "arrow",
-      "type": "layer",
-      "path": "assets/layers/arrow.png",
-      "source": "assets/source/arrow.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "promptFile": "prompts/arrow.txt",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/arrow.watermark.json"
-      }
-    },
-    {
-      "id": "real-pipeline",
-      "type": "layer",
-      "path": "assets/layers/real-pipeline.png",
-      "source": "assets/source/real-pipeline.png",
+      "path": "assets/layers/p-drafts.png",
+      "source": "assets/source3/p-drafts.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/real-pipeline.watermark.json"
+        "report": "assets/qa/p-drafts.watermark.json"
       },
-      "evidence": "一手",
-      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+      "promptFile": "prompts/p-drafts.txt"
     },
     {
-      "id": "real-contradiction",
+      "id": "p-pen",
       "type": "layer",
-      "path": "assets/layers/real-contradiction.png",
-      "source": "assets/source/real-contradiction.png",
+      "path": "assets/layers/p-pen.png",
+      "source": "assets/source3/p-pen.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/real-contradiction.watermark.json"
+        "report": "assets/qa/p-pen.watermark.json"
       },
-      "evidence": "一手",
-      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+      "promptFile": "prompts/p-pen.txt"
     },
     {
-      "id": "real-data",
+      "id": "p-lens",
       "type": "layer",
-      "path": "assets/layers/real-data.png",
-      "source": "assets/source/real-data.png",
+      "path": "assets/layers/p-lens.png",
+      "source": "assets/source3/p-lens.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/real-data.watermark.json"
+        "report": "assets/qa/p-lens.watermark.json"
       },
-      "evidence": "一手",
-      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
+      "promptFile": "prompts/p-lens.txt"
+    },
+    {
+      "id": "p-funnel",
+      "type": "layer",
+      "path": "assets/layers/p-funnel.png",
+      "source": "assets/source3/p-funnel.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-funnel.watermark.json"
+      },
+      "promptFile": "prompts/p-funnel.txt"
+    },
+    {
+      "id": "p-chain",
+      "type": "layer",
+      "path": "assets/layers/p-chain.png",
+      "source": "assets/source3/p-chain.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-chain.watermark.json"
+      },
+      "promptFile": "prompts/p-chain.txt"
+    },
+    {
+      "id": "p-cross",
+      "type": "layer",
+      "path": "assets/layers/p-cross.png",
+      "source": "assets/source3/p-cross.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-cross.watermark.json"
+      },
+      "promptFile": "prompts/p-cross.txt"
+    },
+    {
+      "id": "p-stamp",
+      "type": "layer",
+      "path": "assets/layers/p-stamp.png",
+      "source": "assets/source3/p-stamp.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-stamp.watermark.json"
+      },
+      "promptFile": "prompts/p-stamp.txt"
+    },
+    {
+      "id": "p-gear",
+      "type": "layer",
+      "path": "assets/layers/p-gear.png",
+      "source": "assets/source3/p-gear.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-gear.watermark.json"
+      },
+      "promptFile": "prompts/p-gear.txt"
+    },
+    {
+      "id": "p-clock",
+      "type": "layer",
+      "path": "assets/layers/p-clock.png",
+      "source": "assets/source3/p-clock.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-clock.watermark.json"
+      },
+      "promptFile": "prompts/p-clock.txt"
+    },
+    {
+      "id": "p-clock-face",
+      "type": "layer",
+      "path": "assets/layers/p-clock-face.png",
+      "source": "由 p-clock 合成的表盘与指针层",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-clock-face.watermark.json"
+      }
+    },
+    {
+      "id": "p-arrow",
+      "type": "layer",
+      "path": "assets/layers/p-arrow.png",
+      "source": "assets/source3/p-arrow.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-arrow.watermark.json"
+      },
+      "promptFile": "prompts/p-arrow.txt"
+    },
+    {
+      "id": "p-folder",
+      "type": "layer",
+      "path": "assets/layers/p-folder.png",
+      "source": "assets/source3/p-folder.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/p-folder.watermark.json"
+      },
+      "promptFile": "prompts/p-folder.txt"
     },
     {
       "id": "real-quote",
       "type": "layer",
       "path": "assets/layers/real-quote.png",
-      "source": "assets/source/real-quote.png",
+      "source": "实验一 drafts/youtube/assets/S04-quote.png，一手产物未改动",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "evidence": "一手",
       "watermarkCheck": {
         "status": "clear",
         "report": "assets/qa/real-quote.watermark.json"
-      },
+      }
+    },
+    {
+      "id": "real-contradiction",
+      "type": "layer",
+      "path": "assets/layers/real-contradiction.png",
+      "source": "实验一 drafts/wechat/assets/01-contradiction.png，一手产物未改动",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
       "evidence": "一手",
-      "mount": "加了纸质衬底与透明外边以满足分层契约；产物内容未改动一个像素，原件在 source/"
-    },
-    {
-      "id": "practices",
-      "type": "layer",
-      "path": "assets/layers/practices.png",
-      "source": "实验 2026-08-markdown-only-content-pipeline 的 content-brief.md 实践清单，用 HTML 渲染成图，表格内容逐行照抄",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/practices.watermark.json"
-      },
-      "evidence": "一手"
-    },
-    {
-      "id": "clock-face",
-      "type": "layer",
-      "path": "assets/layers/clock-face.png",
-      "source": "由 Pillow 合成的表盘与指针层，用于只转指针不转钟体",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/clock-face.watermark.json"
+        "report": "assets/qa/real-contradiction.watermark.json"
       }
     },
     {
@@ -249,11 +259,11 @@
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "evidence": "一手",
       "watermarkCheck": {
         "status": "clear",
         "report": "assets/qa/polish.watermark.json"
-      },
-      "evidence": "一手"
+      }
     },
     {
       "id": "reviews",
@@ -263,81 +273,25 @@
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "evidence": "一手",
       "watermarkCheck": {
         "status": "clear",
         "report": "assets/qa/reviews.watermark.json"
-      },
-      "evidence": "一手"
+      }
     },
     {
-      "id": "pen",
+      "id": "practices",
       "type": "layer",
-      "path": "assets/layers/pen.png",
-      "source": "assets/source/pen.png",
+      "path": "assets/layers/practices.png",
+      "source": "实验一 content-brief.md 的实践清单，逐行照抄渲染成图",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "evidence": "一手",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/pen.watermark.json"
-      },
-      "promptFile": "prompts/pen.txt"
-    },
-    {
-      "id": "lens",
-      "type": "layer",
-      "path": "assets/layers/lens.png",
-      "source": "assets/source/lens.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/lens.watermark.json"
-      },
-      "promptFile": "prompts/lens.txt"
-    },
-    {
-      "id": "funnel",
-      "type": "layer",
-      "path": "assets/layers/funnel.png",
-      "source": "assets/source/funnel.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/funnel.watermark.json"
-      },
-      "promptFile": "prompts/funnel.txt"
-    },
-    {
-      "id": "chain",
-      "type": "layer",
-      "path": "assets/layers/chain.png",
-      "source": "assets/source/chain.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/chain.watermark.json"
-      },
-      "promptFile": "prompts/chain.txt"
-    },
-    {
-      "id": "crosslist",
-      "type": "layer",
-      "path": "assets/layers/crosslist.png",
-      "source": "assets/source/crosslist.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/crosslist.watermark.json"
-      },
-      "promptFile": "prompts/crosslist.txt"
+        "report": "assets/qa/practices.watermark.json"
+      }
     }
   ]
 }

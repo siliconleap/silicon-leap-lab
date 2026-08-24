@@ -38,18 +38,18 @@
   "scenes": [
     {
       "id": "s1",
-      "background": "assets/backgrounds/bg-shelf.png",
+      "background": "assets/backgrounds/bg1-shelf.png",
       "hero": true,
       "transition": "fade",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/stack.png",
-          "assetId": "stack",
+          "src": "assets/layers/p-drafts.png",
+          "assetId": "p-drafts",
           "role": "primary",
           "width": 600,
           "x": 520,
-          "y": 421,
+          "y": 454,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "down",
@@ -106,15 +106,15 @@
               }
             ]
           },
-          "id": "s1-stack-0"
+          "id": "s1-p-drafts-0"
         },
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/p-folder.png",
+          "assetId": "p-folder",
           "role": "secondary",
           "width": 380,
           "x": 1310,
-          "y": 673,
+          "y": 711,
           "zIndex": 5,
           "delay": 14,
           "enterFrom": "right",
@@ -147,15 +147,15 @@
               }
             ]
           },
-          "id": "s1-folder-1"
+          "id": "s1-p-folder-1"
         },
         {
-          "src": "assets/layers/clock.png",
-          "assetId": "clock",
+          "src": "assets/layers/p-clock.png",
+          "assetId": "p-clock",
           "role": "tertiary",
           "width": 210,
           "x": 1595,
-          "y": 190,
+          "y": 187,
           "zIndex": 4,
           "delay": 26,
           "enterFrom": "right",
@@ -190,28 +190,28 @@
               }
             ]
           },
-          "id": "s1-clock-2"
+          "id": "s1-p-clock-2"
         }
       ],
       "from": 0,
       "duration": 221,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-shelf"
+      "backgroundAssetId": "bg1-shelf"
     },
     {
       "id": "s2",
-      "background": "assets/backgrounds/bg-desk.png",
+      "background": "assets/backgrounds/bg2-desk.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/gear.png",
-          "assetId": "gear",
+          "src": "assets/layers/p-gear.png",
+          "assetId": "p-gear",
           "role": "primary",
           "width": 620,
           "x": 350,
-          "y": 210,
+          "y": 202,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "left",
@@ -270,15 +270,15 @@
               }
             ]
           },
-          "id": "s2-gear-0"
+          "id": "s2-p-gear-0"
         },
         {
-          "src": "assets/layers/arrow.png",
-          "assetId": "arrow",
+          "src": "assets/layers/p-arrow.png",
+          "assetId": "p-arrow",
           "role": "secondary",
           "width": 360,
           "x": 1220,
-          "y": 598,
+          "y": 844,
           "zIndex": 7,
           "delay": 16,
           "enterFrom": "right",
@@ -343,15 +343,15 @@
               }
             ]
           },
-          "id": "s2-arrow-1"
+          "id": "s2-p-arrow-1"
         },
         {
-          "src": "assets/layers/stack.png",
-          "assetId": "stack",
+          "src": "assets/layers/p-drafts.png",
+          "assetId": "p-drafts",
           "role": "tertiary",
           "width": 260,
           "x": 110,
-          "y": 729,
+          "y": 743,
           "zIndex": 4,
           "delay": 30,
           "enterFrom": "left",
@@ -384,28 +384,28 @@
               }
             ]
           },
-          "id": "s2-stack-2"
+          "id": "s2-p-drafts-2"
         }
       ],
       "from": 221,
       "duration": 436,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-desk"
+      "backgroundAssetId": "bg2-desk"
     },
     {
       "id": "s3",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/p-folder.png",
+          "assetId": "p-folder",
           "role": "primary",
           "width": 620,
           "x": 450,
-          "y": 392,
+          "y": 455,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "left",
@@ -462,15 +462,15 @@
               }
             ]
           },
-          "id": "s3-folder-0"
+          "id": "s3-p-folder-0"
         },
         {
-          "src": "assets/layers/crosslist.png",
-          "assetId": "crosslist",
+          "src": "assets/layers/p-cross.png",
+          "assetId": "p-cross",
           "role": "secondary",
           "width": 300,
           "x": 1290,
-          "y": 616,
+          "y": 604,
           "zIndex": 7,
           "delay": 18,
           "enterFrom": "right",
@@ -511,18 +511,18 @@
               }
             ]
           },
-          "id": "s3-crosslist-1"
+          "id": "s3-p-cross-1"
         }
       ],
       "from": 657,
       "duration": 202,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper",
+      "backgroundAssetId": "bg3-paper",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     },
     {
       "id": "s4",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
@@ -585,12 +585,12 @@
           "id": "s4-real-contradiction-0"
         },
         {
-          "src": "assets/layers/gear.png",
-          "assetId": "gear",
+          "src": "assets/layers/p-gear.png",
+          "assetId": "p-gear",
           "role": "tertiary",
           "width": 200,
           "x": 120,
-          "y": 140,
+          "y": 138,
           "zIndex": 4,
           "delay": 20,
           "enterFrom": "left",
@@ -625,15 +625,15 @@
               }
             ]
           },
-          "id": "s4-gear-1"
+          "id": "s4-p-gear-1"
         },
         {
-          "src": "assets/layers/lens.png",
-          "assetId": "lens",
+          "src": "assets/layers/p-lens.png",
+          "assetId": "p-lens",
           "role": "secondary",
           "width": 330,
           "x": 1535,
-          "y": 97,
+          "y": 125,
           "zIndex": 7,
           "delay": 34,
           "enterFrom": "right",
@@ -674,28 +674,28 @@
               }
             ]
           },
-          "id": "s4-lens-2"
+          "id": "s4-p-lens-2"
         }
       ],
       "from": 859,
       "duration": 752,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper"
+      "backgroundAssetId": "bg3-paper"
     },
     {
       "id": "s5",
-      "background": "assets/backgrounds/bg-desk.png",
+      "background": "assets/backgrounds/bg2-desk.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/clock.png",
-          "assetId": "clock",
+          "src": "assets/layers/p-clock.png",
+          "assetId": "p-clock",
           "role": "primary",
           "width": 600,
           "x": 400,
-          "y": 250,
+          "y": 243,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "scale",
@@ -730,15 +730,15 @@
               }
             ]
           },
-          "id": "s5-clock-0"
+          "id": "s5-p-clock-0"
         },
         {
-          "src": "assets/layers/clock-face.png",
-          "assetId": "clock-face",
+          "src": "assets/layers/p-clock-face.png",
+          "assetId": "p-clock-face",
           "role": "primary",
           "width": 600,
           "x": 400,
-          "y": 250,
+          "y": 243,
           "zIndex": 7,
           "delay": 4,
           "enterFrom": "scale",
@@ -773,15 +773,15 @@
               }
             ]
           },
-          "id": "s5-clock-face-1"
+          "id": "s5-p-clock-face-1"
         },
         {
-          "src": "assets/layers/arrow.png",
-          "assetId": "arrow",
+          "src": "assets/layers/p-arrow.png",
+          "assetId": "p-arrow",
           "role": "secondary",
           "width": 340,
           "x": 1310,
-          "y": 685,
+          "y": 918,
           "zIndex": 5,
           "delay": 20,
           "enterFrom": "right",
@@ -814,28 +814,28 @@
               }
             ]
           },
-          "id": "s5-arrow-2"
+          "id": "s5-p-arrow-2"
         }
       ],
       "from": 1611,
       "duration": 171,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-desk"
+      "backgroundAssetId": "bg2-desk"
     },
     {
       "id": "s6",
-      "background": "assets/backgrounds/bg-desk.png",
+      "background": "assets/backgrounds/bg2-desk.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/pen.png",
-          "assetId": "pen",
+          "src": "assets/layers/p-pen.png",
+          "assetId": "p-pen",
           "role": "primary",
           "width": 760,
           "x": 340,
-          "y": 175,
+          "y": 312,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "left",
@@ -900,15 +900,15 @@
               }
             ]
           },
-          "id": "s6-pen-0"
+          "id": "s6-p-pen-0"
         },
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/p-folder.png",
+          "assetId": "p-folder",
           "role": "secondary",
           "width": 400,
           "x": 1280,
-          "y": 578,
+          "y": 618,
           "zIndex": 5,
           "delay": 16,
           "enterFrom": "right",
@@ -941,15 +941,15 @@
               }
             ]
           },
-          "id": "s6-folder-1"
+          "id": "s6-p-folder-1"
         },
         {
-          "src": "assets/layers/stack.png",
-          "assetId": "stack",
+          "src": "assets/layers/p-drafts.png",
+          "assetId": "p-drafts",
           "role": "tertiary",
           "width": 220,
           "x": 110,
-          "y": 738,
+          "y": 750,
           "zIndex": 4,
           "delay": 32,
           "enterFrom": "left",
@@ -982,17 +982,17 @@
               }
             ]
           },
-          "id": "s6-stack-2"
+          "id": "s6-p-drafts-2"
         }
       ],
       "from": 1782,
       "duration": 429,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-desk"
+      "backgroundAssetId": "bg2-desk"
     },
     {
       "id": "s7",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
@@ -1047,12 +1047,12 @@
           "id": "s7-polish-0"
         },
         {
-          "src": "assets/layers/pen.png",
-          "assetId": "pen",
+          "src": "assets/layers/p-pen.png",
+          "assetId": "p-pen",
           "role": "tertiary",
           "width": 300,
           "x": 1570,
-          "y": 767,
+          "y": 821,
           "zIndex": 7,
           "delay": 26,
           "enterFrom": "right",
@@ -1085,29 +1085,29 @@
               }
             ]
           },
-          "id": "s7-pen-1"
+          "id": "s7-p-pen-1"
         }
       ],
       "from": 2211,
       "duration": 372,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper",
+      "backgroundAssetId": "bg3-paper",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     },
     {
       "id": "s8",
-      "background": "assets/backgrounds/bg-desk.png",
+      "background": "assets/backgrounds/bg2-desk.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/lens.png",
-          "assetId": "lens",
+          "src": "assets/layers/p-lens.png",
+          "assetId": "p-lens",
           "role": "primary",
           "width": 700,
           "x": 350,
-          "y": 123,
+          "y": 182,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "left",
@@ -1164,7 +1164,7 @@
               }
             ]
           },
-          "id": "s8-lens-0"
+          "id": "s8-p-lens-0"
         },
         {
           "src": "assets/layers/real-quote.png",
@@ -1211,12 +1211,12 @@
       "from": 2583,
       "duration": 352,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-desk",
+      "backgroundAssetId": "bg2-desk",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     },
     {
       "id": "s9",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
@@ -1271,12 +1271,12 @@
           "id": "s9-reviews-0"
         },
         {
-          "src": "assets/layers/stamp.png",
-          "assetId": "stamp",
+          "src": "assets/layers/p-stamp.png",
+          "assetId": "p-stamp",
           "role": "tertiary",
           "width": 230,
           "x": 1625,
-          "y": 824,
+          "y": 761,
           "zIndex": 7,
           "delay": 28,
           "enterFrom": "right",
@@ -1341,29 +1341,29 @@
               }
             ]
           },
-          "id": "s9-stamp-1"
+          "id": "s9-p-stamp-1"
         }
       ],
       "from": 2935,
       "duration": 322,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper",
+      "backgroundAssetId": "bg3-paper",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     },
     {
       "id": "s10",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/funnel.png",
-          "assetId": "funnel",
+          "src": "assets/layers/p-funnel.png",
+          "assetId": "p-funnel",
           "role": "primary",
           "width": 640,
           "x": 380,
-          "y": 365,
+          "y": 295,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "up",
@@ -1420,15 +1420,15 @@
               }
             ]
           },
-          "id": "s10-funnel-0"
+          "id": "s10-p-funnel-0"
         },
         {
-          "src": "assets/layers/stamp.png",
-          "assetId": "stamp",
+          "src": "assets/layers/p-stamp.png",
+          "assetId": "p-stamp",
           "role": "secondary",
           "width": 280,
           "x": 1290,
-          "y": 612,
+          "y": 535,
           "zIndex": 7,
           "delay": 22,
           "enterFrom": "up",
@@ -1477,15 +1477,15 @@
               }
             ]
           },
-          "id": "s10-stamp-1"
+          "id": "s10-p-stamp-1"
         },
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/p-folder.png",
+          "assetId": "p-folder",
           "role": "tertiary",
           "width": 260,
           "x": 120,
-          "y": 704,
+          "y": 730,
           "zIndex": 4,
           "delay": 36,
           "enterFrom": "left",
@@ -1518,28 +1518,28 @@
               }
             ]
           },
-          "id": "s10-folder-2"
+          "id": "s10-p-folder-2"
         }
       ],
       "from": 3257,
       "duration": 400,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper"
+      "backgroundAssetId": "bg3-paper"
     },
     {
       "id": "s11",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/chain.png",
-          "assetId": "chain",
+          "src": "assets/layers/p-chain.png",
+          "assetId": "p-chain",
           "role": "primary",
           "width": 860,
           "x": 430,
-          "y": 236,
+          "y": 731,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "left",
@@ -1604,15 +1604,15 @@
               }
             ]
           },
-          "id": "s11-chain-0"
+          "id": "s11-p-chain-0"
         },
         {
-          "src": "assets/layers/gear.png",
-          "assetId": "gear",
+          "src": "assets/layers/p-gear.png",
+          "assetId": "p-gear",
           "role": "tertiary",
           "width": 200,
           "x": 140,
-          "y": 160,
+          "y": 158,
           "zIndex": 4,
           "delay": 18,
           "enterFrom": "left",
@@ -1647,15 +1647,15 @@
               }
             ]
           },
-          "id": "s11-gear-1"
+          "id": "s11-p-gear-1"
         },
         {
-          "src": "assets/layers/funnel.png",
-          "assetId": "funnel",
+          "src": "assets/layers/p-funnel.png",
+          "assetId": "p-funnel",
           "role": "tertiary",
           "width": 230,
           "x": 1605,
-          "y": 303,
+          "y": 278,
           "zIndex": 5,
           "delay": 34,
           "enterFrom": "right",
@@ -1688,28 +1688,28 @@
               }
             ]
           },
-          "id": "s11-funnel-2"
+          "id": "s11-p-funnel-2"
         }
       ],
       "from": 3657,
       "duration": 399,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper"
+      "backgroundAssetId": "bg3-paper"
     },
     {
       "id": "s12",
-      "background": "assets/backgrounds/bg-desk.png",
+      "background": "assets/backgrounds/bg2-desk.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/crosslist.png",
-          "assetId": "crosslist",
+          "src": "assets/layers/p-cross.png",
+          "assetId": "p-cross",
           "role": "primary",
           "width": 700,
           "x": 430,
-          "y": 320,
+          "y": 293,
           "zIndex": 6,
           "delay": 0,
           "enterFrom": "scale",
@@ -1774,15 +1774,15 @@
               }
             ]
           },
-          "id": "s12-crosslist-0"
+          "id": "s12-p-cross-0"
         },
         {
-          "src": "assets/layers/folder.png",
-          "assetId": "folder",
+          "src": "assets/layers/p-folder.png",
+          "assetId": "p-folder",
           "role": "secondary",
           "width": 380,
           "x": 1270,
-          "y": 583,
+          "y": 621,
           "zIndex": 5,
           "delay": 18,
           "enterFrom": "right",
@@ -1815,15 +1815,15 @@
               }
             ]
           },
-          "id": "s12-folder-1"
+          "id": "s12-p-folder-1"
         },
         {
-          "src": "assets/layers/pen.png",
-          "assetId": "pen",
+          "src": "assets/layers/p-pen.png",
+          "assetId": "p-pen",
           "role": "tertiary",
           "width": 240,
           "x": 120,
-          "y": 736,
+          "y": 779,
           "zIndex": 4,
           "delay": 34,
           "enterFrom": "left",
@@ -1856,28 +1856,28 @@
               }
             ]
           },
-          "id": "s12-pen-2"
+          "id": "s12-p-pen-2"
         }
       ],
       "from": 4056,
       "duration": 464,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-desk"
+      "backgroundAssetId": "bg2-desk"
     },
     {
       "id": "s13",
-      "background": "assets/backgrounds/bg-night.png",
+      "background": "assets/backgrounds/bg4-night.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
       "layers": [
         {
-          "src": "assets/layers/clock.png",
-          "assetId": "clock",
+          "src": "assets/layers/p-clock.png",
+          "assetId": "p-clock",
           "role": "secondary",
           "width": 600,
           "x": 440,
-          "y": 200,
+          "y": 193,
           "zIndex": 5,
           "delay": 0,
           "enterFrom": "scale",
@@ -1912,15 +1912,15 @@
               }
             ]
           },
-          "id": "s13-clock-0"
+          "id": "s13-p-clock-0"
         },
         {
-          "src": "assets/layers/clock-face.png",
-          "assetId": "clock-face",
+          "src": "assets/layers/p-clock-face.png",
+          "assetId": "p-clock-face",
           "role": "primary",
           "width": 600,
           "x": 440,
-          "y": 200,
+          "y": 193,
           "zIndex": 6,
           "delay": 4,
           "enterFrom": "scale",
@@ -1963,48 +1963,7 @@
               }
             ]
           },
-          "id": "s13-clock-face-1"
-        },
-        {
-          "src": "assets/layers/lamp-desk.png",
-          "assetId": "lamp-desk",
-          "role": "secondary",
-          "width": 360,
-          "x": 1320,
-          "y": 267,
-          "zIndex": 5,
-          "delay": 22,
-          "enterFrom": "right",
-          "motion": {
-            "action": "台灯一直亮着",
-            "keyframes": [
-              {
-                "at": 0,
-                "x": 300,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 0
-              },
-              {
-                "at": 0.4,
-                "x": 0,
-                "y": 0,
-                "rotation": 0,
-                "scale": 1,
-                "opacity": 1
-              },
-              {
-                "at": 1,
-                "x": 0,
-                "y": -6,
-                "rotation": 0,
-                "scale": 1.01,
-                "opacity": 1
-              }
-            ]
-          },
-          "id": "s13-lamp-desk-2"
+          "id": "s13-p-clock-face-1"
         }
       ],
       "camera": {
@@ -2015,11 +1974,12 @@
       "from": 4520,
       "duration": 287,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-night"
+      "backgroundAssetId": "bg4-night",
+      "layerPlanRationale": "时间流逝这一拍：钟体与表盘必须严格套准，多加一层会挡住指针，而台灯已经画在背景里"
     },
     {
       "id": "s14",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "paper-wipe",
       "decorations": false,
@@ -2074,12 +2034,12 @@
           "id": "s14-practices-0"
         },
         {
-          "src": "assets/layers/stamp.png",
-          "assetId": "stamp",
+          "src": "assets/layers/p-stamp.png",
+          "assetId": "p-stamp",
           "role": "tertiary",
           "width": 200,
           "x": 1680,
-          "y": 860,
+          "y": 805,
           "zIndex": 7,
           "delay": 26,
           "enterFrom": "right",
@@ -2128,18 +2088,18 @@
               }
             ]
           },
-          "id": "s14-stamp-1"
+          "id": "s14-p-stamp-1"
         }
       ],
       "from": 4807,
       "duration": 180,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper",
+      "backgroundAssetId": "bg3-paper",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     },
     {
       "id": "s15",
-      "background": "assets/backgrounds/bg-paper.png",
+      "background": "assets/backgrounds/bg3-paper.png",
       "hero": true,
       "transition": "cut",
       "decorations": false,
@@ -2194,12 +2154,12 @@
           "id": "s15-practices-0"
         },
         {
-          "src": "assets/layers/arrow.png",
-          "assetId": "arrow",
+          "src": "assets/layers/p-arrow.png",
+          "assetId": "p-arrow",
           "role": "secondary",
           "width": 440,
           "x": 740,
-          "y": 871,
+          "y": 1172,
           "zIndex": 8,
           "delay": 20,
           "enterFrom": "left",
@@ -2248,7 +2208,7 @@
               }
             ]
           },
-          "id": "s15-arrow-1"
+          "id": "s15-p-arrow-1"
         }
       ],
       "camera": {
@@ -2259,7 +2219,7 @@
       "from": 4987,
       "duration": 369,
       "captionStyle": "strip",
-      "backgroundAssetId": "bg-paper",
+      "backgroundAssetId": "bg3-paper",
       "layerPlanRationale": "证据卡拍：主体是一张不可改动的一手产物，加一个次级元件已足够，再加层会挡住可读性"
     }
   ],
