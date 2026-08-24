@@ -8,3 +8,8 @@ node_modules/
 **/drafts/*/build/
 __pycache__/
 *.pyc
+
+# 视频成片与中间件：由 project.json + assets/ 确定性地渲染出来，源在 git 里就够了。
+# 上一个实验已经定过这条约定（drafts/*/build/），这里对 editorial-video 项目同样适用。
+**/video/*/out/
+**/video/*/node_modules/
