@@ -2,17 +2,19 @@
   "contentMode": "explainer",
   "assetStrategy": "layered",
   "image": {
-    "provider": "codex-native",
-    "model": null
+    "provider": "tencent-aiart",
+    "model": null,
+    "resolution": "1920:1080"
   },
   "voice": {
-    "provider": "edge-tts",
-    "voice": "zh-CN-XiaoxiaoNeural",
+    "provider": "tencent",
+    "voice": "501000",
+    "speed": 0,
     "model": null
   },
   "timing": {
-    "provider": "manual",
-    "model": "small"
+    "provider": "synthesis",
+    "model": null
   },
   "renderer": {
     "provider": "remotion"
