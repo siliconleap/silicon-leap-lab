@@ -93,7 +93,7 @@
           "width": 360,
           "zIndex": 3,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "第二盏隔一拍亮",
             "keyframes": [
@@ -142,7 +142,7 @@
           "width": 360,
           "zIndex": 3,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "第三盏最后亮，完成「一盏一盏」",
             "keyframes": [
@@ -186,12 +186,12 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "primary",
-          "x": 840,
-          "y": 336,
-          "width": 240,
+          "x": 672,
+          "y": -257,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "up",
-          "delay": 6,
+          "delay": 23,
           "motion": {
             "action": "一盏灯落到画面中央，成为这一拍的主体",
             "keyframes": [
@@ -253,9 +253,9 @@
           "src": "assets/layers/fox-run.png",
           "assetId": "fox-run",
           "role": "primary",
-          "x": 545,
-          "y": 692,
-          "width": 430,
+          "x": 472,
+          "y": 621,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
@@ -294,12 +294,12 @@
           "src": "assets/layers/fox-sit.png",
           "assetId": "fox-sit",
           "role": "primary",
-          "x": 560,
-          "y": 532,
-          "width": 400,
+          "x": 472,
+          "y": 370,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "跑到位后坐下，抬头看向远处的灯",
             "keyframes": [
@@ -356,7 +356,7 @@
           "width": 200,
           "zIndex": 3,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "远处谷底的灯依次亮起",
             "keyframes": [
@@ -397,7 +397,7 @@
           "width": 200,
           "zIndex": 3,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "第二点灯光晚一拍亮",
             "keyframes": [
@@ -454,9 +454,9 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "primary",
-          "x": 835,
-          "y": 338,
-          "width": 250,
+          "x": 672,
+          "y": -238,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "scale",
           "delay": 0,
@@ -500,7 +500,7 @@
           "width": 520,
           "zIndex": 4,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "光晕随时间扩大",
             "keyframes": [
@@ -542,7 +542,7 @@
           "width": 96,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -583,7 +583,7 @@
           "width": 64,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -624,7 +624,7 @@
           "width": 110,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 31,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -665,7 +665,7 @@
           "width": 72,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 39,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -713,9 +713,9 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "primary",
-          "x": 830,
-          "y": 301,
-          "width": 260,
+          "x": 672,
+          "y": -257,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "scale",
           "delay": 0,
@@ -783,7 +783,7 @@
           "width": 560,
           "zIndex": 4,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "光晕跟着晃，然后在一拍之内彻底熄掉——这是本拍的事件",
             "keyframes": [
@@ -857,7 +857,7 @@
           "width": 88,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -898,7 +898,7 @@
           "width": 60,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -939,7 +939,7 @@
           "width": 100,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 31,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -980,7 +980,7 @@
           "width": 70,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 39,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1021,7 +1021,7 @@
           "width": 54,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 47,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1074,9 +1074,9 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "primary",
-          "x": 835,
-          "y": 338,
-          "width": 250,
+          "x": 672,
+          "y": -238,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "scale",
           "delay": 0,
@@ -1137,7 +1137,7 @@
           "width": 120,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1178,7 +1178,7 @@
           "width": 84,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1219,7 +1219,7 @@
           "width": 104,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1260,7 +1260,7 @@
           "width": 92,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 31,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1301,7 +1301,7 @@
           "width": 66,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 39,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1342,7 +1342,7 @@
           "width": 76,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 47,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -1390,9 +1390,9 @@
           "src": "assets/layers/fox-run.png",
           "assetId": "fox-run",
           "role": "primary",
-          "width": 440,
-          "x": 440,
-          "y": 717,
+          "width": 576,
+          "x": 372,
+          "y": 651,
           "zIndex": 6,
           "enterFrom": "left",
           "delay": 0,
@@ -1431,12 +1431,12 @@
           "src": "assets/layers/fox-jump.png",
           "assetId": "fox-jump",
           "role": "primary",
-          "width": 430,
-          "x": 465,
-          "y": 468,
+          "width": 576,
+          "x": 392,
+          "y": 311,
           "zIndex": 7,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "狐狸盯住窗台上的灯，先蹲下蓄力，再蹬起来往灯的方向扑，落回时前腿缓冲；第二次幅度更小，明显够不到",
             "keyframes": [
@@ -1573,7 +1573,7 @@
           "y": 205,
           "zIndex": 5,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "窗台上那盏灭掉的灯，被狐狸扑起来的风带着晃了两下——够不着，但差一点",
             "keyframes": [
@@ -1695,12 +1695,12 @@
           "src": "assets/layers/fox-belly.png",
           "assetId": "fox-belly",
           "role": "primary",
-          "width": 520,
-          "x": 620,
-          "y": 495,
+          "width": 576,
+          "x": 592,
+          "y": 454,
           "zIndex": 6,
           "enterFrom": "left",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "狐狸退到雪地中间，趴下来——这是翻身之前的最后一个侧面姿态",
             "keyframes": [
@@ -1757,7 +1757,7 @@
           "y": 559,
           "zIndex": 7,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "身子整个翻过去，白肚皮朝天——由侧躺交叉淡入到仰躺，不是把侧面图转过来",
             "keyframes": [
@@ -1822,7 +1822,7 @@
           "y": 401,
           "zIndex": 5,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "雪面把这点白反出去，在最后亮成一小簇——它自己成了那盏灯",
             "keyframes": [
@@ -1941,12 +1941,12 @@
           "src": "assets/layers/lamp-on.png",
           "assetId": "lamp-on",
           "role": "primary",
-          "x": 785,
-          "y": 474,
-          "width": 230,
+          "x": 612,
+          "y": -137,
+          "width": 576,
           "zIndex": 6,
           "enterFrom": "scale",
-          "delay": 0,
+          "delay": 7,
           "motion": {
             "action": "雪地上那个凹痕慢慢显出灯的形状，从看不清到看得出来，最后停住",
             "keyframes": [
@@ -2004,7 +2004,7 @@
           "width": 58,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 15,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
@@ -2045,7 +2045,7 @@
           "width": 46,
           "zIndex": 8,
           "enterFrom": "up",
-          "delay": 0,
+          "delay": 23,
           "motion": {
             "action": "一片纸雪花从画面上方缓慢飘落，边落边转",
             "keyframes": [
