@@ -10,10 +10,10 @@
   "heuristicStatusBeforeConfirmation": "review-required",
   "decisionReason": "A human or Agent visually reviewed the exact source bytes. Heuristic signals are retained in the report but the explicit visual decision is authoritative.",
   "image": {
-    "path": "/Users/kaidong/Code/silicon-leap-lab/experiments/2026-08-story-to-animated-video/video/film-a/public/assets/layers/practices.png",
-    "sha256": "79e901725f5f1bcdbcd7f1bd1e2e99c1bba15dacfd90301a55405cd8a0b369cc",
-    "width": 2310,
-    "height": 1496,
+    "path": "/Users/kaidong/Code/silicon-leap-lab/experiments/2026-08-story-to-animated-video/video/film-a/public/assets/layers/c-pen.png",
+    "sha256": "8fd8c11a2525d0a6e8a2d37608b13aa186047ee37c0e87766d91f322690e2f10",
+    "width": 555,
+    "height": 715,
     "mode": "RGBA",
     "format": "PNG"
   },
@@ -24,7 +24,7 @@
   "visualConfirmation": {
     "provided": true,
     "reviewerType": "agent",
-    "confirmedSha256": "79e901725f5f1bcdbcd7f1bd1e2e99c1bba15dacfd90301a55405cd8a0b369cc",
+    "confirmedSha256": "8fd8c11a2525d0a6e8a2d37608b13aa186047ee37c0e87766d91f322690e2f10",
     "expectedSha256Verified": true,
     "overrodeHeuristicStatus": true
   },
@@ -36,7 +36,7 @@
     "version": "tesseract 5.5.3",
     "language": "engine-default",
     "minimumConfidence": 45.0,
-    "edgeTextFindings": 1
+    "edgeTextFindings": 0
   },
   "regions": [
     {
@@ -44,33 +44,30 @@
       "box": [
         0,
         0,
-        832,
-        449
+        200,
+        214
       ],
       "metrics": {
-        "strongContrastRatio": 0.184966,
-        "extremeContrastRatio": 0.112729,
-        "meanLocalContrast": 39.957,
-        "partialAlphaRatio": 0.141864
+        "strongContrastRatio": 0.0,
+        "extremeContrastRatio": 0.0,
+        "meanLocalContrast": 0.0,
+        "partialAlphaRatio": 0.0
       },
-      "signals": [
-        "high-contrast-mark-like-detail",
-        "partial-alpha-overlay-like-detail"
-      ]
+      "signals": []
     },
     {
       "name": "top-right",
       "box": [
-        1478,
+        355,
         0,
-        2310,
-        449
+        555,
+        214
       ],
       "metrics": {
-        "strongContrastRatio": 0.086512,
-        "extremeContrastRatio": 0.050329,
-        "meanLocalContrast": 19.62,
-        "partialAlphaRatio": 0.141308
+        "strongContrastRatio": 0.111542,
+        "extremeContrastRatio": 0.038341,
+        "meanLocalContrast": 24.925,
+        "partialAlphaRatio": 0.084089
       },
       "signals": [
         "high-contrast-mark-like-detail",
@@ -81,15 +78,15 @@
       "name": "bottom-left",
       "box": [
         0,
-        1047,
-        832,
-        1496
+        500,
+        200,
+        715
       ],
       "metrics": {
-        "strongContrastRatio": 0.086641,
-        "extremeContrastRatio": 0.0502,
-        "meanLocalContrast": 21.441,
-        "partialAlphaRatio": 0.142429
+        "strongContrastRatio": 0.158116,
+        "extremeContrastRatio": 0.060093,
+        "meanLocalContrast": 35.429,
+        "partialAlphaRatio": 0.038837
       },
       "signals": [
         "high-contrast-mark-like-detail",
@@ -99,16 +96,16 @@
     {
       "name": "bottom-right",
       "box": [
-        1478,
-        1047,
-        2310,
-        1496
+        355,
+        500,
+        555,
+        715
       ],
       "metrics": {
-        "strongContrastRatio": 0.088617,
-        "extremeContrastRatio": 0.051575,
-        "meanLocalContrast": 20.051,
-        "partialAlphaRatio": 0.145136
+        "strongContrastRatio": 0.106279,
+        "extremeContrastRatio": 0.045023,
+        "meanLocalContrast": 26.161,
+        "partialAlphaRatio": 0.024326
       },
       "signals": [
         "high-contrast-mark-like-detail",
@@ -118,35 +115,34 @@
     {
       "name": "top-edge",
       "box": [
-        693,
+        166,
         0,
-        1617,
-        299
+        388,
+        143
       ],
       "metrics": {
-        "strongContrastRatio": 0.115589,
-        "extremeContrastRatio": 0.075814,
-        "meanLocalContrast": 26.652,
-        "partialAlphaRatio": 0.156673
+        "strongContrastRatio": 0.012569,
+        "extremeContrastRatio": 0.008127,
+        "meanLocalContrast": 2.773,
+        "partialAlphaRatio": 0.008001
       },
       "signals": [
-        "high-contrast-mark-like-detail",
         "partial-alpha-overlay-like-detail"
       ]
     },
     {
       "name": "bottom-edge",
       "box": [
-        693,
-        1197,
-        1617,
-        1496
+        166,
+        572,
+        388,
+        715
       ],
       "metrics": {
-        "strongContrastRatio": 0.110249,
-        "extremeContrastRatio": 0.070977,
-        "meanLocalContrast": 25.391,
-        "partialAlphaRatio": 0.160018
+        "strongContrastRatio": 0.109494,
+        "extremeContrastRatio": 0.044982,
+        "meanLocalContrast": 26.331,
+        "partialAlphaRatio": 0.026555
       },
       "signals": [
         "high-contrast-mark-like-detail",
@@ -157,34 +153,33 @@
       "name": "left-edge",
       "box": [
         0,
-        374,
-        462,
-        1122
+        179,
+        111,
+        536
       ],
       "metrics": {
-        "strongContrastRatio": 0.153353,
-        "extremeContrastRatio": 0.115078,
-        "meanLocalContrast": 35.333,
-        "partialAlphaRatio": 0.101347
+        "strongContrastRatio": 0.008302,
+        "extremeContrastRatio": 0.003382,
+        "meanLocalContrast": 1.783,
+        "partialAlphaRatio": 0.002574
       },
       "signals": [
-        "high-contrast-mark-like-detail",
         "partial-alpha-overlay-like-detail"
       ]
     },
     {
       "name": "right-edge",
       "box": [
-        1848,
-        374,
-        2310,
-        1122
+        444,
+        179,
+        555,
+        536
       ],
       "metrics": {
-        "strongContrastRatio": 0.05717,
-        "extremeContrastRatio": 0.034234,
-        "meanLocalContrast": 13.665,
-        "partialAlphaRatio": 0.103517
+        "strongContrastRatio": 0.046736,
+        "extremeContrastRatio": 0.013122,
+        "meanLocalContrast": 8.787,
+        "partialAlphaRatio": 0.0054
       },
       "signals": [
         "high-contrast-mark-like-detail",
@@ -196,50 +191,18 @@
     {
       "signal": "high-contrast-mark-like-detail",
       "strength": "review",
-      "region": "top-left",
-      "box": [
-        0,
-        0,
-        832,
-        449
-      ],
-      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
-      "metrics": {
-        "strongContrastRatio": 0.184966,
-        "extremeContrastRatio": 0.112729,
-        "meanLocalContrast": 39.957
-      }
-    },
-    {
-      "signal": "partial-alpha-overlay-like-detail",
-      "strength": "review",
-      "region": "top-left",
-      "box": [
-        0,
-        0,
-        832,
-        449
-      ],
-      "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
-      "metrics": {
-        "partialAlphaRatio": 0.141864
-      }
-    },
-    {
-      "signal": "high-contrast-mark-like-detail",
-      "strength": "review",
       "region": "top-right",
       "box": [
-        1478,
+        355,
         0,
-        2310,
-        449
+        555,
+        214
       ],
       "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
       "metrics": {
-        "strongContrastRatio": 0.086512,
-        "extremeContrastRatio": 0.050329,
-        "meanLocalContrast": 19.62
+        "strongContrastRatio": 0.111542,
+        "extremeContrastRatio": 0.038341,
+        "meanLocalContrast": 24.925
       }
     },
     {
@@ -247,14 +210,14 @@
       "strength": "review",
       "region": "top-right",
       "box": [
-        1478,
+        355,
         0,
-        2310,
-        449
+        555,
+        214
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.141308
+        "partialAlphaRatio": 0.084089
       }
     },
     {
@@ -263,15 +226,15 @@
       "region": "bottom-left",
       "box": [
         0,
-        1047,
-        832,
-        1496
+        500,
+        200,
+        715
       ],
       "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
       "metrics": {
-        "strongContrastRatio": 0.086641,
-        "extremeContrastRatio": 0.0502,
-        "meanLocalContrast": 21.441
+        "strongContrastRatio": 0.158116,
+        "extremeContrastRatio": 0.060093,
+        "meanLocalContrast": 35.429
       }
     },
     {
@@ -280,13 +243,13 @@
       "region": "bottom-left",
       "box": [
         0,
-        1047,
-        832,
-        1496
+        500,
+        200,
+        715
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.142429
+        "partialAlphaRatio": 0.038837
       }
     },
     {
@@ -294,16 +257,16 @@
       "strength": "review",
       "region": "bottom-right",
       "box": [
-        1478,
-        1047,
-        2310,
-        1496
+        355,
+        500,
+        555,
+        715
       ],
       "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
       "metrics": {
-        "strongContrastRatio": 0.088617,
-        "extremeContrastRatio": 0.051575,
-        "meanLocalContrast": 20.051
+        "strongContrastRatio": 0.106279,
+        "extremeContrastRatio": 0.045023,
+        "meanLocalContrast": 26.161
       }
     },
     {
@@ -311,31 +274,14 @@
       "strength": "review",
       "region": "bottom-right",
       "box": [
-        1478,
-        1047,
-        2310,
-        1496
+        355,
+        500,
+        555,
+        715
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.145136
-      }
-    },
-    {
-      "signal": "high-contrast-mark-like-detail",
-      "strength": "review",
-      "region": "top-edge",
-      "box": [
-        693,
-        0,
-        1617,
-        299
-      ],
-      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
-      "metrics": {
-        "strongContrastRatio": 0.115589,
-        "extremeContrastRatio": 0.075814,
-        "meanLocalContrast": 26.652
+        "partialAlphaRatio": 0.024326
       }
     },
     {
@@ -343,14 +289,14 @@
       "strength": "review",
       "region": "top-edge",
       "box": [
-        693,
+        166,
         0,
-        1617,
-        299
+        388,
+        143
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.156673
+        "partialAlphaRatio": 0.008001
       }
     },
     {
@@ -358,16 +304,16 @@
       "strength": "review",
       "region": "bottom-edge",
       "box": [
-        693,
-        1197,
-        1617,
-        1496
+        166,
+        572,
+        388,
+        715
       ],
       "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
       "metrics": {
-        "strongContrastRatio": 0.110249,
-        "extremeContrastRatio": 0.070977,
-        "meanLocalContrast": 25.391
+        "strongContrastRatio": 0.109494,
+        "extremeContrastRatio": 0.044982,
+        "meanLocalContrast": 26.331
       }
     },
     {
@@ -375,31 +321,14 @@
       "strength": "review",
       "region": "bottom-edge",
       "box": [
-        693,
-        1197,
-        1617,
-        1496
+        166,
+        572,
+        388,
+        715
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.160018
-      }
-    },
-    {
-      "signal": "high-contrast-mark-like-detail",
-      "strength": "review",
-      "region": "left-edge",
-      "box": [
-        0,
-        374,
-        462,
-        1122
-      ],
-      "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
-      "metrics": {
-        "strongContrastRatio": 0.153353,
-        "extremeContrastRatio": 0.115078,
-        "meanLocalContrast": 35.333
+        "partialAlphaRatio": 0.026555
       }
     },
     {
@@ -408,13 +337,13 @@
       "region": "left-edge",
       "box": [
         0,
-        374,
-        462,
-        1122
+        179,
+        111,
+        536
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.101347
+        "partialAlphaRatio": 0.002574
       }
     },
     {
@@ -422,16 +351,16 @@
       "strength": "review",
       "region": "right-edge",
       "box": [
-        1848,
-        374,
-        2310,
-        1122
+        444,
+        179,
+        555,
+        536
       ],
       "reason": "Localized edge pixels contain a mark-like concentration of high local contrast; illustration detail can cause false positives.",
       "metrics": {
-        "strongContrastRatio": 0.05717,
-        "extremeContrastRatio": 0.034234,
-        "meanLocalContrast": 13.665
+        "strongContrastRatio": 0.046736,
+        "extremeContrastRatio": 0.013122,
+        "meanLocalContrast": 8.787
       }
     },
     {
@@ -439,29 +368,15 @@
       "strength": "review",
       "region": "right-edge",
       "box": [
-        1848,
-        374,
-        2310,
-        1122
+        444,
+        179,
+        555,
+        536
       ],
       "reason": "Partially transparent edge pixels could belong to an overlay, but soft artwork and cutout edges can produce the same signal.",
       "metrics": {
-        "partialAlphaRatio": 0.103517
+        "partialAlphaRatio": 0.0054
       }
-    },
-    {
-      "signal": "ocr-text",
-      "strength": "review",
-      "region": "top-left",
-      "box": [
-        469,
-        373,
-        529,
-        386
-      ],
-      "reason": "Local OCR found text along an image edge. Generated source art is expected to contain no embedded text, so this may be a watermark or label.",
-      "text": "contd",
-      "confidence": 54.09
     }
   ],
   "warnings": [],

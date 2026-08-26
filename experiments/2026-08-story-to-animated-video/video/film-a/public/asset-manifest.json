@@ -3,259 +3,193 @@
   "assetStrategy": "layered",
   "imageProvider": "tencent-aiart",
   "voiceProvider": "tencent",
+  "stylePreset": "tech-blue-render",
   "assets": [
     {
-      "id": "bg1-shelf",
+      "id": "stage",
       "type": "background",
-      "path": "assets/backgrounds/bg1-shelf.png",
-      "source": "assets/source3/bg1-shelf.png",
-      "promptFile": "prompts/bg1-shelf.txt",
+      "path": "assets/backgrounds/stage.png",
+      "source": "由代码绘制（预设 tech-blue-render 的 stage.mode=code）",
       "subjectFree": true,
       "visuallyInspected": true,
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg1-shelf.watermark.json"
+        "report": "assets/qa/stage.watermark.json"
       }
     },
     {
-      "id": "bg2-desk",
-      "type": "background",
-      "path": "assets/backgrounds/bg2-desk.png",
-      "source": "assets/source3/bg2-desk.png",
-      "promptFile": "prompts/bg2-desk.txt",
-      "subjectFree": true,
+      "id": "c-lens",
+      "type": "layer",
+      "path": "assets/layers/c-lens.png",
+      "source": "assets/tb/c-lens.png",
+      "alpha": true,
+      "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-lens.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg2-desk.watermark.json"
+        "report": "assets/qa/c-lens.watermark.json"
       }
     },
     {
-      "id": "bg3-paper",
-      "type": "background",
-      "path": "assets/backgrounds/bg3-paper.png",
-      "source": "assets/source3/bg3-paper.png",
-      "promptFile": "prompts/bg3-paper.txt",
-      "subjectFree": true,
+      "id": "c-funnel",
+      "type": "layer",
+      "path": "assets/layers/c-funnel.png",
+      "source": "assets/tb/c-funnel.png",
+      "alpha": true,
+      "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-funnel.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg3-paper.watermark.json"
+        "report": "assets/qa/c-funnel.watermark.json"
       }
     },
     {
-      "id": "bg4-night",
-      "type": "background",
-      "path": "assets/backgrounds/bg4-night.png",
-      "source": "assets/source3/bg4-night.png",
-      "promptFile": "prompts/bg4-night.txt",
-      "subjectFree": true,
+      "id": "c-gear",
+      "type": "layer",
+      "path": "assets/layers/c-gear.png",
+      "source": "assets/tb/c-gear.png",
+      "alpha": true,
+      "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-gear.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/bg4-night.watermark.json"
+        "report": "assets/qa/c-gear.watermark.json"
       }
     },
     {
-      "id": "p-drafts",
+      "id": "c-chain",
       "type": "layer",
-      "path": "assets/layers/p-drafts.png",
-      "source": "assets/source3/p-drafts.png",
+      "path": "assets/layers/c-chain.png",
+      "source": "assets/tb/c-chain.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-chain.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/p-drafts.watermark.json"
-      },
-      "promptFile": "prompts/p-drafts.txt"
-    },
-    {
-      "id": "p-pen",
-      "type": "layer",
-      "path": "assets/layers/p-pen.png",
-      "source": "assets/source3/p-pen.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-pen.watermark.json"
-      },
-      "promptFile": "prompts/p-pen.txt"
-    },
-    {
-      "id": "p-lens",
-      "type": "layer",
-      "path": "assets/layers/p-lens.png",
-      "source": "assets/source3/p-lens.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-lens.watermark.json"
-      },
-      "promptFile": "prompts/p-lens.txt"
-    },
-    {
-      "id": "p-funnel",
-      "type": "layer",
-      "path": "assets/layers/p-funnel.png",
-      "source": "assets/source3/p-funnel.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-funnel.watermark.json"
-      },
-      "promptFile": "prompts/p-funnel.txt"
-    },
-    {
-      "id": "p-chain",
-      "type": "layer",
-      "path": "assets/layers/p-chain.png",
-      "source": "assets/source3/p-chain.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-chain.watermark.json"
-      },
-      "promptFile": "prompts/p-chain.txt"
-    },
-    {
-      "id": "p-cross",
-      "type": "layer",
-      "path": "assets/layers/p-cross.png",
-      "source": "assets/source3/p-cross.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-cross.watermark.json"
-      },
-      "promptFile": "prompts/p-cross.txt"
-    },
-    {
-      "id": "p-stamp",
-      "type": "layer",
-      "path": "assets/layers/p-stamp.png",
-      "source": "assets/source3/p-stamp.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-stamp.watermark.json"
-      },
-      "promptFile": "prompts/p-stamp.txt"
-    },
-    {
-      "id": "p-gear",
-      "type": "layer",
-      "path": "assets/layers/p-gear.png",
-      "source": "assets/source3/p-gear.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-gear.watermark.json"
-      },
-      "promptFile": "prompts/p-gear.txt"
-    },
-    {
-      "id": "p-clock",
-      "type": "layer",
-      "path": "assets/layers/p-clock.png",
-      "source": "assets/source3/p-clock.png",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-clock.watermark.json"
-      },
-      "promptFile": "prompts/p-clock.txt"
-    },
-    {
-      "id": "p-clock-face",
-      "type": "layer",
-      "path": "assets/layers/p-clock-face.png",
-      "source": "由 p-clock 合成的表盘与指针层",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/p-clock-face.watermark.json"
+        "report": "assets/qa/c-chain.watermark.json"
       }
     },
     {
-      "id": "p-arrow",
+      "id": "c-clock",
       "type": "layer",
-      "path": "assets/layers/p-arrow.png",
-      "source": "assets/source3/p-arrow.png",
+      "path": "assets/layers/c-clock.png",
+      "source": "assets/tb/c-clock.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-clock.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/p-arrow.watermark.json"
-      },
-      "promptFile": "prompts/p-arrow.txt"
+        "report": "assets/qa/c-clock.watermark.json"
+      }
     },
     {
-      "id": "p-folder",
+      "id": "c-checklist",
       "type": "layer",
-      "path": "assets/layers/p-folder.png",
-      "source": "assets/source3/p-folder.png",
+      "path": "assets/layers/c-checklist.png",
+      "source": "assets/tb/c-checklist.png",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
+      "promptFile": "prompts/c-checklist.txt",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/p-folder.watermark.json"
-      },
-      "promptFile": "prompts/p-folder.txt"
+        "report": "assets/qa/c-checklist.watermark.json"
+      }
     },
     {
-      "id": "real-quote",
+      "id": "c-pile",
       "type": "layer",
-      "path": "assets/layers/real-quote.png",
-      "source": "实验一 drafts/youtube/assets/S04-quote.png，一手产物未改动",
+      "path": "assets/layers/c-pile.png",
+      "source": "assets/tb/c-pile.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/c-pile.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/c-pile.watermark.json"
+      }
+    },
+    {
+      "id": "c-cards",
+      "type": "layer",
+      "path": "assets/layers/c-cards.png",
+      "source": "assets/tb/c-cards.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/c-cards.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/c-cards.watermark.json"
+      }
+    },
+    {
+      "id": "c-scale",
+      "type": "layer",
+      "path": "assets/layers/c-scale.png",
+      "source": "assets/tb/c-scale.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/c-scale.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/c-scale.watermark.json"
+      }
+    },
+    {
+      "id": "c-pen",
+      "type": "layer",
+      "path": "assets/layers/c-pen.png",
+      "source": "assets/tb/c-pen.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/c-pen.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/c-pen.watermark.json"
+      }
+    },
+    {
+      "id": "c-stamp",
+      "type": "layer",
+      "path": "assets/layers/c-stamp.png",
+      "source": "assets/tb/c-stamp.png",
+      "alpha": true,
+      "alphaValidated": true,
+      "visuallyInspected": true,
+      "promptFile": "prompts/c-stamp.txt",
+      "watermarkCheck": {
+        "status": "clear",
+        "report": "assets/qa/c-stamp.watermark.json"
+      }
+    },
+    {
+      "id": "practices",
+      "type": "layer",
+      "path": "assets/layers/practices.png",
+      "source": "实验一 content-brief.md 的实践清单，逐行照抄渲染成图；本轮只换蓝色装裱，内容未改，原件在 assets/source_ev/",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
       "evidence": "一手",
       "watermarkCheck": {
         "status": "clear",
-        "report": "assets/qa/real-quote.watermark.json"
-      }
-    },
-    {
-      "id": "real-contradiction",
-      "type": "layer",
-      "path": "assets/layers/real-contradiction.png",
-      "source": "实验一 drafts/wechat/assets/01-contradiction.png，一手产物未改动",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "evidence": "一手",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/real-contradiction.watermark.json"
+        "report": "assets/qa/practices.watermark.json"
       }
     },
     {
       "id": "polish",
       "type": "layer",
       "path": "assets/layers/polish.png",
-      "source": "实验一 notes/polish-pass-2026-08-19.diff 的真实 before/after，逐字照抄渲染成图",
+      "source": "实验一 notes/polish-pass-2026-08-19.diff 的真实 before/after；同上",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
@@ -269,7 +203,7 @@
       "id": "reviews",
       "type": "layer",
       "path": "assets/layers/reviews.png",
-      "source": "实验一 internal/review1-6.md 的文件清单，渲染成图",
+      "source": "实验一 internal/review1-6.md 的文件清单；同上",
       "alpha": true,
       "alphaValidated": true,
       "visuallyInspected": true,
@@ -277,20 +211,6 @@
       "watermarkCheck": {
         "status": "clear",
         "report": "assets/qa/reviews.watermark.json"
-      }
-    },
-    {
-      "id": "practices",
-      "type": "layer",
-      "path": "assets/layers/practices.png",
-      "source": "实验一 content-brief.md 的实践清单，逐行照抄渲染成图",
-      "alpha": true,
-      "alphaValidated": true,
-      "visuallyInspected": true,
-      "evidence": "一手",
-      "watermarkCheck": {
-        "status": "clear",
-        "report": "assets/qa/practices.watermark.json"
       }
     }
   ]
