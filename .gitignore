@@ -13,3 +13,23 @@ __pycache__/
 # 上一个实验已经定过这条约定（drafts/*/build/），这里对 editorial-video 项目同样适用。
 **/video/*/out/
 **/video/*/node_modules/
+
+# 逐帧动画的中间产物：HTML 由 shots/*/build.mjs 生成，PNG 由 HTML 渲染，
+# mp4 由 PNG 合成。源是 build.mjs 加素材，其余都能重新跑出来。
+# （单拍 192 帧就有 380 MB，十四拍近 4 GB。）
+**/shots/*/frames/
+
+# 水印检测报告：每个素材一份几百行的 JSON，两支片子就是两万多行。
+# 供应商水印现已在账号后台关闭并实测确认，改为每批抽查，不再逐素材留档。
+**/public/assets/qa/
+
+# 成片：由 shots/*/build.mjs 或 src/shots/*.tsx 加素材确定性地渲出来，
+# 而且体积大到不该进历史（一支 20 MB，早先清过一次 569 MB 的仓库）。
+**/video/*/film-*.mp4
+
+# 探针产物：找风格、试方案过程中生成的图和短片。真正进成片的素材在
+# video/<片名>/assets/ 下单独跟踪，那些是生成式接口的产物，重跑不会一样。
+**/notes/probe/
+
+# 排布好的语音：由 narration.mp3 加 shot-durations.json 算出来的中间产物。
+**/audio/aligned.m4a

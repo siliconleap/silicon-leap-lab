@@ -12,7 +12,7 @@ TENCENT_CLOUD_SECRET_ID
 TENCENT_CLOUD_SECRET_KEY
 ```
 
-`editorial-video/scripts/lib/tencent.mjs` 也认 `TENCENTCLOUD_SECRET_ID` / `_KEY`
+`illustrated-videos` 的 `scripts/lib/tencent.mjs` 也认 `TENCENTCLOUD_SECRET_ID` / `_KEY`
 这一组写法，两种都行。
 
 放在 shell 的启动文件里（本机是 `~/.zshrc`），或任何仓库之外的地方。**这里只记变量名，
@@ -28,7 +28,7 @@ agent 跑的是非交互 shell，**不加载 `~/.zshrc`**，所以「我明明�
 的那两个变量一起载进来：
 
 ```sh
-export PATH="$HOME/Code/editorial-video/.venv/bin:$PATH"
+export PATH="$HOME/.claude/skills/illustrated-videos/.venv/bin:$PATH"
 set -a
 eval "$(grep -E '^[[:space:]]*export[[:space:]]+TENCENT' "$HOME/.zshrc" | sed 's/^[[:space:]]*export[[:space:]]*//')"
 set +a
@@ -40,8 +40,8 @@ set +a
 ## 依赖
 
 ```sh
-python3 -m venv ~/Code/editorial-video/.venv
-~/Code/editorial-video/.venv/bin/pip install pillow rembg onnxruntime
+python3 -m venv ~/.claude/skills/illustrated-videos/.venv
+~/.claude/skills/illustrated-videos/.venv/bin/pip install pillow rembg onnxruntime
 ```
 
 Pillow 不要用 `brew install pillow`：它会装进 brew 自己那个 Python 版本，而系统
@@ -52,8 +52,8 @@ Pillow 不要用 `brew install pillow`：它会装进 brew 自己那个 Python �
 ```sh
 cd <film-a 或 film-b>
 npm install
-node ~/Code/editorial-video/scripts/preflight.mjs --config project-config.json
-node ~/Code/editorial-video/scripts/validate-manifest.mjs .
+node ~/.claude/skills/illustrated-videos/scripts/preflight.mjs --config project-config.json
+node ~/.claude/skills/illustrated-videos/scripts/validate-manifest.mjs .
 npx remotion render src/index.ts IllustratedVideo out/film.mp4 \
   --codec=h264 --audio-codec=aac --pixel-format=yuv420p --crf=18 --concurrency=2
 ```
@@ -61,9 +61,9 @@ npx remotion render src/index.ts IllustratedVideo out/film.mp4 \
 改了旁白就要重新配音并重新对时，顺序不能颠倒：
 
 ```sh
-node ~/Code/editorial-video/scripts/generate-voice.mjs --provider tencent --voice 501000 \
+node ~/.claude/skills/illustrated-videos/scripts/generate-voice.mjs --provider tencent --voice 501000 \
   --speed 0 --text-file narration.txt --scene-ids s1,s2,... --out public/assets/audio/narration.mp3
-node ~/Code/editorial-video/scripts/apply-caption-timings.mjs \
+node ~/.claude/skills/illustrated-videos/scripts/apply-caption-timings.mjs \
   --aligned public/assets/audio/narration.cues.json --project public/project.json --tail-seconds 1.6
 ```
 

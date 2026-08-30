@@ -1,0 +1,134 @@
+{
+  "fps": 24,
+  "breath": 0.95,
+  "lead": 0.45,
+  "totalSeconds": 187,
+  "shots": [
+    {
+      "shot": 1,
+      "speechStart": 0,
+      "speechSeconds": 9.916,
+      "speechOffset": 0.45,
+      "seconds": 11,
+      "durationInFrames": 264,
+      "head": "收藏夹里躺着一千篇教程，想着以后要仔"
+    },
+    {
+      "shot": 2,
+      "speechStart": 10.366,
+      "speechSeconds": 3.285,
+      "speechOffset": 0.45,
+      "seconds": 4.5,
+      "durationInFrames": 108,
+      "head": "所以我决定，不再收藏了，直接开始做实"
+    },
+    {
+      "shot": 3,
+      "speechStart": 14.101,
+      "speechSeconds": 9.493,
+      "speechOffset": 0.45,
+      "seconds": 10.5,
+      "durationInFrames": 252,
+      "head": "你现在看到的，就是第一个实验：按网上"
+    },
+    {
+      "shot": 4,
+      "speechStart": 24.044,
+      "speechSeconds": 7.926,
+      "speechOffset": 0.45,
+      "seconds": 9,
+      "durationInFrames": 216,
+      "head": "它确实跑通了。网站、GitHub、小"
+    },
+    {
+      "shot": 5,
+      "speechStart": 32.42,
+      "speechSeconds": 15.197,
+      "speechOffset": 0.45,
+      "seconds": 16.5,
+      "durationInFrames": 396,
+      "head": "但四份摊开来看，内容都很寡淡，语言也"
+    },
+    {
+      "shot": 6,
+      "speechStart": 48.067,
+      "speechSeconds": 13.644,
+      "speechOffset": 0.45,
+      "seconds": 15,
+      "durationInFrames": 360,
+      "head": "更麻烦的是，一次生成的东西太多，四份"
+    },
+    {
+      "shot": 7,
+      "speechStart": 62.161,
+      "speechSeconds": 10.575,
+      "speechOffset": 0.45,
+      "seconds": 12,
+      "durationInFrames": 288,
+      "head": "骨架半天就搭完了，但产出的成品质量很"
+    },
+    {
+      "shot": 8,
+      "speechStart": 73.186,
+      "speechSeconds": 15.423,
+      "speechOffset": 0.45,
+      "seconds": 16.5,
+      "durationInFrames": 396,
+      "head": "第一件，不自己写。把社区里现成的写作"
+    },
+    {
+      "shot": 9,
+      "speechStart": 89.059,
+      "speechSeconds": 9.782,
+      "speechOffset": 0.45,
+      "seconds": 11,
+      "durationInFrames": 264,
+      "head": "第二件，让另一个没写过这稿子的 ag"
+    },
+    {
+      "shot": 10,
+      "speechStart": 99.291,
+      "speechSeconds": 12.874,
+      "speechOffset": 0.45,
+      "seconds": 14,
+      "durationInFrames": 336,
+      "head": "第三件，用流程替代抽卡。先出简报，事"
+    },
+    {
+      "shot": 11,
+      "speechStart": 112.615,
+      "speechSeconds": 10.961,
+      "speechOffset": 0.45,
+      "seconds": 12,
+      "durationInFrames": 288,
+      "head": "第四件，把确定性的活交给脚本。目录骨"
+    },
+    {
+      "shot": 12,
+      "speechStart": 124.026,
+      "speechSeconds": 17.49,
+      "speechOffset": 0.45,
+      "seconds": 18.5,
+      "durationInFrames": 444,
+      "head": "这些问题，没有一条是看文章能看出来的"
+    },
+    {
+      "shot": 13,
+      "speechStart": 141.966,
+      "speechSeconds": 11.507,
+      "speechOffset": 0.45,
+      "seconds": 12.5,
+      "durationInFrames": 300,
+      "head": "哪些有效、哪些能被别人照搬，最后列成"
+    },
+    {
+      "shot": 14,
+      "speechStart": 153.923,
+      "speechSeconds": 23.007,
+      "speechOffset": 0.45,
+      "seconds": 24,
+      "durationInFrames": 576,
+      "head": "你正在看的这支片子，就是那一行的下一"
+    }
+  ]
+}
