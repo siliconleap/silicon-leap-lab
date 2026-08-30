@@ -33,3 +33,6 @@ __pycache__/
 
 # 排布好的语音：由 narration.mp3 加 shot-durations.json 算出来的中间产物。
 **/audio/aligned.m4a
+
+# 单拍成片：由 shots/*/build.mjs 加素材渲出来，和整片一样是产物。
+**/shots/*/s*.mp4
