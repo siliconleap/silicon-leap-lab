@@ -9,9 +9,9 @@
 **环境**
 
 - macOS，Claude Code CLI，模型 Opus 5，Node v24.6.0
-- 图像：腾讯云 aiart `TextToImageLite`（`ap-guangzhou`），密钥取自 `TENCENTCLOUD_SECRET_ID` / `_KEY`
+- 图像：腾讯云
 - 配音：腾讯云 TTS，音色 501000，`Speed=0`
-- 渲染：Remotion（首选候选的默认渲染器，本机尚未安装依赖）
+- 渲染：浏览器（片 A 逐帧渲染，片 B 走 Remotion），ffmpeg 合成
 - 无 OpenAI API key，无图形编辑软件，无实拍设备
 
 **被测对象**
