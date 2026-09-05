@@ -13,7 +13,7 @@ import {mkdirSync, writeFileSync, copyFileSync} from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {easeOut, easeInOut, window_, pulse, flash, mix} from
-  'file:///Users/kaidong/Code/editorial-video/scripts/lib/easing.mjs';
+  '../../src/easing.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dir = process.argv[2] ?? path.join(here, 'frames');

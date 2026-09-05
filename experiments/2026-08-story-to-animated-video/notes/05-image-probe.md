@@ -111,7 +111,7 @@ Authorization:  TC3-HMAC-SHA256 ...（含 SecretId）
 
 ```sh
 cd ~/Code/editorial-video
-export TENCENT_CLOUD_SECRET_ID=...   # 本机已配在 ~/.zshrc
+export TENCENT_CLOUD_SECRET_ID=...   # 凭据应由安全的环境配置提供
 export TENCENT_CLOUD_SECRET_KEY=...
 echo "剪纸风格插画，一只戴眼镜的灰兔子坐在桌前" > /tmp/p.txt
 node scripts/generate-tencent-image.mjs --prompt-file /tmp/p.txt --out /tmp/a.png --resolution 1024:1024

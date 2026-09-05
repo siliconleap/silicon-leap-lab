@@ -1,0 +1,28 @@
+#!/bin/sh
+
+allowed_name='Silicon Leap'
+allowed_email='ai.siliconleap@gmail.com'
+
+author_ident=$(git var GIT_AUTHOR_IDENT) || exit 1
+committer_ident=$(git var GIT_COMMITTER_IDENT) || exit 1
+
+author_name=$(printf '%s\n' "$author_ident" | sed -n 's/^\(.*\) <[^>]*>.*$/\1/p')
+author_email=$(printf '%s\n' "$author_ident" | sed -n 's/.*<\([^>]*\)>.*/\1/p')
+committer_name=$(printf '%s\n' "$committer_ident" | sed -n 's/^\(.*\) <[^>]*>.*$/\1/p')
+committer_email=$(printf '%s\n' "$committer_ident" | sed -n 's/.*<\([^>]*\)>.*/\1/p')
+
+if [ "$author_name" != "$allowed_name" ] || [ "$author_email" != "$allowed_email" ]; then
+  printf '%s\n' \
+    'Commit blocked: author identity is not the Silicon Leap identity.' \
+    "Expected: $allowed_name <$allowed_email>" \
+    "Actual:   $author_name <$author_email>"
+  exit 1
+fi
+
+if [ "$committer_name" != "$allowed_name" ] || [ "$committer_email" != "$allowed_email" ]; then
+  printf '%s\n' \
+    'Commit blocked: committer identity is not the Silicon Leap identity.' \
+    "Expected: $allowed_name <$allowed_email>" \
+    "Actual:   $committer_name <$committer_email>"
+  exit 1
+fi

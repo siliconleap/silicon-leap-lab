@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""平台稿结构校验：认知开篇、实践清单、边界收尾，以及行文跳不跳。
+"""平台稿结构校验：可判定的内容结构与陌生读者上下文。
 
 用法：
     python3 check-structure.py <实验目录>
 
 退出码 0 表示通过（可能带 WARN），非 0 表示有 FAIL 必须修。
 
-这个脚本只查确定性的东西：该有的段落在不在、清单有没有失败行、段落是不是
-长到读不动。它查不了「读起来顺不顺」，那仍然是审核 sub-agent 的活。
+这个脚本只查确定性的东西：必要结构、失败行、篇幅、内部名词是否先于实验对象。
+它不判定文章是否好读或故事是否成立，那是无背景盲读的任务。
 """
 
 import re
@@ -27,6 +27,8 @@ PRACTICE_HEADERS = (
 )
 NEGATIVE_MARKERS = ("目前无效", "不可复制", "not yet", "no |", "无效")
 BOUNDARY_MARKERS = ("边界", "boundary")
+INTERNAL_MARKERS = ("film a", "film b", "片 a", "片 b", "qa", "重做")
+CONTEXT_MARKERS = ("实验", "故事", "视频", "动画", "experiment", "story", "video", "animation")
 
 fails: list[str] = []
 warns: list[str] = []
@@ -78,20 +80,27 @@ def has_practice_table(body: str) -> bool:
     return len(hits) >= 3
 
 
+def has_context_before_internal(body: str) -> bool:
+    """内部代号可出现，但不能比实验对象更早出现。"""
+    sample = body[:1600].lower()
+    internal = [sample.find(marker) for marker in INTERNAL_MARKERS if sample.find(marker) >= 0]
+    if not internal:
+        return True
+    context = [sample.find(marker) for marker in CONTEXT_MARKERS if sample.find(marker) >= 0]
+    return bool(context) and min(context) < min(internal)
+
+
 def check(path: Path, rel: str, kind: str) -> None:
     text = path.read_text(encoding="utf-8")
     body = body_of(text)
     opening = opening_of(body)
 
     if kind in ("long", "short"):
-        # 认知：开篇里至少两条独立判断。长文用加粗，短文允许 emoji 路标带序号。
-        bold = len(re.findall(r"\*\*[^*]+\*\*", opening))
-        numbered = len(re.findall(r"^[^\n]*(?:一、|二、|三、|📌)", opening, flags=re.M))
-        if max(bold, numbered) < 2:
-            fails.append(f"{rel}: 开篇没有两条以上认知（加粗判断或编号条目）")
+        if not has_context_before_internal(body):
+            fails.append(f"{rel}: 内部名词先于实验对象出现，陌生读者缺上下文")
         limit = int(900 * scale(opening))
         if len(opening.strip()) > limit:
-            warns.append(f"{rel}: 开篇 {len(opening.strip())} 字，认知该是判断不是铺垫")
+            warns.append(f"{rel}: 开篇 {len(opening.strip())} 字，压缩总体说明后再进细节")
 
     if kind in ("long", "short", "fragment"):
         if not has_practice_table(body):

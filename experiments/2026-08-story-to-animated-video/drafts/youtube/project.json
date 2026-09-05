@@ -1,0 +1,27 @@
+{
+  "title": "AI 能出片，却还不会做决定",
+  "contentMode": "explainer",
+  "assetStrategy": "layered",
+  "stylePreset": "tech-blue",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "_status": "未构建：durationInFrames 和每个 scene 的 from/duration 等待 TTS 后回填",
+  "durationInFrames": 1,
+  "captionSafeBottom": 180,
+  "palette": {"paper": "#1a1a19", "ink": "#ffffff", "accent": "#3987e5", "warning": "#fab219"},
+  "audio": {"voice": "assets/audio/voice.mp3", "tailSeconds": 0.35},
+  "scenes": [
+    {"id":"S01","storyBeatId":"QA 全过仍重做","layerPlanRationale":"用已发布 Film A 成片直接开场","from":0,"duration":1,"hero":true,"background":"../../video/film-a/film-a.mp4","transition":"fade","camera":{"scaleFrom":1.0,"scaleTo":1.04},"layers":[]},
+    {"id":"S02","storyBeatId":"两支片子","layerPlanRationale":"用已发布 Film B 成片展示第二个输入","from":0,"duration":1,"hero":false,"background":"../../video/film-b/out/film-b.mp4","transition":"slide","camera":{"scaleFrom":1.02,"scaleTo":1.0},"layers":[]},
+    {"id":"S03","storyBeatId":"错误路线","layerPlanRationale":"突出三次返工","from":0,"duration":1,"hero":false,"background":"assets/01-route.png","transition":"fade","camera":{"scaleFrom":1.0,"scaleTo":1.03},"layers":[]},
+    {"id":"S04","storyBeatId":"路线反转","layerPlanRationale":"同图切换到最终路线","from":0,"duration":1,"hero":false,"background":"assets/01-route.png","transition":"wipe","camera":{"scaleFrom":1.03,"scaleTo":1.0},"layers":[]},
+    {"id":"S05","storyBeatId":"素材浪费","layerPlanRationale":"用单一 hero 数字呈现","from":0,"duration":1,"hero":true,"background":"assets/02-waste.png","transition":"fade","camera":{"scaleFrom":1.0,"scaleTo":1.02},"layers":[]},
+    {"id":"S06","storyBeatId":"QA 边界","layerPlanRationale":"技术通过与内容失败并列","from":0,"duration":1,"hero":false,"background":"assets/04-qa.png","transition":"slide","camera":{"scaleFrom":1.0,"scaleTo":1.03},"layers":[]},
+    {"id":"S07","storyBeatId":"提示词内容不足","layerPlanRationale":"对比风格词与内容词","from":0,"duration":1,"hero":false,"background":"assets/03-prompt.png","transition":"fade","camera":{"scaleFrom":1.02,"scaleTo":1.0},"layers":[]},
+    {"id":"S08","storyBeatId":"自动化边界","layerPlanRationale":"用分界线划开人工与自动","from":0,"duration":1,"hero":false,"background":"assets/05-boundary.png","transition":"wipe","camera":{"scaleFrom":1.0,"scaleTo":1.03},"layers":[]},
+    {"id":"S09","storyBeatId":"评分与时间","layerPlanRationale":"A/B 双卡对比","from":0,"duration":1,"hero":false,"background":"assets/07-results.png","transition":"slide","camera":{"scaleFrom":1.03,"scaleTo":1.0},"layers":[]},
+    {"id":"S10","storyBeatId":"有效实践","layerPlanRationale":"先单独展示能复制的做法","from":0,"duration":1,"hero":false,"background":"assets/06-practice.png","transition":"fade","camera":{"scaleFrom":1.0,"scaleTo":1.02},"layers":[]},
+    {"id":"S11","storyBeatId":"结论边界","layerPlanRationale":"单独收束不可外推的部分","from":0,"duration":1,"hero":false,"background":"assets/06-practice.png","transition":"slide","camera":{"scaleFrom":1.02,"scaleTo":1.0},"layers":[]}
+  ]
+}
